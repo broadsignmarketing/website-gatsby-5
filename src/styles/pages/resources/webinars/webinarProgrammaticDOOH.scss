@@ -1,0 +1,278 @@
+@import "../../../base/dependencies";
+
+#page_webinarProgrammaticDOOH {
+	.hull {
+		.Row {
+			flex-flow: row-reverse;
+		}
+
+		.form_zone {
+			flex-basis: calc(35% - 3rem);
+			max-width: calc(35% - 3rem);
+
+			h3 {
+				@include fontBolder;
+				background-color: $worker;
+				color: white;
+				font-size: 2.5rem;
+				margin-top: 0;
+				padding: 2rem;
+				text-align: center;
+				width: 100%;
+			}
+
+			.Panel .Form .field {
+				flex-basis: 100%;
+				width: 100%;
+			}
+		}
+
+		.text_zone {
+			align-items: flex-start;
+			display: flex;
+			flex-basis: calc(65% - 3rem);
+			flex-flow: column;
+			max-width: calc(65% - 3rem);
+
+			img {
+				width: 100%;
+			}
+
+			h3 {
+				@include fontBolder;
+				color: $mint;
+				font-size: 6.2rem;
+				font-variant: small-caps;
+				font-weight: bolder;
+				line-height: 100%;
+			}
+
+			p {
+				@include fontBolder;
+				font-size: 2.4rem;
+				margin-bottom: 6rem;
+				margin-top: 6rem;
+			}
+
+			.Panel {
+				padding-bottom: 0;
+				padding-top: 0;
+
+				p {
+					@include fontReg;
+					font-size: 2rem;
+					margin: 0;
+				}
+			}
+
+			.ImgFlank {
+				aside {
+					flex-basis: calc(40% - 1.5rem);
+					justify-content: flex-end;
+					max-width: calc(40% - 1.5rem);
+					padding-top: 3rem;
+				}
+
+				.lead {
+					@include fontReg;
+					color: $koamaru;
+					flex-basis: calc(60% - 1.5rem);
+					font-size: 2rem;
+					max-width: calc(60% - 1.5rem);
+					padding: 3rem 0;
+				}
+			}
+		}
+	}
+}
+
+#page_thankYouWebinarProgrammaticDOOH {
+	padding-bottom: 9rem;
+
+	.Panel {
+		background-color: $whisper;
+		margin-top: 6rem;
+		padding-top: 5rem;
+
+		h3 {
+			color: $mint;
+			font-size: 5.2rem;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 90rem;
+			padding-bottom: 3rem;
+			text-align: center;
+		}
+
+		p {
+			@include fontAltBolder;
+			font-size: 2.6rem;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 90rem;
+		}
+	}
+
+	.line {
+		border-bottom: 2px solid #DFE3E8;
+		display: inline-block;
+		height: 1rem;
+		margin: 6rem 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	#page_webinarProgrammaticDOOH {}
+
+	#page_thankYouWebinarProgrammaticDOOH {}
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_webinarProgrammaticDOOH .hull .text_zone h3 {
+		font-size: 4.8rem;
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $super_xs_max_width) {
+
+	#page_webinarProgrammaticDOOH {
+		.Hero {
+			padding-left: 0;
+
+			.person {
+				left: -13rem;
+
+			}
+
+			.title {
+				span {
+					font-size: 32%;
+					;
+				}
+			}
+		}
+
+		.hull {
+			.Row {
+				flex-flow: column-reverse;
+				width: 100%;
+			}
+
+			.form_zone {
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+
+			.text_zone {
+				flex-basis: 100%;
+				max-width: 100%;
+
+				.Panel {
+					padding: 0 3rem 0 0;
+				}
+			}
+
+			.form_zone .Panel .Form {
+
+				.hs-dependent-field {
+					max-width: 100%;
+					width: 100%;
+				}
+			}
+
+			.actions {
+				margin-top: 3rem;
+			}
+
+			.footer_webinar {
+
+				height: 65rem;
+
+				p {
+					padding: 2rem;
+				}
+
+				.features {
+					display: flex;
+					width: 90%;
+
+					.ImgFlank {
+						display: flex;
+						flex-flow: column;
+
+						aside {
+							flex-basis: calc(100% - 15px);
+							max-width: calc(100% - 15px);
+						}
+
+						.lead {
+							@include fontReg;
+							bottom: 9rem;
+							flex-basis: calc(100% - 15px);
+							max-width: calc(100% - 15px);
+							position: relative;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#page_thankYouWebinarProgrammaticDOOH {}
+}
+
+html[lang="fr"] {
+	#page_webinarProgrammaticDOOH {}
+
+	#page_thankYouWebinarProgrammaticDOOH {}
+}
+
+html[lang="es"] {
+	#page_webinarProgrammaticDOOH {}
+
+	#page_thankYouWebinarProgrammaticDOOH {}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		#page_webinarProgrammaticDOOH {}
+
+		#page_thankYouWebinarProgrammaticDOOH {}
+	}
+
+	html[lang="es"] {
+		#page_webinarProgrammaticDOOH {}
+
+		#page_thankYouWebinarProgrammaticDOOH {}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		#page_webinarProgrammaticDOOH {}
+
+		#page_thankYouWebinarProgrammaticDOOH {}
+	}
+
+	html[lang="es"] {
+		#page_webinarProgrammaticDOOH {}
+
+		#page_thankYouWebinarProgrammaticDOOH {}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#page_webinarProgrammaticDOOH {}
+
+		#page_thankYouWebinarProgrammaticDOOH {}
+	}
+
+	html[lang="es"] {
+		#page_webinarProgrammaticDOOH {}
+
+		#page_thankYouWebinarProgrammaticDOOH {}
+	}
+}

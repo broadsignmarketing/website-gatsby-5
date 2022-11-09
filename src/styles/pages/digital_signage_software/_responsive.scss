@@ -1,0 +1,144 @@
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	#digital_signage_software {
+		h2 {}
+
+		h3 {}
+
+		h4 {}
+
+		.header {
+			text-align: left;
+
+			.branding {
+				max-width: 180px;
+			}
+		}
+
+		.Hero {
+
+			.Row {}
+
+			.Column {
+				flex-basis: calc(50% - 3rem);
+				max-width: calc(50% - 3rem);
+			}
+
+			.aside {
+				padding: 6rem 6rem 6rem 0;
+				transform: none;
+			}
+		}
+
+		.trusted_by {
+			h2 {}
+
+			.LogosList {}
+
+			.Logo {}
+		}
+
+		.why_broadsign {
+
+			.Row {}
+
+			.Column {}
+		}
+
+		.do_better {
+			h2 {}
+
+			.features {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			.feature {}
+
+			.icon {}
+
+			h3 {}
+
+			p {}
+
+			.ctas {
+				margin: 0 auto;
+			}
+
+			.cta {}
+		}
+
+		.quotes {
+			.Row {}
+
+			.Column {
+				background-color: $breeze;
+				border: 0 none;
+				border-radius: 0 20rem 20rem 0;
+				flex-basis: calc(50% - 3rem);
+				margin-top: 6rem;
+				max-width: calc(50% - 3rem);
+				padding: 6rem 7rem;
+
+				&:before {
+					background-image: url("../../img/ui/quote_round_white.svg");
+					background-position: center center;
+					background-repeat: no-repeat;
+					content: "";
+					height: 32px;
+					left: 4px;
+					position: absolute;
+					top: 4px;
+					width: 32px;
+					z-index: 100;
+				}
+			}
+
+			blockquote {}
+
+			.sign {
+				margin-top: 2em;
+			}
+		}
+
+		.flexible {
+			margin-top: 160px;
+			padding-bottom: 130px;
+			padding-top: 80px;
+
+			.bg {
+				width: 70vw;
+			}
+
+			.Tank {}
+
+			.Row {}
+
+			.Column {}
+
+			h2 {}
+
+			p {}
+
+			.CTA {}
+		}
+
+		.shin {
+			padding-bottom: 90px;
+			padding-top: 90px;
+
+			.Form {}
+		}
+	}
+}
+
+@media (min-width: $tablet_min_width) {
+	#digital_signage_software {
+		h1 {
+			line-height: 140%;
+		}
+	}
+}
+
+@media (min-width: $desktop_min_width) {
+	#digital_signage_software {}
+}

@@ -1,0 +1,12 @@
+html[lang="fr"] {}
+
+html[lang="es"] {
+	#who_we_are {
+		.Hero .title {
+			em {
+				font-size: 80%;
+				margin-top: 1rem;
+			}
+		}
+	}
+}

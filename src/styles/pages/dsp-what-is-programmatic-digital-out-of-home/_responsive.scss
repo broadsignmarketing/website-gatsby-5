@@ -1,0 +1,42 @@
+@media (max-width: $tablet_max_width) {
+	#dsp-what-is-digital-out-of-home {
+		.video {
+			.Row {}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#dsp-what-is-digital-out-of-home {
+		.DefiningDOOH {
+			.column {
+				img.icon {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#dsp-what-is-digital-out-of-home {
+		.Hero {
+			background: linear-gradient(to right, #500CC5 0%, #5C0BC2 25%, #640AC2 37.5%, #6909C3 50%, #6B0BC5 62.5%, #640AC2 75%, #560AC4 100%);
+
+			.bgFluid {
+
+				img,
+				picture {
+					object-position: right center !important;
+				}
+			}
+
+			.Tank {
+				.text {
+					text-shadow: 1px 1px 2px $dspPurpleShadow, 2px 2px 2px $dspPurpleShadow;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

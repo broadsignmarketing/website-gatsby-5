@@ -1,0 +1,228 @@
+@import "../../base/dependencies";
+@import "./broadsign_ads_overview";
+
+.broadsign_ads {
+	margin-top: 40px;
+	min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+
+	h1>em,
+	h2>em {
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	.Video {
+		width: 100%;
+	}
+
+	.broadsign_ads_logo {
+		max-width: 95px;
+		width: 22vw;
+	}
+
+	.broadsign_ads__hero {
+		background: linear-gradient(to top right, #3c4fc6 0%, #53e1c1 100%);
+		height: auto;
+		max-height: none;
+		min-height: 520px;
+		overflow: hidden;
+
+		h1 {
+			@include fontSuperBold;
+			line-height: 100%;
+		}
+
+		[class^="col-"] {
+			z-index: 10;
+		}
+
+		.blob {
+			border-radius: 50%;
+			filter: blur(60px);
+			position: absolute;
+			z-index: 1;
+		}
+
+		.blob1 {
+			background-color: #0513AF;
+			height: 550px;
+			left: 0;
+			max-height: 50vw;
+			max-width: 50vw;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 550px;
+			z-index: 1;
+		}
+
+		.blob2 {
+			background-color: #0573DA;
+			height: 180%;
+			left: 50%;
+			max-width: 50vw;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 550px;
+			z-index: 2;
+		}
+
+		.blob3 {
+			background-color: #18D7AA;
+			height: 720px;
+			max-height: 100vw;
+			max-width: 100vw;
+			right: 0;
+			top: 0;
+			transform: translate(45%, -45%);
+			width: 720px;
+			z-index: 3;
+		}
+	}
+
+	.quote_card {
+		&__portrait_wrapper {
+			border: 2px solid $cerulean;
+			border-radius: 50%;
+			height: 22vw;
+			max-height: 90px;
+			max-width: 90px;
+			width: 22vw;
+		}
+
+
+		&__author_wrapper {
+			flex: 0 0 30%;
+		}
+
+		&__name {}
+
+		&__blockquote_wrapper {
+			flex: 0 0 70%;
+		}
+
+		&__company {
+			height: auto;
+			max-height: 40px;
+			max-width: 100px;
+			width: 50%;
+		}
+
+		.col_author_cite {
+			font-style: normal;
+		}
+
+		blockquote p {
+			font-size: calc(min(3.8vw, 16px));
+		}
+	}
+
+	.SpynavTabs .ending .CTA {
+		font-size: calc(min(14px, 1.4vw)) !important;
+		padding-left: 1.4em !important;
+		padding-right: 1.4em !important;
+	}
+}
+
+.Modal.campsite_redirect_modal {
+	.close {
+		appearance: none;
+		background: transparent none;
+		box-shadow: none;
+		color: $ash;
+		transform: translate(-10px, 10px);
+
+		&:hover {
+			color: $cerulean;
+		}
+	}
+
+	.card {
+		background-color: $alice;
+		flex-flow: column nowrap;
+		justify-content: center;
+		padding: calc(min(10vw, 60px));
+	}
+
+	img {
+		max-width: 320px;
+	}
+}
+
+html[lang="fr"] {
+
+	.broadsign_ads .broadsign_ads__hero h1 {
+		font-size: min(8vw, 40px);
+	}
+
+	.broadsign_ads .SpynavTabs .ending .CTA {
+		font-size: min(14px, 1.2vw) !important;
+	}
+}
+
+@media (max-width:$xsMax) {
+	.broadsign_ads .quote_card__author_wrapper {
+		.col_portrait {
+			flex: 0 0 22vw;
+			max-width: 100px;
+		}
+
+		.col_author_cite {
+			flex: 1 1 calc(100% - 22vw);
+		}
+	}
+}
+
+@media (min-width:$sm) {
+	.broadsign_ads {
+		margin-top: 50px;
+
+		.broadsign_ads__hero {
+			background: linear-gradient(to right, #462ca2 0%, #37bbf1 100%);
+
+			.blob {
+				filter: blur(100px);
+			}
+
+			.blob1 {}
+
+			.blob2 {
+				background-color: #37bbf1;
+				bottom: auto;
+				height: 40vw;
+				left: 0%;
+				top: auto;
+				transform: translate(-50%, 70%);
+				width: 40vw;
+			}
+
+			.blob3 {
+				filter: blur(80px);
+				right: 0;
+				top: 0;
+				transform: translate(50%, -50%);
+			}
+		}
+
+		.quote_card {
+			&__portrait_wrapper {
+				height: 14vw;
+				max-height: 200px;
+				max-width: 200px;
+				width: 14vw;
+			}
+
+			&__company {
+				height: 40px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100px;
+			}
+
+			blockquote p {
+				font-size: calc(min(2.2vw, 21px));
+			}
+		}
+	}
+}

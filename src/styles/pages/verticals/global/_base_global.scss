@@ -1,0 +1,180 @@
+main[id^="page_vertical_"] {
+	.Hero {
+		@include bgCover;
+		height: 66rem;
+
+		.text {
+			max-width: 70rem;
+		}
+
+		.Tank {
+			.title {
+				margin: 0;
+
+				&,
+				em,
+				span {
+					line-height: 80%;
+				}
+
+				em,
+				span {
+					white-space: nowrap;
+				}
+			}
+
+			.tagline {
+				@include fontReg;
+				color: #FFF;
+				line-height: 120%;
+				margin: 3rem 0;
+			}
+		}
+	}
+
+	.Lattice {
+		margin-bottom: 8rem;
+		margin-top: 6rem;
+	}
+
+	.Pane {
+		h3 {
+			font-size: 3rem;
+		}
+
+		p {
+			display: inline-block;
+			margin-bottom: 2rem;
+		}
+
+		p.link {
+			margin: 0 0 2rem;
+			width: 100%;
+
+			a {
+				@include fontSuperBold;
+				color: $teal;
+				display: inline-block;
+				margin: 0;
+				padding-left: 2.2rem;
+				text-indent: -2.2rem;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+
+	#features {
+		.ImgHat {
+			&>.Row {
+				height: auto;
+				min-height: 15rem;
+
+				img {
+					max-height: 13rem;
+					max-width: 24rem;
+					margin: 0 auto;
+				}
+			}
+
+			.column {
+				width: 100%;
+			}
+		}
+
+		h3 {
+			@include fontSuperBold;
+			color: $blue;
+			line-height: 100%;
+			margin: 4rem 0 2rem;
+			width: 100%;
+		}
+
+		p {
+			width: 100%;
+		}
+	}
+
+	.cp_logos {
+		margin-bottom: 8rem;
+		margin-top: 8rem;
+
+		.tagline {
+			max-width: 60ch;
+		}
+
+		.logos {
+			margin-bottom: 2rem;
+		}
+
+		.logo {
+			transform: scale(1.1);
+		}
+	}
+
+	.CardPanel {
+		align-items: center;
+		display: flex;
+		flex-flow: column nowrap;
+		margin-top: 7rem;
+		max-width: 1100px;
+
+		h3 {
+			color: $blue;
+			font-size: 3rem;
+			margin-bottom: 2rem;
+			text-align: center;
+		}
+
+		p {
+			font-size: 1.8rem;
+			margin: 0 auto;
+			margin-bottom: 6rem;
+			max-width: 100ch;
+			text-align: center;
+		}
+
+		.cards {
+			align-items: stretch;
+			display: flex;
+			flex-flow: row wrap;
+			width: 100%;
+		}
+
+		.card {
+			align-items: center;
+			background-color: #e3f7fa;
+			box-shadow: 4px 4px 20px #e4e6eb;
+			display: flex;
+			flex: 0 1 calc(50% - 6rem);
+			flex-flow: column nowrap;
+			justify-content: center;
+			margin: 0 3rem;
+			max-width: calc(50% - 6rem);
+			min-height: 30rem;
+			padding: 4rem 3rem;
+			transition: box-shadow 0.3s;
+
+			span {
+				@include fontBolder;
+				font-size: 2rem;
+				margin: 0 auto 4rem;
+				max-width: 34ch;
+				text-align: center;
+				text-transform: uppercase;
+				transition: color 0.3s;
+			}
+
+			img {
+				max-width: 300px;
+				width: 80%;
+			}
+
+			&:hover {
+				box-shadow: 4px 4px 20px #AAA;
+			}
+		}
+	}
+}

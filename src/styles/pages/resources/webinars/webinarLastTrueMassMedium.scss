@@ -1,0 +1,343 @@
+@import "../../../base/dependencies";
+
+#webinar_last_true_mass_medium,
+#webinar_pdooh_2022 {
+	padding-bottom: 120px;
+
+	.hidden-mobile {
+		display: none !important;
+	}
+
+	.hidden-tablet-up {
+		display: flex !important;
+	}
+
+	.Hero {
+		background-color: $reflex;
+		height: auto;
+		margin-bottom: 60px;
+		max-height: none;
+		padding-bottom: 100px;
+		padding-top: 100px;
+
+		.Column {
+			align-items: center;
+		}
+	}
+
+	.badge {
+		@include fontReg;
+		background-color: #FFF;
+		border-radius: 10em;
+		color: $cerulean;
+		font-size: 16px;
+		letter-spacing: .15em;
+		margin: 0 auto;
+		padding: 0.5em 1.4em 0.4em;
+		text-transform: uppercase;
+	}
+
+	.hero_img {
+		margin: 20px auto 30px;
+		width: 100%;
+
+		&:before {
+			background: linear-gradient(-10deg, #E43425 46.58%, #441FD8 75.94%, #0A26B8 96.53%);
+			border-radius: 8px;
+			bottom: 0;
+			content: "";
+			height: 80%;
+			left: 0;
+			max-height: 300px;
+			opacity: 0.5;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+
+		img,
+		picture {
+			object-position: center bottom !important;
+			z-index: 10;
+		}
+	}
+
+	h1 {
+		@include fontThin;
+		display: block;
+		font-size: 34px;
+		line-height: 140%;
+		margin-bottom: 50px;
+		margin-top: 20px;
+		max-width: 22ch;
+		text-align: center;
+		text-transform: none;
+
+		em {
+			@include fontBolder;
+			display: block;
+		}
+	}
+
+	.presenter {
+		border-top: 1px solid $cerulean;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: 24px 0;
+		width: 100%;
+
+		&:last-of-type {
+			border-bottom: 1px solid $cerulean;
+		}
+
+		.portrait {
+			border-radius: 100%;
+			flex: 0 0 44px;
+			height: 44px;
+			width: 44px;
+		}
+
+		.txt {
+			flex: 0 0 calc(100% - 70px);
+		}
+
+		aside {
+			display: grid;
+			flex: 0 0 44px;
+			height: 44px;
+			place-items: center;
+			width: 44px;
+		}
+
+		.icon_calendar {
+			height: 22px;
+			width: 22px;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+
+	.text_zone {
+		align-content: flex-start;
+
+		p {
+			line-height: 180%;
+		}
+	}
+
+	.form_zone {
+		margin-top: 30px;
+
+		.Panel {
+			border-radius: 16px;
+			padding: calc(min(10vw, 3rem)) calc(min(10vw, 5rem)) calc(min(10vw, 6rem));
+		}
+	}
+
+	.sub_panel {
+		background-color: rgba(#fff, 0.6);
+		border-radius: 8px;
+		padding: calc(min(10vw, 3rem));
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.Form {
+		@include inputWebkitAutofills(#FFF, $reflex);
+
+		input {
+			border-radius: 4px;
+		}
+
+		.hs-fieldtype-text label,
+		.hs-fieldtype-select label {
+			&:not(.hs-error-msg) {
+				display: none;
+			}
+		}
+
+		.hs-fieldtype-booleancheckbox {
+			label {
+				font-size: 14px;
+				line-height: 150%;
+
+				span {
+					color: $dark;
+				}
+
+				input {
+					min-height: 1em;
+
+					&:before {
+						border-color: #8e918f;
+						height: 1.2em;
+						width: 1.2em;
+					}
+				}
+			}
+
+			a {
+				color: $reflex;
+
+				&:hover {
+					color: $cerulean !important;
+				}
+			}
+		}
+
+		.actions {
+			text-align: right;
+
+			.hs-button {
+				background-color: $reflex;
+				border-color: $reflex;
+				border-radius: 4px;
+				font-size: 14px;
+				letter-spacing: 0.1em;
+
+				&:hover {
+					background-color: transparent;
+					color: $reflex;
+				}
+			}
+		}
+	}
+
+	.submitted-message {
+		p {
+			color: $ash;
+			margin: 1em 0 2em;
+		}
+
+		strong {
+			@include fontBolder;
+			align-items: center;
+			background: url("../../../../img/ui/check_circle_green.svg") left center no-repeat;
+			background-size: 30px 30px;
+			color: $reflex;
+			display: flex;
+			font-size: 24px;
+			line-height: 30px;
+			padding-left: 2em;
+		}
+	}
+
+	&.thank_you {
+		.Video {
+			border-radius: 8px;
+			box-shadow: 6px 6px 20px rgba(#000, 0.4);
+			max-width: 1088px;
+		}
+
+		.ctas {
+			justify-content: center;
+			margin: 80px 0;
+
+			.CTA {
+				border: 0 none;
+				font-size: 14px;
+				letter-spacing: 0.1em;
+				background-color: #0542C4;
+				padding: 1.3em 2em 1.1em;
+
+				&:hover {
+					background-color: $cerulean;
+					color: #FFF !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:$smMax) {
+
+	#webinar_last_true_mass_medium,
+	#webinar_pdooh_2022 {
+		.Form {
+
+			label {
+				font-size: 16px;
+				line-height: 140%;
+			}
+
+			input,
+			select {
+				font-size: 16px;
+				line-height: 140%;
+				min-height: 2.2em;
+			}
+
+			.hs-fieldtype-booleancheckbox label {
+				font-size: 14px;
+			}
+
+			.hs-error-msgs label {
+				font-size: 12px;
+			}
+
+			.actions .hs-button {
+				height: auto;
+			}
+		}
+	}
+}
+
+/* Replace with $sm eventually. This is a patch. */
+@media (min-width:$mobile_min_width) {
+
+	#webinar_last_true_mass_medium,
+	#webinar_pdooh_2022 {}
+}
+
+@media (min-width:$mobile_min_width) and (orientation:landscape),
+(min-width:$tablet_min_width) {
+
+	#webinar_last_true_mass_medium,
+	#webinar_pdooh_2022 {
+		.hidden-mobile {
+			display: flex !important;
+		}
+
+		.hidden-tablet-up {
+			display: none !important;
+		}
+
+		.Hero .Column:first-of-type {
+			max-width: 42%;
+		}
+
+		.badge {
+			margin: 0;
+		}
+
+		h1 {
+			text-align: left;
+		}
+
+		.form_zone {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (min-width:$sm) {
+
+	#webinar_last_true_mass_medium,
+	#webinar_pdooh_2022 {
+		.hero_img {
+			&:before {
+				height: 25vw;
+			}
+		}
+	}
+}
+
+@media (min-width:$md) {}
+
+@media (min-width:$lg) {}

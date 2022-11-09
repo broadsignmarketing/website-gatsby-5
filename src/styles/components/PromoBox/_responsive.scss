@@ -1,0 +1,211 @@
+@media (orientation:landscape),
+(min-width: $mobile_min_width) {
+	.PromoBox {
+		.wrap {
+			padding: 3em 40px;
+		}
+	}
+
+	.pb_set_demo_trial {
+		.wrap {
+			padding: 3em 20px;
+		}
+	}
+}
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	.PromoBox {
+		border-radius: 4rem;
+		font-size: calc(min(10px, 1.2vw));
+		height: 44rem;
+		margin-bottom: 6rem;
+		margin-top: 6rem;
+		max-height: 450px;
+
+		&:before {
+			border-radius: 4rem;
+		}
+	}
+
+	.pb_set_demo_trial {
+		.icon {
+			height: 12em;
+			width: 12em;
+		}
+
+		.tagline {
+			font-size: 2.6em;
+		}
+	}
+
+	#pb_ebook_adding_digital_to_your_ooh_network {
+		.tagline {
+			font-size: 3em;
+			line-height: 150%;
+		}
+	}
+
+	#pb_ebook_campsite_add_real_world_kick {
+		font-size: calc(min(2vw, 24px));
+	}
+
+	#pb_ebook_increase_revenue_in_store_media {
+		font-size: calc(min(10px, 1vw));
+
+		.tagline {
+			font-size: 3.4em;
+		}
+
+		.img {
+			margin-top: 3em;
+		}
+	}
+
+	#pb_ebook_media_buyers_pdooh {
+		.wrap {
+			align-items: flex-start;
+			margin: 0 auto;
+			max-width: 50rem;
+			padding: 3em 3em 0;
+		}
+
+		.blob1 {
+			filter: blur(25px);
+			height: 20vw;
+			left: -10%;
+			top: -10%;
+			width: 50vw;
+		}
+
+		.blob2 {
+			bottom: 0;
+			filter: blur(120px);
+			height: 20vw;
+			left: 32%;
+			transform: translate(50%, 50%);
+			width: 30vw;
+		}
+
+		.blob3 {
+			height: 20vw;
+			left: 60%;
+			top: 0;
+			width: 30vw;
+		}
+	}
+
+	#pb_ebook_modernize_ooh_business {
+		height: 44rem;
+	}
+
+	#pb_ebook_optimize_ooh_sales {
+		font-size: calc(min(10px, 1vw));
+
+		.wrap {
+			padding-top: 3em;
+		}
+
+		h3 {
+			font-size: 2.8em;
+		}
+	}
+
+	#pb_ebook_interactive_content {
+		.img {
+			flex: 0 0 40%;
+			height: 40%;
+		}
+
+		.tagline {
+			text-align: left;
+		}
+	}
+
+	#pb_ebook_dooh_playbook,
+	#pb_ebook_playbook_programmatic_buyers {
+		.img {
+			flex: 0 0 40%;
+			height: 40%;
+		}
+
+		.tagline {
+			text-align: left;
+		}
+	}
+
+	#pb_health_media_kit,
+	#pb_media_kit_amplify {}
+
+	#pb_ebook_successful_network {
+		.img {
+			flex: 0 0 40%;
+			height: 40%;
+			margin-bottom: -2em;
+		}
+	}
+
+	#pb_programmatic_u {
+		.wrap {
+			padding-bottom: 4em;
+		}
+
+		.person {
+			max-height: 20em;
+			max-width: 20em;
+		}
+	}
+}
+
+@media (min-width: $tablet_min_width) and (orientation:landscape),
+(min-width: $desktop_min_width) {
+	.pb_set_demo_trial .wrap {
+		padding: 3em 40px;
+	}
+
+	#pb_ebook_campsite_add_real_world_kick .wrap {}
+
+	#pb_ebook_successful_network .img {
+		margin: 0 auto;
+	}
+
+	#pb_media_kit_amplify {
+		.wrap {
+			padding: 6em 40px;
+		}
+	}
+
+	#pb_programmatic_u {
+		.wrap {
+			padding: 6em 40px 4em;
+		}
+
+		.tagline {
+			max-width: 24ch;
+		}
+	}
+}
+
+@media (min-width: $desktop_min_width) {
+	.pb_set_demo_trial {
+		.wrap {
+			font-size: 1.2em;
+		}
+	}
+
+	#pb_programmatic_u .wrap {
+		font-size: 1.1em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.PromoBox {
+		height: 40em;
+	}
+
+	#pb_ebook_campsite_add_real_world_kick {
+		.tagline {}
+
+		.CTA {}
+	}
+}

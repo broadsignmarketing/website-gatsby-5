@@ -1,0 +1,63 @@
+#page_vertical_outdoor {
+	section.Hero {
+		.title {
+			font-size: 14rem;
+
+			span:first-of-type {
+				font-size: 35.4%;
+				line-height: 70%;
+			}
+
+			span:last-of-type {
+				font-size: 50.5%;
+			}
+		}
+	}
+
+	section.outdoorSpiel {
+		align-items: center;
+		display: flex;
+		max-height: 70vh;
+
+		.outdoor_spiel_wrapper {
+			width: 50%;
+
+			p {
+				font-size: 2.2rem;
+			}
+		}
+	}
+
+	.QuoteCarousel {
+		margin-top: 6rem;
+	}
+
+	.cp_logos .logos {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+
+		.logo {
+			display: flex;
+			flex: 0 0 33%;
+			max-width: 24rem;
+
+			&:nth-child(5) {
+				margin-left: auto;
+			}
+
+			&:nth-child(7) {
+				margin-right: auto;
+			}
+
+			img {
+				display: inline-block;
+				flex: 1 1 auto;
+				height: auto;
+				max-width: 20rem;
+				overflow: hidden;
+				width: 100%;
+			}
+		}
+	}
+}

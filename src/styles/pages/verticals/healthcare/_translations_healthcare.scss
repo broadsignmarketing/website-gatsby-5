@@ -1,0 +1,42 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_healthcare {
+		.Hero {
+			.title {
+				span:first-of-type {
+					font-size: 70.6%;
+					line-height: 96%;
+				}
+
+				span:last-of-type {
+					font-size: 88%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		#page_vertical_healthcare {
+			.Hero {
+				.title {
+					font-size: 10rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_healthcare {
+			.Hero {
+				.title {
+					font-size: 6.8rem;
+				}
+			}
+		}
+	}
+}

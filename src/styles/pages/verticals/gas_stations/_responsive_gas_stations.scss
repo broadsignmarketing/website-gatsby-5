@@ -1,0 +1,67 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_gas_stations {
+		.Hero .title {}
+
+		section.show_gas_stations_spiel {
+			padding: 16rem 0;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	#page_vertical_gas_stations {
+		.Hero .title {
+			font-size: 12rem;
+
+			em {
+				white-space: normal;
+			}
+		}
+
+		section.show_gas_stations_spiel {
+			background-position-x: 20%;
+			height: 30rem;
+			padding: 0;
+
+			.stations_spiel {
+				max-width: 35rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 599px) and (orientation:portrait) {
+	#page_vertical_gas_stations {
+		.cards .title {
+			flex: 0 1 100%;
+			margin: 3rem auto 0;
+			max-width: 360px;
+
+			&:nth-of-type(1) {
+				order: 1;
+			}
+
+			&:nth-of-type(2) {
+				order: 3;
+			}
+		}
+
+		.card {
+			&:nth-of-type(1) {
+				order: 2;
+			}
+
+			&:nth-of-type(2) {
+				order: 4;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_gas_stations {
+		.Hero .title {
+			font-size: 13vw;
+		}
+	}
+}

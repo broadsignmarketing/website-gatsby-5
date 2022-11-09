@@ -1,0 +1,50 @@
+@import "../base/dependencies";
+
+$sizes: 1400,
+1100,
+1000,
+900;
+
+.Tank {
+	@each $size in $sizes {
+		&.base_#{$size} {
+			max-width: #{$size + 80 + "px"};
+		}
+	}
+
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+
+	&.snug {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	.Tank {
+		&.snug {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	.Tank {
+
+		&,
+		&.snug {
+			max-width: 1280px;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+}
+
+@media (min-width: $desktop_min_width) {}

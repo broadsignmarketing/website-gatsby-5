@@ -1,0 +1,13 @@
+html[lang="es"] {
+	#demo .Hero h1 {
+		font-size: calc(clamp(25px, 6vw, 32px));
+	}
+}
+
+@media (min-width:$tablet_min_width) {
+	html[lang="fr"] {
+		#demo .Hero h1 {
+			font-size: 4.2rem;
+		}
+	}
+}

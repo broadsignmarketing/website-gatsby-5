@@ -1,0 +1,98 @@
+@import "../../base/dependencies";
+
+#broadsign_ads__our_story {
+	h1 {
+		font-size: calc(min(9vw, 46px));
+	}
+
+	.intro_img {
+		height: 60vw;
+		max-height: 360px;
+	}
+
+	.time_line {
+		border-left: 3px dotted $campsiteGreen;
+		position: fixed;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.dot {
+		height: 40px;
+		position: relative;
+		width: 40px;
+
+		em {
+			background-color: #1056FB;
+			border-radius: 100%;
+			height: 40px;
+			left: 0;
+			opacity: 50%;
+			position: absolute;
+			top: 0;
+			width: 40px;
+			z-index: 1;
+		}
+
+		i {
+			background-color: #1056FB;
+			border-radius: 100%;
+			display: block;
+			height: 24px;
+			left: 8px;
+			position: absolute;
+			top: 8px;
+			width: 24px;
+			z-index: 10;
+		}
+	}
+}
+
+html[lang="fr"] {
+	#broadsign_ads__our_story {
+		h1 {
+			font-size: calc(min(9vw, 40px));
+		}
+	}
+}
+
+@media (min-width:$sm) {
+	#broadsign_ads__our_story {
+		h2 {
+			font-size: min(5.6vw, 46px);
+		}
+
+		.step {
+			background-color: transparent !important;
+		}
+
+		.step_img:not(.our_story_step_1) {
+			top: calc(max(-50px, -4vw));
+		}
+	}
+}
+
+@media (min-width:$md) {
+	#broadsign_ads__our_story {
+		h2 {}
+
+		.intro_img {
+			height: 450px;
+			max-height: none;
+		}
+
+		.intro_par_delimiter {
+			max-width: 544px;
+			padding-left: 16.6666%;
+			padding-right: 16px;
+		}
+	}
+}
+
+@media (min-width:$lg) {
+	#broadsign_ads__our_story {
+		.intro_par_delimiter {
+			padding-right: 32px;
+		}
+	}
+}

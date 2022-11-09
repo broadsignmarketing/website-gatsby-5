@@ -1,0 +1,10 @@
+.VideoPoster {
+	@include bgCover;
+	@import "../../misc/bg";
+
+	display: flex;
+	height: auto;
+	min-height: 40rem;
+	padding: 6rem 0;
+	position: relative;
+}

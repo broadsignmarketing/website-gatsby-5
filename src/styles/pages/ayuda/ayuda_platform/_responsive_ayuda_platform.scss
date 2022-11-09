@@ -1,0 +1,396 @@
+@media (max-width: $xl_max_width) {
+	#ayuda_platform {
+		.Hero {
+			height: 60rem;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	#ayuda_platform {
+		.Hero {
+			max-height: 60rem;
+
+			.Tank {
+				padding-top: 8rem;
+			}
+
+			.hero_content {
+				width: 65%;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	#ayuda_platform {
+		.Hero {
+
+			.hero_content .description {
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	#ayuda_platform .QuoteBlock blockquote p {
+		padding-left: $tankPaddingPhone;
+		padding-right: $tankPaddingPhone;
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $xs_max_width) {
+	#ayuda_platform {
+		.Hero {
+			background-position: 16%;
+			height: 66rem;
+			margin-bottom: 23rem;
+			max-height: 66rem;
+
+			.title {
+				text-align: center;
+			}
+
+			.Tank {
+				padding-top: 5rem;
+
+				.bus_stop {
+					bottom: 0;
+					left: 5%;
+					max-width: 90%;
+					width: 90vw;
+				}
+
+				.hero_content {
+					align-items: center;
+					display: flex;
+					flex-flow: column;
+					width: 100%;
+
+					p {
+						text-align: center;
+					}
+
+					img {
+						width: 75%;
+					}
+				}
+			}
+
+			.ctas {
+				position: absolute;
+				top: 70rem;
+				width: 100%;
+				justify-content: center;
+			}
+
+			.CTA {
+				background-color: $teal;
+				border-color: $teal;
+				color: #FFF;
+
+				&:hover {
+					background-color: #FFF;
+					color: $teal;
+				}
+			}
+		}
+
+		.main_feature {
+			background-color: #F5F5F5;
+
+			.column {
+				flex-basis: calc(100% - 1.5rem);
+				max-width: calc(100% - 1.5rem);
+				padding-left: 0;
+
+				&.tagline_wrapper p {
+					font-size: 5rem;
+					padding-left: 0;
+				}
+
+				&.description_wrapper {
+					font-size: 4rem;
+				}
+			}
+		}
+
+		section.products {
+			h2 {
+				font-size: 5rem;
+			}
+
+			.juice_product {
+				margin-top: 8rem;
+			}
+
+			.ImgHat {
+				margin-bottom: 4rem;
+
+				.Row {
+					align-items: center;
+
+					img {
+						width: 45%;
+					}
+				}
+
+				.column {
+					padding: 0 20px;
+
+					.description {
+						align-items: center;
+						display: flex;
+						flex-flow: column;
+						padding: 0;
+						width: 100%;
+
+						p {
+							text-align: center;
+
+							&.font_size_3 {
+								font-size: 3.8rem;
+								;
+							}
+
+							&.font_size_2_2 {
+								font-size: 3.2rem;
+								;
+							}
+						}
+					}
+
+					.CTA {
+						width: 50%;
+					}
+				}
+			}
+		}
+
+		section.demo {
+			height: auto;
+			margin-top: 44rem;
+			padding-left: 0;
+
+			.Tank {
+				padding: 0rem 20px 4rem 20px;
+
+				.ImgFlank {
+					flex-flow: column nowrap;
+
+					aside,
+					.lead {
+						flex-basis: calc(100% - 1.5rem);
+						max-width: calc(100% - 1.5rem);
+					}
+
+					aside {
+						margin-bottom: 5rem;
+
+						img {
+							bottom: 0;
+							position: absolute;
+						}
+					}
+
+					.lead {
+						align-items: center;
+
+						p em {
+							display: initial;
+						}
+
+						.CTA {
+							width: 80%;
+						}
+					}
+				}
+			}
+		}
+
+		.Row {
+			flex-flow: column nowrap;
+
+			.column {
+				flex: 0 0 auto;
+				max-width: 100%;
+			}
+		}
+
+		.QuoteBlock blockquote {
+			margin: 6rem 5rem 7rem 4rem;
+
+			.wrap:before {
+				font-size: 17rem;
+				left: 0%;
+			}
+
+			.wrap {
+				max-width: 100%;
+
+				.bg {
+					display: none;
+				}
+			}
+
+			p {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.sign {
+				font-size: 2.2rem;
+			}
+		}
+
+		.blog_recent_posts {
+			h2 {
+				font-size: 5rem;
+			}
+
+			.Row {
+				flex-flow: row;
+
+			}
+
+			.ctas {
+				margin-bottom: 9rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 599px) and (orientation:portrait),
+(max-width: $xs_max_width) {
+	#ayuda_platform {
+		.blog_recent_posts {
+			.Row {
+				flex-flow: column nowrap;
+			}
+
+			.ctas {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	.page_ayuda .cross_promo {
+		margin-bottom: 6rem;
+
+		.screenshot {
+			bottom: -6rem;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	#page_ayuda {
+		.Hero {
+			background-size: cover;
+			max-height: 60rem;
+		}
+
+		section#partners .LogosList {
+			.Row {
+				justify-content: center;
+			}
+
+			.logo {
+				flex-basis: calc(33% - 6rem);
+				margin: 0 3rem 2rem;
+				max-height: 10rem;
+				max-width: 30rem;
+				object-fit: contain;
+				width: calc(33% - 6rem);
+
+				&.astral {
+					padding: 1.4rem 0;
+				}
+
+				&.vgi {
+					padding: 0.6rem 0;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: $super_xs_max_width) {
+	#ayuda_platform {
+
+		.QuoteBlock blockquote {
+			p {
+				line-height: 160%;
+				padding-left: $tankPaddingXS;
+				padding-right: $tankPaddingXS;
+			}
+		}
+	}
+}
+
+@media (max-width:$xsMax) {}
+
+@media (min-width:$sm) {
+	#ayuda_platform {
+		.Hero {
+			.title {
+				font-size: min(80px, 10vw);
+			}
+
+			.description {
+				font-size: 30px;
+			}
+		}
+
+		.grey_wave h3 {
+			font-size: min(88px, 8vw);
+		}
+
+		.main_feature .column.tagline_wrapper p {
+			font-size: 40px;
+		}
+
+		.main_feature .description_wrapper p {
+			font-size: 30px;
+		}
+
+		.QuoteBlock blockquote p {
+			font-size: 28px;
+		}
+	}
+}
+
+@media (min-width:$md) {
+	#ayuda_platform {
+		.manage_campaigns .carousel_item {
+
+			p,
+			ul li {
+				font-size: 20px;
+			}
+		}
+
+		.features_list .ImgFlank .lead {
+			h2 {
+				font-size: 36px;
+			}
+
+			p {
+				font-size: 20px;
+			}
+		}
+
+		.QuoteBlock blockquote p {
+			font-size: 28px;
+		}
+
+		.demo .lead p {
+			font-size: 28px;
+		}
+	}
+}

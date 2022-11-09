@@ -1,0 +1,115 @@
+@media (max-width: $tablet_max_width) {
+	#page_training {}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait) {
+
+	#page_training {
+		section#intro {
+			.ImgFlank {
+				width: 100%;
+
+				p {
+					width: 100%;
+				}
+
+				aside {
+					margin-right: 0rem;
+					max-width: 100%;
+					flex-basis: 100%;
+
+					img {
+						width: 70%;
+					}
+				}
+
+				.lead {
+					margin-top: 3rem;
+					max-width: 100%;
+					flex-basis: 100%;
+				}
+			}
+		}
+
+		section.training {
+			margin-top: 6rem;
+
+			.ImgHat {
+				margin-bottom: 6rem;
+				max-width: 100%;
+				flex-basis: 100%;
+
+				.column {
+					flex-flow: column;
+					margin-top: 2rem;
+				}
+			}
+		}
+
+		section.quotes {
+			margin-top: 0;
+		}
+
+		section.video_training {
+			.Row {
+				flex-flow: column;
+				margin-top: 2rem;
+
+				.ImgHat {
+					flex-flow: column;
+					max-width: calc(100% - 15px);
+					flex-basis: calc(100% - 15px);
+
+					.Row {
+						margin-right: 0;
+						width: 100%;
+					}
+
+					.column {
+						margin-bottom: 2rem;
+						margin-top: 2rem;
+						width: 100%;
+					}
+				}
+			}
+
+			.youtube {
+				a {
+					line-height: 130%;
+				}
+			}
+		}
+
+		section.video_training {
+			.Row {
+				flex-flow: column;
+				width: 100%;
+
+				a {
+					max-width: 100%;
+					flex-basis: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation: portrait) {
+	#page_training {
+		section.quotes {
+			.Row {
+				flex-flow: column;
+
+				.ImgHat {
+					margin-bottom: 3rem;
+					max-width: calc(100% - 15px);
+					flex-basis: calc(100% - 15px);
+				}
+
+				.vertical_line {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+#page_vertical_internal_communications {
+	.Hero {
+		.text {
+			max-width: 80rem;
+		}
+
+		.title {
+			font-size: 9rem;
+
+			&.mobile {
+				display: none;
+			}
+
+			span:first-of-type {
+				font-size: 63%;
+			}
+
+			span:last-of-type {
+				font-size: 81%;
+			}
+		}
+	}
+
+	section.showVisitorSpiel {
+		max-height: 70vh;
+
+		.show_visitor {
+			width: 50%;
+
+			p {
+				font-size: 2.2rem;
+			}
+		}
+	}
+}

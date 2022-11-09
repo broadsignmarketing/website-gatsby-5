@@ -1,0 +1,136 @@
+.page_product {
+	.Hero {
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 6rem;
+
+		.title {
+			em {
+				bottom: 0.05em;
+				font-size: 100%;
+				left: -6px;
+				line-height: 70%;
+				position: relative;
+			}
+
+			span {
+				line-height: 80%;
+			}
+		}
+
+		.tagline {
+			@include fontBold;
+			color: #FFF;
+			font-size: 2.4rem;
+			line-height: 120%;
+			margin: 0;
+			margin-bottom: 3rem;
+			text-transform: uppercase;
+		}
+
+		&.v2021 {
+			height: auto;
+			max-height: none;
+			overflow: hidden;
+
+			.blob {
+				border-radius: 100rem;
+				filter: blur(130px);
+				left: 50%;
+				position: absolute;
+				width: 100%;
+			}
+
+			.Tank {
+				align-items: stretch;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				max-width: 1070px;
+				min-height: 560px;
+				transform: translateX(11%);
+				z-index: 10;
+			}
+
+			.text {
+				flex: 0 1 440px;
+				margin: 12rem 0 8rem;
+				max-width: 420px;
+			}
+
+			.img {
+				align-items: flex-end;
+				display: flex;
+				flex: 0 1 620px;
+				height: 100%;
+				margin: auto 0 0;
+				max-height: 560px;
+				max-width: 50%;
+				padding-top: 6rem;
+			}
+
+			.person {
+				height: 100%;
+				width: 100%;
+			}
+
+			h1 {
+				@include fontSuperBold;
+				color: #FFF;
+				font-size: 6rem;
+
+				span {
+					color: $picton;
+					display: inline-block;
+					line-height: 80%;
+					width: 100%;
+				}
+
+				em {
+					display: inline-block;
+					width: 100%;
+				}
+			}
+
+			.tagline {
+				@include fontLighter;
+				font-size: 2.7rem;
+				margin-bottom: 5rem;
+				text-transform: none;
+			}
+
+			.ctas {
+				align-items: stretch;
+				width: 100%;
+			}
+
+			.gap {
+				flex: 0 0 1rem;
+			}
+
+			.CTA {
+				flex: 1 1 50%;
+				font-size: 16px;
+				font-weight: normal;
+				max-height: none;
+				padding-bottom: 1em;
+				padding-top: 1.1em;
+				white-space: normal;
+
+				&.demo {
+					max-width: calc(min(70%, 26ch));
+				}
+
+				&.free_trial {
+					max-width: 40%;
+				}
+			}
+		}
+	}
+
+	.VideoPoster {
+		.Video {
+			box-shadow: 0.8rem 0.8rem 2.4rem rgba(#000, 0.5);
+		}
+	}
+}

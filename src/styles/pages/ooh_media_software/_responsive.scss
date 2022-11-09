@@ -1,0 +1,328 @@
+@media (max-width: $tablet_max_width) {
+	#ooh_media_software_page {
+		.Hero {
+			border-bottom-right-radius: 180px;
+			height: 68rem;
+
+			.person {
+				right: -10rem;
+			}
+
+			.intro {
+				white-space: nowrap;
+			}
+
+			.title {
+				font-size: 23rem;
+			}
+		}
+
+		.sell_programmatically .content_wrapper .content {
+			width: 75%;
+		}
+
+		.manage_all_things_container {
+			.title_wrapper h2 .loop_container {
+				width: 110px;
+			}
+
+			.product_container {
+				&.desktop {
+					display: none;
+				}
+
+				&.mobile {
+					display: inherit;
+				}
+
+				.product_wrapper {
+					.lead p {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.platform_container {
+			.platform_content_container {
+				.Panel {
+					padding: 5rem;
+
+					.ctas {
+						width: 100%;
+					}
+
+					.title {
+						font-size: 2.6rem;
+					}
+
+					.description {
+						font-size: 2rem;
+					}
+
+					.features p {
+						font-size: 1.4rem;
+						white-space: normal;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:landscape) {
+	#ooh_media_software_page {
+		.Hero {
+			border-bottom-right-radius: 150px;
+			height: 64rem;
+			max-height: none;
+
+			.title {
+				font-size: 20rem;
+			}
+
+			.person {
+				right: -6rem;
+			}
+		}
+
+		.sell_more {
+			.desktop_img {
+				width: 100%;
+			}
+		}
+
+		.sell_programmatically .wrapper .content_wrapper .content {
+			width: 80%;
+		}
+
+		.platform_container .Row {
+			.column .ctas .CTA {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#ooh_media_software_page {
+		.Hero {
+			border-bottom-right-radius: 0;
+			height: 130rem;
+			max-height: 150vh;
+
+			.intro {
+				white-space: normal;
+			}
+
+			.person {
+				$w: 80rem;
+				$h: 80rem;
+				height: $h !important;
+				right: 0rem;
+				width: $w !important;
+			}
+
+			.Tank {
+				justify-content: flex-start;
+				padding-top: 60px;
+			}
+
+			.content {
+				width: 100%;
+			}
+
+			.title {
+				font-size: 35vw;
+
+				span {
+					font-size: 40%;
+				}
+
+				p {
+					font-size: 4.5vw;
+				}
+			}
+
+			p {
+				color: white;
+			}
+
+			.description {
+				@include fontLighter;
+			}
+		}
+
+		.sell_more {
+
+			h2,
+			p {
+				text-align: left;
+				width: 100%;
+			}
+
+			.sell_more_img_wrapper {
+				.desktop_img {
+					display: none;
+				}
+
+				.mobile_img {
+					display: block;
+					margin-bottom: 1.5rem;
+					width: 100%;
+				}
+			}
+
+			.ctas {
+				flex-flow: column;
+
+				.CTA {
+					margin-bottom: 2rem;
+					width: 100%;
+
+					.inner {
+						padding: 2rem 4rem;
+					}
+				}
+			}
+		}
+
+		.sell_programmatically {
+			.wrapper {
+				border-radius: 0;
+				width: 100%;
+
+				.content_wrapper .content {
+					align-items: flex-start;
+					width: 100%;
+
+					h2 {
+						font-size: 3.6rem;
+						text-align: left;
+					}
+
+					.description {
+						font-size: 2rem;
+						text-align: left;
+					}
+
+					.ctas a {
+						justify-content: flex-start;
+					}
+				}
+			}
+		}
+
+		.manage_all_things_container {
+			.title_wrapper {
+				align-items: flex-start;
+				border-bottom: solid 1px $grey;
+				padding: 7rem 0;
+
+				h2 {
+					font-size: 3rem;
+					text-align: left;
+					white-space: normal;
+					width: 100%;
+				}
+
+				p {
+					text-align: left;
+					width: 100%;
+				}
+
+				.loop_container .text_loop_element {
+					font-size: 3rem;
+				}
+			}
+
+			.product_container {
+				&.mobile {
+					color: red;
+
+					.product_wrapper {
+						flex-flow: column nowrap;
+
+						.lead,
+						aside {
+							flex-basis: calc(100% - 1.5rem);
+							max-width: calc(100% - 1.5rem);
+						}
+
+						.lead a {
+							margin-bottom: 3rem;
+							margin-top: 4rem;
+
+							img {
+								padding-left: 4rem;
+							}
+						}
+
+						aside img {
+							margin-top: 5rem;
+						}
+
+						&.modernize .lead {
+							a {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.platform_container {
+			.intro .title_container p {
+				width: 100%;
+			}
+
+			.platform_content_container {
+				align-items: center;
+				display: flex;
+				flex-flow: column;
+
+				.ctas .cta {
+					padding: 2rem 4rem;
+					width: 100%;
+				}
+
+				.Panel {
+					max-width: calc(100% - 1.5rem);
+					padding: 7rem 5rem 7rem 5rem;
+					width: calc(100% - 1.5rem);
+				}
+			}
+
+			.ayuda_platform {
+				margin-top: 6rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#ooh_media_software_page {
+		.Hero {
+			height: 120rem;
+
+			.person {
+				$w: 65rem;
+				$h: 65rem;
+				height: $h !important;
+				right: 0rem;
+				width: $w !important;
+			}
+		}
+
+		.platform_container .column .ctas .cta {
+			width: 85%;
+		}
+	}
+}
+
+@media (hover: none) {
+	#ooh_media_software_page .manage_all_things_container .title_wrapper .x0 {
+		transform: none !important;
+	}
+}

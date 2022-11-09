@@ -1,0 +1,92 @@
+.DspForm {
+	background: linear-gradient(to top, #70D0F9 0%, #2D78E6 50%, #0E4FDD 100%);
+	z-index: 150;
+
+	.form_zone {
+		padding-bottom: 5rem;
+		padding-top: 5rem;
+		width: 80%;
+
+		.Row {
+			.image_container {
+				flex-basis: 40%;
+				justify-content: center;
+				max-width: 40%;
+
+				.lunch {
+					object-fit: contain;
+					width: 110%;
+				}
+
+				.ebook {
+					object-fit: contain;
+					width: 80%;
+				}
+			}
+
+			.form_container {
+				align-items: start;
+				flex-basis: 60%;
+				max-width: 60%;
+
+				p {
+					color: #FFF;
+				}
+
+				h3 {
+					@include fontBolder;
+					color: $blizzard;
+					font-size: 4.2rem;
+					line-height: 120%;
+					text-transform: uppercase;
+
+				}
+
+				.Form {
+					form {
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: space-between;
+
+						label {
+							span {
+								color: white;
+							}
+						}
+
+						input {
+							border-bottom-width: 1px !important;
+							color: white;
+						}
+
+						select {
+							border-color: white;
+							border-width: 1px !important;
+							color: white;
+
+							option {
+								background-color: #58B1F2;
+							}
+						}
+
+						.hs_consent_to_privacy_policy {
+							a {
+								color: $blue;
+
+								&:hover {
+									color: $mint;
+								}
+							}
+						}
+
+						.hs_submit {
+							display: flex;
+							justify-content: center;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

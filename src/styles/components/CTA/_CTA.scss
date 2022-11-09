@@ -1,0 +1,44 @@
+@import "cta_bases";
+
+@keyframes rippleEffect {
+	0% {
+		border-radius: 100%;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	40% {
+		opacity: 0.6;
+	}
+
+	80% {
+		opacity: 0.2;
+	}
+
+	100% {
+		border-radius: 0%;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+/* AND NOW THE CLASS ITSELF */
+
+.CTA {
+	@extend %cta;
+}
+
+.ctas {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
+
+.theme_carolina {
+	.CTA {
+		font-size: 14px;
+		letter-spacing: 0.1em;
+		min-height: 3.2em;
+	}
+}

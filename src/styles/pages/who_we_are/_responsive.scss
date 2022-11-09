@@ -1,0 +1,225 @@
+@media (max-width: 1200px) {
+	#who_we_are {
+		.leadership .profile {
+			max-width: 30rem;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	#who_we_are {
+		.Hero .title {
+			font-size: 16rem;
+		}
+
+		.leadership {
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+
+	.Modal.modal_leader_profile {
+		.card {
+			max-height: 70vw;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation: portrait) {
+	#who_we_are {
+		.Hero .title {
+			font-size: 14rem;
+
+			span {
+				font-size: 50%;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	#who_we_are {
+		.Hero .title {
+			font-size: 10rem;
+
+			span {
+				font-size: 50%;
+			}
+		}
+	}
+}
+
+
+@media (max-width: $mobile_max_width) and (orientation: portrait) {
+	#who_we_are {
+		.Hero {
+			.Tank {
+				justify-content: flex-end;
+			}
+
+			.title {
+				bottom: 6rem;
+				font-size: 12rem;
+				position: relative;
+				text-shadow: 1px 1px 2px #001464, 1px 1px 2px #001464, 1px 1px 2px #001464;
+
+				span {
+					font-size: 50%;
+				}
+
+				em {
+					left: -0.2rem;
+				}
+			}
+		}
+
+		.intro {
+			.pars {
+				grid-template-columns: 1fr;
+			}
+
+			.stats {
+				justify-content: center;
+				margin: 6rem -2rem 0;
+				max-width: none;
+			}
+
+			.item {
+				flex: 0 0 calc(30% - 4rem);
+				margin: 0 2rem 3rem;
+				max-width: calc(30% - 4rem);
+
+				img {
+					max-height: 12vw;
+					max-width: 16vw;
+				}
+			}
+
+			.Video {
+				width: 100%;
+			}
+		}
+
+		.leadership {
+			.profile {
+				flex-basis: calc(50% - 1.5rem);
+				font-size: calc(max(8px, 2vw));
+				max-height: none;
+				max-width: calc(50% - 1.5rem);
+
+				.profile-wrapper {
+					height: auto;
+					max-height: 40vw;
+					width: 100%;
+				}
+
+				.text {
+					padding: 1.2em;
+
+					.name {
+						font-size: 2em;
+						margin-top: auto;
+					}
+
+					.title {
+						font-size: 1.4em;
+						margin-bottom: 0.8em;
+					}
+
+					.CTA {
+						font-size: calc(min(3vw, 2em));
+					}
+				}
+			}
+		}
+	}
+
+	.Modal.modal_leader_profile {
+		.card {
+			background-color: #FFF;
+			flex-flow: column nowrap;
+			height: 70vh;
+			max-height: 70vh;
+			max-width: 360px;
+		}
+
+		.profile_picture {
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+
+			&.desktop {
+				display: none;
+			}
+
+			&.mobile {
+				display: block;
+			}
+		}
+
+		.description {
+			background-color: transparent;
+			flex: 1 1 100%;
+			max-width: 100%;
+			overflow-y: auto;
+			padding: 19px;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: landscape) {
+	.Modal.modal_leader_profile .card {
+		flex-flow: row;
+		overflow-y: hidden;
+
+		.description {
+			overflow-y: scroll;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation: portrait) {
+	#who_we_are {
+		.Hero {
+
+			img,
+			picture {
+				object-position: 85% bottom !important;
+			}
+
+			.title {
+				bottom: 3rem;
+			}
+		}
+
+		.intro {
+			.row_container {
+				flex-basis: 100%;
+				margin-bottom: 3rem;
+				max-width: 100%;
+			}
+		}
+
+	}
+
+	.Modal.modal_leader_profile {
+		.description .name {
+			font-size: 4.2rem;
+		}
+	}
+}
+
+
+
+@media (max-width: $xs_max_width) and (orientation: landscape) {
+	#who_we_are {
+		.Hero .title {
+			font-size: 13rem;
+
+			span {
+				font-size: 40%;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+html[lang="fr"] {
+	#page_campsite {
+		.Hero {
+			.tagline {
+				em {
+					font-size: 4.6rem;
+				}
+			}
+		}
+	}
+}
+
+html[lang="es"] {}
+
+@media (max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#page_campsite {
+			.Hero {
+				.tagline {
+					em {
+						font-size: 4rem;
+					}
+				}
+			}
+		}
+	}
+}

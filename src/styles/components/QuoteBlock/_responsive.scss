@@ -1,0 +1,34 @@
+@media (max-width: $tablet_max_width) {
+	.QuoteBlock {
+		blockquote {
+			margin: 7rem $tankPadding;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait) {
+
+	.QuoteBlock {
+		blockquote {
+			border-radius: 0;
+			margin: 4rem auto;
+			padding: 6rem $tankPaddingPhone;
+
+			p {}
+
+			.signature {}
+		}
+	}
+
+}
+
+@media (max-width: $mobile_max_width) and (orientation: landscape) {}
+
+@media (max-width: $super_xs_max_width) {
+	.QuoteBlock {
+		blockquote {
+			padding-left: $tankPaddingXS;
+			padding-right: $tankPaddingXS;
+		}
+	}
+}

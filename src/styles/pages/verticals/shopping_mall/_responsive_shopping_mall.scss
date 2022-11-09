@@ -1,0 +1,47 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_shopping_mall {}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#page_vertical_shopping_mall {
+		.Lattice {
+			margin-bottom: 0;
+		}
+
+		section.SpielPoster {
+			background-position: 70% center;
+		}
+
+		.QuoteBlock blockquote {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_shopping_mall {
+		.Hero .title {
+			font-size: 10.8vw;
+
+			em {
+				font-size: 160%;
+				left: -0.2rem;
+				margin: 0 0 1rem;
+				position: relative;
+				white-space: normal;
+			}
+
+			span:not(.dim) {
+				font-size: 71.8%;
+			}
+		}
+
+		section.SpielPoster {
+			height: 40rem;
+		}
+
+		.Lattice {
+			margin-bottom: 0;
+		}
+	}
+}

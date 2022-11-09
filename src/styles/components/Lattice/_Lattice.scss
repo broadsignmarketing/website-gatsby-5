@@ -1,0 +1,12 @@
+.Lattice {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	column-gap: 6rem;
+	row-gap: 6rem;
+
+	.Pane {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+}

@@ -1,0 +1,49 @@
+@import "../base/dependencies";
+
+.Quote {
+	@include broadsignGradient;
+	border-radius: 8px;
+	padding: 2px;
+
+	.Quote_mark {
+		height: 3rem;
+		margin-bottom: 3rem;
+		object-fit: contain;
+		width: 4rem;
+	}
+
+	.Quote_inner {
+		background-color: #FFF;
+		border-radius: 6px;
+		height: 100%;
+		padding: 4rem;
+	}
+
+	.Quote_portrait {
+		border-radius: 50%;
+		height: 44px;
+		margin-right: 1em;
+		width: 44px;
+	}
+
+	p {
+		@include fontAlt;
+		color: $reflex;
+		font-size: 16px;
+		line-height: 180%;
+		margin-bottom: 2em;
+	}
+
+	cite {
+		@include fontReg;
+		align-items: center;
+		display: flex;
+		flex-flow: row nowrap;
+		font-size: 16px;
+		font-style: normal;
+
+		span {
+			max-width: calc(100% - 44px - 1em);
+		}
+	}
+}

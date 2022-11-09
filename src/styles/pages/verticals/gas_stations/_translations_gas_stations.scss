@@ -1,0 +1,82 @@
+html[lang="es"] {}
+
+html[lang="fr"] #page_vertical_gas_stations {
+	.Hero {
+		.title {
+			font-size: 10rem;
+
+			span:first-of-type {
+				font-size: 95.3%;
+				order: 1;
+			}
+
+			span:last-of-type {
+				font-size: 95.3%;
+				order: 2;
+			}
+
+			em {
+				font-size: 100%;
+				order: 3;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] #page_vertical_gas_stations {
+		.Hero {
+			.title {}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_gas_stations {
+		.Hero {
+			.text {
+				max-width: 100%;
+			}
+
+			.title {
+				font-size: 10rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_gas_stations {
+		.Hero {
+			.title {
+				font-size: 9rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_gas_stations {
+		.Hero {
+			.title {
+				font-size: 10rem;
+
+				span:first-of-type {
+					font-size: 76%;
+				}
+
+				span:last-of-type {
+					font-size: 54%;
+				}
+			}
+		}
+
+		section.show_gas_stations_spiel {
+			height: 34rem;
+
+			.stations_spiel {
+				width: 80%;
+			}
+		}
+	}
+}

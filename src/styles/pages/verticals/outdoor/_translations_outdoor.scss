@@ -1,0 +1,47 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_outdoor {
+		section.Hero {
+			.title {
+				font-size: 9rem;
+
+				span:first-of-type {
+					font-size: 84.8%;
+					order: 1;
+				}
+
+				span:last-of-type {
+					font-size: 134%;
+					line-height: 96%;
+					order: 2;
+				}
+
+				em {
+					font-size: 100%;
+					order: 3;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] #page_vertical_outdoor {
+		section.Hero {
+			.title {
+				font-size: 7rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_outdoor {
+		section.Hero {
+			.title {
+				font-size: 4.7rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_banking {
+		.Hero {
+			.text {
+				max-width: 75rem;
+			}
+
+			.title {
+				font-size: 14rem;
+
+				em {
+					font-size: 33%;
+				}
+
+				span:first-of-type {
+					color: #FFFF;
+					font-size: 30.3%;
+					margin-top: 0.4rem;
+				}
+
+				span:last-of-type {
+					color: #FFFF;
+					font-size: 41.5%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		#page_vertical_banking {
+			.Hero {
+				.title {}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_banking {
+			.Hero {
+				.title {
+					font-size: 12rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#page_vertical_banking {
+			.Hero {
+				.title {
+					font-size: 13.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_banking {
+			.Hero {
+				.title {
+					font-size: 6rem;
+
+					em,
+					span:first-of-type {
+						display: inline;
+						font-size: 64%;
+						max-width: 42rem;
+						white-space: normal;
+					}
+
+					span:last-of-type {
+						display: inline-block;
+						font-size: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@media (max-width: $tank_max_width) {
+	#page_campsite {}
+}
+
+@media (max-width: $tablet_max_width) {
+	#page_campsite {}
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_campsite {}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait),
+(max-width: $xs_max_width) {
+	#page_campsite {
+		#ebook_campsite_add_real_world_kick .inner {
+			background-position-x: -15%;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	#page_campsite {
+		.Hero {
+			.tagline {
+				em {
+					font-size: 4rem;
+				}
+			}
+		}
+
+		#ebook_campsite_add_real_world_kick .inner {
+			background-position-x: -75%;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_campsite {}
+}

@@ -1,0 +1,24 @@
+html[lang="fr"] {
+	#work_with_us_dsps {
+		.fold {
+			h2 {
+				font-size: 4.8rem;
+			}
+
+			.tagline {
+				font-size: 2.6rem;
+			}
+		}
+	}
+
+}
+
+html[lang="es"] {}
+
+@media (min-width:576px) {
+	#dooh_dsps {
+		.get_started h3 {
+			font-size: calc(min(3vw, 35px));
+		}
+	}
+}

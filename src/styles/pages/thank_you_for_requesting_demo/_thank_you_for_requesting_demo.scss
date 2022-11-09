@@ -1,0 +1,45 @@
+#thank_you_demo {
+	padding-bottom: 6rem;
+
+	.Hero {
+		margin-bottom: 3rem;
+	}
+
+	.Panel {
+		padding: 9rem 6rem;
+		text-align: center;
+
+		h1 {
+			@include fontSuperBold;
+			color: $mint;
+			font-size: 6.2rem;
+			line-height: 90%;
+			margin: 0 auto;
+			max-width: 75rem;
+		}
+
+		.blurb {
+			font-size: 2.6rem;
+			font-weight: bold;
+			margin-top: 3rem;
+		}
+
+		.cant_wait {
+			margin-bottom: 3rem;
+		}
+
+		hr {
+			margin: 4rem auto;
+			max-width: 75rem;
+		}
+	}
+
+	.resources {
+		h3 {
+			font-size: 3.2rem;
+			line-height: 120%;
+			margin-bottom: 2rem;
+			text-transform: none;
+		}
+	}
+}

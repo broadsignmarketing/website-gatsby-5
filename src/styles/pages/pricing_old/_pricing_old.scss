@@ -1,0 +1,244 @@
+$borderColor: #83DBE7;
+$green: #46d300;
+$headerBg: #E3F7FA;
+
+#page_pricing {
+	padding-bottom: 12rem;
+
+	section#intro {
+		margin-bottom: 6rem;
+		margin-top: 3rem;
+
+		h1 {
+			@include fontSuperBold;
+			color: $titleTeal;
+			font-size: 6.2rem;
+			line-height: 80%;
+			margin-bottom: 3.6rem;
+		}
+
+		p {
+			font-size: 2.2rem;
+		}
+	}
+
+	#hull {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	.table_zone {
+		flex: 0 0 calc(65% - 3rem);
+		margin: 0;
+		max-width: calc(65% - 3rem);
+		order: 1;
+	}
+
+	.form_zone {
+		background-color: $borderColor;
+		flex: 0 0 35%;
+		margin: 0;
+		max-width: 35%;
+		order: 2;
+		padding: 4rem;
+	}
+
+	table.features_list {
+		@include fontReg;
+		border-spacing: 1rem;
+		margin: 0 -1rem;
+		width: calc(100% + 2rem);
+
+		td,
+		th {
+			border-bottom: 1px solid $borderColor;
+			color: $blue;
+			padding: 0.6rem 1rem 1rem;
+			position: relative;
+			vertical-align: middle;
+
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+
+		thead {
+			th {
+				background-color: $headerBg;
+				border: 0 none;
+				margin: 0;
+				padding: 0.8rem 1rem 0.6rem;
+			}
+
+			td,
+			th {
+				font-size: 2rem;
+				line-height: 100%;
+				text-align: center;
+
+				&.left {
+					text-align: left;
+				}
+			}
+		}
+
+		tbody {
+			font-size: 14px;
+
+			th {
+				font-size: 1.8rem;
+				font-weight: bold;
+				line-height: 140%;
+				text-align: left;
+				vertical-align: middle;
+
+				&.unique_control {
+					position: relative;
+
+					.line {
+						border-bottom: 1px solid #83DBE7;
+						bottom: -1px;
+						left: 0;
+						position: absolute;
+						width: 120%;
+					}
+				}
+			}
+
+			td {
+
+				&.sub {
+					border-left: 0 none;
+					font-weight: normal;
+					padding-left: 0;
+				}
+
+				em {
+					font-style: inherit;
+					white-space: nowrap;
+				}
+
+				.included {
+					align-items: center;
+					color: $green;
+					cursor: default;
+					display: flex;
+					font-size: 2rem;
+					justify-content: center;
+					line-height: 80%;
+					position: relative;
+					text-align: center;
+					width: 100%;
+
+					&.dot {
+						font-size: 4rem;
+					}
+
+					&:after {
+						background: $green;
+						border-radius: 0.4rem;
+						color: #FFF;
+						content: "Included";
+						cursor: default;
+						font-size: 1.4rem;
+						left: 50%;
+						line-height: 80%;
+						opacity: 0;
+						padding: 0.4rem 0.8rem 0.2rem;
+						pointer-events: none;
+						position: absolute;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						transition: opacity 0.3s;
+					}
+
+					&:hover:after {
+						display: inline-block;
+						opacity: 1;
+						pointer-events: all;
+					}
+
+					&.extra:after {
+						content: "Extra";
+					}
+				}
+
+				&.give_right_border {
+					border-right: 1px solid $borderColor;
+				}
+
+				&.multi_rows {
+					border-left: 1px solid $borderColor;
+					border-right: 1px solid $borderColor;
+					text-align: center;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	p.note {
+		display: block;
+		font-size: 1.2rem;
+		margin-bottom: 0;
+		padding-bottom: 2rem;
+		padding-right: 1rem;
+		text-align: right;
+		width: 100%;
+	}
+
+	.form_zone {
+		h3 {
+			@include fontAltBold;
+			color: #FFF;
+			font-size: 3.6rem;
+			font-variant: unset;
+			font-weight: bold;
+			margin: 0 0 2rem;
+			text-transform: unset;
+		}
+
+		p {
+			@include fontAlt;
+			color: #FFF;
+			font-size: 1.8rem;
+			font-weight: bold;
+			margin-top: 0;
+		}
+
+		.Form {
+			padding-top: 2rem;
+
+			form {
+				.field {
+					label span {
+						@include fontAlt;
+
+						a {
+							color: $blue;
+							font-weight: bold;
+
+							&:hover {
+								color: #FFF;
+							}
+						}
+					}
+				}
+
+				.field.hs-fieldtype-booleancheckbox {
+					padding-top: 1rem;
+				}
+
+				.actions input[type="submit"] {
+					display: block;
+					margin: 0 auto;
+
+					&:focus {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}

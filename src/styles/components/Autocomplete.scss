@@ -1,0 +1,120 @@
+@import "../base/dependencies";
+
+.Autocomplete {
+	font-size: 1em;
+	width: 100%;
+
+	&:focus-visible {
+		border: 0 none;
+		outline: none;
+	}
+}
+
+.Autocomplete__query_field_wrapper {
+	z-index: 1;
+}
+
+.Autocomplete__query_field {}
+
+.Autocomplete__query_field_icon {}
+
+.Autocomplete__values_list {
+	background-color: #FFF;
+	font-size: 0.8em;
+	left: 0;
+	line-height: 100%;
+	max-height: 0vh;
+	opacity: 0;
+	overflow: hidden;
+	padding: 0 0 0.4em;
+	pointer-events: none;
+	position: absolute;
+	top: 100%;
+	transition: max-height 0.3s, opacity 0.3s, padding 0.3s;
+	width: 100%;
+	z-index: 10;
+
+	.inner {
+		max-height: 8em;
+		overflow-y: scroll;
+	}
+
+	&.active {
+		box-shadow: 4px 4px 12px rgba(#000, 0.4);
+		max-height: 50vh;
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+.Autocomplete__option {
+	appearance: none;
+	background: transparent none;
+	border: 0 none;
+	line-height: 120%;
+	margin: 0;
+	padding: 0.2em 1em;
+	text-align: left;
+	transition: background-color 0.3s;
+	width: 100%;
+
+	&:hover {
+		background-color: #DDD;
+	}
+}
+
+.Autocomplete__clear {
+	appearance: none;
+	background: radial-gradient(rgba(#FFF, 0.01) 0%, rgba(#FFF, 0) 100%);
+	border: 0 none;
+	color: $blue;
+	cursor: pointer;
+	font-size: 2em;
+	height: 100%;
+	padding: 0 0.2em 0 0.4em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: color 0.3s;
+	z-index: 100;
+
+	&:hover {
+		color: $teal;
+	}
+}
+
+.input_style_neon {
+	.Autocomplete__values_list {
+		background: linear-gradient(to right, #E43425 31.77%, #441FD8 71.88%, #0A26B8 100%);
+		border-radius: 0 0 4px 4px;
+		box-shadow: none;
+		padding: 0 2px;
+		transform: translateY(-4px);
+
+		.inner {
+			background-color: #FFF;
+			border-radius: 0 0 4px 4px;
+			padding: 0.4em 0;
+			transform: translateY(-2px);
+			width: 100%;
+		}
+	}
+}
+
+.input_style_gray {
+	.Autocomplete__values_list {
+		background: $soft none;
+		border-radius: 0 0 4px 4px;
+		box-shadow: none;
+		padding: 0 1px;
+		transform: translateY(-2px);
+
+		.inner {
+			background-color: #FFF;
+			border-radius: 0 0 4px 4px;
+			padding: 0.4em 0;
+			transform: translateY(-1px);
+			width: 100%;
+		}
+	}
+}

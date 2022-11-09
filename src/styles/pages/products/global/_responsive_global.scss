@@ -1,0 +1,195 @@
+@media (max-width: $tank_max_width) {
+	.page_product .Hero {
+		&.v2021 {
+			.Tank {
+				min-height: 430px;
+				transform: none;
+			}
+
+			.text {
+				flex: 0 1 50%;
+				max-width: 50%;
+			}
+
+			.img {
+				flex: 0 1 42%;
+				left: 6rem;
+			}
+
+			.person {
+				max-height: 330px;
+				max-width: 380px;
+				transform: scale(1.2);
+				transform-origin: center bottom;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	.page_product {
+		.Hero {
+			height: 50rem;
+			margin-bottom: 6rem;
+			max-height: 60vh;
+
+			.Tank {
+				.title {
+
+					em {
+						font-size: 100%;
+					}
+
+					span {
+						font-size: 50%;
+					}
+				}
+
+				.tagline {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	.page_product {
+		.Hero {
+			.Tank {
+				.content {
+					.title {
+
+						em {
+							font-size: 100%;
+						}
+
+						span {
+							left: -0.6rem;
+							position: relative;
+						}
+					}
+
+					.tagline {
+						font-size: 2.6rem;
+						margin-bottom: 2rem;
+						max-width: 100%;
+						width: 100%;
+					}
+				}
+			}
+
+			&.v2021 {
+				max-height: none;
+
+				.Tank {
+					flex-flow: column nowrap;
+					max-width: 100%;
+				}
+
+				.col {
+					flex: 1 1 auto;
+					max-width: 100%;
+				}
+
+				.text {
+					align-items: center;
+					text-align: center;
+				}
+
+				.img {
+					left: 0;
+					padding-top: 0;
+				}
+
+				.person {
+					max-height: none;
+					max-width: 80vw;
+					transform: none;
+					width: 100%;
+
+				}
+
+				h1 {
+					font-size: 9rem;
+				}
+
+				.tagline {
+					font-size: 2.8rem;
+					margin: 4rem auto;
+				}
+
+				.ctas {
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:landscape) {
+	.page_product .Hero {
+		max-height: none;
+
+		.Tank {
+			justify-content: center;
+			padding-bottom: 0;
+
+			.content {
+				.title {
+
+					em {
+						font-size: 100%;
+					}
+
+					span {
+						left: -0.6rem;
+						position: relative;
+					}
+				}
+
+				.tagline {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	.page_product {
+		.Hero {
+			&.v2021 {
+				.img {
+					left: 0;
+				}
+
+				.CTA {
+					white-space: normal;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	.page_product {
+		.Hero {
+			&.v2021 {
+				.ctas {
+					flex-flow: row wrap;
+				}
+
+				.CTA {
+
+					&.demo,
+					&.free_trial {
+						flex: 0 0 auto;
+						margin-bottom: 3rem;
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

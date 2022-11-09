@@ -1,0 +1,72 @@
+/* INPUT STYLES */
+
+// Wrapper for fields, autocompletes, inputs, selects etc. to give them a "neon" theme
+
+%input_wrapper_style_neon {
+	background: linear-gradient(to right, #E43425 31.77%, #441FD8 71.88%, #0A26B8 100%);
+	border-radius: 4px;
+	padding: 2px;
+
+	input,
+	select {
+		appearance: none;
+		background: rgba(#FFF, 1) none;
+		border: 0 none;
+		border-radius: 2px;
+		padding: 0.6em 0.6em 0.5em 0.6em;
+		transition: background-color 0.3s;
+		width: 100%;
+		z-index: 1;
+
+		&:focus {
+			/* background-color: rgba(#FFF, 0.9); */
+		}
+
+		&:focus,
+		&:focus-visible {
+			outline: none;
+		}
+
+		&.with_icon {
+			padding-left: 2em;
+		}
+
+		&.clearable {
+			padding-right: 2.4em;
+		}
+	}
+
+	.input_field_icon {
+		height: 80%;
+		left: 0.6em;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transform-origin: center;
+		transition: transform 0.3s;
+		width: 1em;
+		z-index: 10;
+	}
+
+	&.focused {
+		.input_field_icon {
+			transform: translateY(-50%) scale(1.2);
+		}
+	}
+}
+
+.input_style_neon {
+	@extend %input_wrapper_style_neon;
+}
+
+.input_style_gray {
+	@extend %input_wrapper_style_neon;
+	background: $soft none;
+	padding: 1px;
+	transform: translateY(-1px);
+
+	.inner {
+		transform: translateY(-1px);
+	}
+}

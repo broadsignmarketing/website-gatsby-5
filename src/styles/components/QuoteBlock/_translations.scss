@@ -1,0 +1,17 @@
+html[lang="fr"] {
+	.QuoteBlock blockquote .wrap {
+		&:after {
+			content: "\00BB";
+			font-size: 100%;
+			top: 0;
+		}
+
+		&:before {
+			content: "\00AB";
+			font-size: 100%;
+			top: 0;
+		}
+	}
+}
+
+html[lang="es"] {}

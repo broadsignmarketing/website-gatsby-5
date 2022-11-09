@@ -1,0 +1,63 @@
+@media (max-width: $tablet_max_width) {
+	#broadsign_control {
+		.DQuote {
+			blockquote {
+				padding-left: 38rem;
+			}
+
+			.LogosList .logos {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	#broadsign_control {
+		.DQuote {
+			&>img {
+				display: none;
+			}
+
+			blockquote {
+				padding-left: 20px;
+				padding-right: 20px;
+
+				.LogosList .logos {
+					grid-template-columns: 1fr 1fr 1fr;
+					row-gap: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:landscape) {
+	#broadsign_control {}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#broadsign_control {}
+}
+
+@media (max-width: $xs_max_width) {
+	#broadsign_control {
+		.Hero {
+			.CTA {
+				white-space: normal;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#broadsign_control {
+		.Hero .CTA.demo {
+			max-width: 100%;
+		}
+
+		.DQuote blockquote .LogosList .logos {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

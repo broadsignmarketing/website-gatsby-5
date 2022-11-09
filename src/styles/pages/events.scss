@@ -1,0 +1,128 @@
+@import "../base/dependencies";
+
+#events {
+	&:before {
+		background: linear-gradient(to bottom, #000 0%, #FFF 100%);
+		content: "";
+		height: 40px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+
+	h1 {
+		font-size: calc(min(14vw, 70px));
+	}
+
+	.hero {
+		.featured {
+			width: 100%;
+
+			.event_box__thumb {
+				height: 40vw;
+				max-height: 375px;
+			}
+		}
+	}
+
+	hr {
+		height: 1px;
+	}
+
+	.event_box {
+		cursor: pointer;
+		z-index: 1;
+
+		&__thumb {
+			box-shadow: 4px 4px 12px rgba(#000, 0.15);
+			height: 30vw;
+			max-height: 210px;
+			transition: box-shadow 0.3s ease;
+		}
+
+		img,
+		picture {
+			transition: transform 0.3s, opacity 0.3s ease !important;
+		}
+
+		&__title {
+			letter-spacing: 0;
+		}
+
+		.CTA {
+			align-items: center;
+			background-image: none;
+			border: 0 none;
+			box-shadow: none;
+			box-sizing: border-box;
+			color: transparent;
+			display: inline-flex;
+			font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+			font-weight: 700;
+			justify-content: center;
+			letter-spacing: 0.1em;
+			line-height: 120%;
+			overflow: hidden;
+			position: relative;
+			text-decoration: none !important;
+			text-shadow: none;
+			text-transform: uppercase;
+			transition: background-color 0.3s;
+			transition-duration: 0.3s;
+			white-space: nowrap;
+		}
+
+		&:hover {
+			z-index: 10;
+
+			.event_box__thumb {
+				box-shadow: 6px 6px 16px rgba(#000, 0.3);
+			}
+
+			img,
+			picture {
+				transform: scale(1.2);
+			}
+
+			.CTA {
+				background-color: $cerulean !important;
+			}
+		}
+	}
+}
+
+@media(min-width:$sm) {
+	#events {
+		.hero {
+			.featured {
+
+				.event_box__title,
+				.event_box__date_wrapper,
+				.event_box__location {
+					max-width: calc(100% - 180px);
+					width: 100%;
+				}
+
+				.CTA {
+					transform: translateY(-100%) translateY(-24px);
+				}
+			}
+		}
+
+
+		h1 {
+			font-size: calc(min(7vw, 70px));
+		}
+
+
+		.event_box {
+			&__thumb {
+				height: 20vw;
+			}
+		}
+	}
+}
+
+@media(min-width:$md) {}

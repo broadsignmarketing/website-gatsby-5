@@ -1,0 +1,25 @@
+html[lang="fr"] #broadsign_publish {}
+
+html[lang="es"] #broadsign_publish {}
+
+html[lang="de"] #broadsign_publish {}
+
+@media (max-width: $tablet_max_width) {}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $xs_max_width) {
+	html[lang="es"] #broadsign_publish {
+		.Sell_smarter {
+			h3 {
+				font-size: 3.6rem;
+			}
+		}
+
+	}
+
+	html[lang="de"] #broadsign_publish {
+		.Hero h1 span {
+			font-size: 70%;
+		}
+	}
+}

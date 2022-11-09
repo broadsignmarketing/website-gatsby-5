@@ -1,0 +1,19 @@
+@import "../base/dependencies";
+
+.BroadsignAdsCarousel {
+	.p-button.p-button-icon-only {
+		.p-button-icon {
+			font-size: 16px;
+		}
+	}
+}
+
+.BroadsignAdsCarousel__item {
+	pointer-events: none;
+	transition: opacity 0s ease 0.6s;
+
+	&.active {
+		pointer-events: all;
+		transition: opacity 0.6s ease 0s;
+	}
+}

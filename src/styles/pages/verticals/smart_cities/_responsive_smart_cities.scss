@@ -1,0 +1,52 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_smart_cities {}
+}
+
+@keyframes animateTextShadow {
+	0% {
+		text-shadow: 2px 2px 4px $blue, 2px 2px 4px $blue, 2px 2px 4px $blue, 2px 2px 4px $blue;
+	}
+
+	40% {
+		text-shadow: 2px 2px 4px darken($red, 35%), 2px 2px 4px darken($red, 35%), 2px 2px 4px darken($red, 35%), 2px 2px 4px darken($red, 35%);
+	}
+
+	70% {
+		text-shadow: 2px 2px 4px darken($teal, 30%), 2px 2px 4px darken($teal, 30%), 2px 2px 4px darken($teal, 30%), 2px 2px 4px darken($teal, 30%);
+	}
+
+	100% {
+		text-shadow: 2px 2px 4px $blue, 2px 2px 4px $blue, 2px 2px 4px $blue, 2px 2px 4px $blue;
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	@media (hover:hover) and (pointer:fine) {
+		@supports(background-attachment: fixed) {
+			#page_vertical_smart_cities {
+				.SpielPoster {
+					background-attachment: fixed;
+				}
+			}
+		}
+	}
+
+	#page_vertical_smart_cities {
+		.SpielPoster {
+			animation: animateTextShadow 6s linear 0s infinite normal forwards;
+			background-position: right center;
+		}
+
+		.QuoteBlock blockquote {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_smart_cities {
+		section.Hero .title {
+			font-size: 25vw;
+		}
+	}
+}

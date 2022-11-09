@@ -1,0 +1,39 @@
+@import "../base/dependencies";
+
+#global.hide_all {
+
+	&>header,
+	&>footer {
+		display: none;
+	}
+}
+
+#global.white_screen {
+	background-color: #FFF;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+
+	&>header,
+	&>main,
+	&>footer {
+		display: none;
+	}
+}
+
+#global.hide_header {
+	&>header {
+		display: none;
+	}
+
+	&>main {
+		padding-top: 0;
+	}
+}
+
+main {
+	padding-top: $headerHeight;
+	transition: padding-top $headerReduceTransitionTime;
+}

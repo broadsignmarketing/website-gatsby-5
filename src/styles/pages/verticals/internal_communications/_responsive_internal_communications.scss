@@ -1,0 +1,51 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_internal_communications {
+		.Hero {
+			.title {}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_internal_communications {
+		.Hero {
+			.title {
+				font-size: 16vw;
+
+				&.mobile {
+					display: flex;
+				}
+
+				&:not(.mobile) {
+					display: none;
+				}
+
+				em {
+					margin: 0.4rem 0 0.8rem;
+					white-space: normal;
+				}
+
+				span:first-of-type {
+					font-size: 52%;
+				}
+
+				span:last-of-type {
+					font-size: 43%;
+				}
+			}
+		}
+
+		section.showVisitorSpiel {
+			align-items: center;
+			background-position-x: 60%;
+			height: 30rem;
+			padding: 0;
+
+			.show_visitor {
+				max-width: 44rem;
+				text-shadow: 2px 2px 4px $blue, 2px 2px 4px $blue, 2px 2px 4px $blue, 2px 2px 4px $blue;
+				width: 80%;
+			}
+		}
+	}
+}

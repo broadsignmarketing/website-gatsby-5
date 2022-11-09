@@ -1,0 +1,18 @@
+@media (max-width: $mobile_max_width) {
+	.VerticalShinDemoOffer {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait) {}
+
+@media (max-width: $mobile_max_width) and (orientation: landscape) {}
+
+@media (max-width: $xs_max_width) and (orientation: portrait) {
+	.VerticalShinDemoOffer {
+		p {
+			max-width: 80%;
+		}
+	}
+}

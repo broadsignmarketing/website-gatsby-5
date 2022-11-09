@@ -1,0 +1,195 @@
+#iab_research_launch_event {
+	background-image: linear-gradient(to bottom, #01EF9F 0%, #04D5DF 100%);
+	z-index: 1;
+
+	.hull {
+		padding-top: 6rem;
+
+		.info {
+			align-items: flex-start;
+			flex-basis: calc(50% - 4.5rem);
+			max-width: calc(50% - 4.5rem);
+
+			.tagline {
+				@include fontSuperBold;
+				color: #FFF;
+				font-size: 5.2rem;
+				line-height: 90%;
+				margin-bottom: 4rem;
+				margin-top: 1.2rem;
+
+				.dim {
+					color: $light;
+					line-height: inherit;
+				}
+			}
+
+			h3 {
+				font-size: 2.4rem;
+				font-variant: normal;
+				margin-bottom: 3rem;
+				text-transform: none;
+			}
+
+			p {
+				@include fontReg;
+				font-size: 2.4rem;
+				margin-bottom: 3rem;
+			}
+
+			ul {
+				li {
+					@include fontReg;
+					display: inline-block;
+					font-size: 1.8rem;
+					list-style-type: none;
+					margin-bottom: 2rem;
+					padding-left: 2rem;
+					text-indent: -2rem;
+
+					&:before {
+						border-color: transparent transparent transparent $blue;
+						border-style: solid;
+						border-width: 0.7rem 0 0.7rem 1.2rem;
+						content: "";
+						display: inline-block;
+						height: 0;
+						margin-right: 0.8rem;
+						position: relative;
+						top: 1px;
+					}
+				}
+			}
+
+			.footer_img {
+				display: none;
+			}
+		}
+
+		.form {
+			background-color: #0500A9;
+			border-radius: 8rem;
+			padding: 6rem;
+
+			h3 {
+				color: #FFF;
+				font-size: 2.4rem;
+				font-variant: normal;
+				font-weight: normal;
+				margin-bottom: 2rem;
+				text-transform: none;
+				width: 100%;
+			}
+
+			.Form form {
+				.field {
+					width: 100%;
+
+					label {
+						font-size: 1.4rem;
+						font-weight: normal;
+						margin-bottom: 0.8rem;
+					}
+
+					.input input {
+						border-bottom-width: 1px;
+						font-size: 2rem;
+					}
+				}
+
+				.actions {
+					margin-top: 2rem;
+					text-align: center;
+
+					input {
+						margin: 0 auto;
+					}
+				}
+
+				select option {
+					background-color: $midnightBlue;
+				}
+			}
+		}
+	}
+
+	.footer_img {
+		bottom: -4px;
+		display: flex;
+		height: 30rem;
+		justify-content: center;
+		margin-top: 5rem;
+		max-width: 100%;
+		position: absolute;
+		width: auto;
+
+		img,
+		picture {
+			flex: 0 0 100%;
+			max-width: 100% !important;
+		}
+	}
+
+	&.thank_you {
+		background: #FFF none;
+
+		.hull {
+			background-image: linear-gradient(to bottom, #01EF9F 0%, #04D5DF 100%);
+			padding-top: 18rem;
+			text-align: center;
+			z-index: 1;
+
+			h2 {
+				@include fontReg;
+				font-size: 4.2rem;
+				font-variant: normal;
+				margin: 0 auto 3rem;
+				max-width: 62rem;
+				text-transform: none;
+			}
+
+			.CTA {
+				display: inline-block;
+				margin: 0 auto;
+			}
+		}
+
+		.footer_img {
+			margin-top: 0;
+		}
+
+		.resources {
+			background-color: #FFF;
+			padding-bottom: 9rem;
+			padding-top: 6rem;
+			z-index: 10;
+
+			h3 {
+				@include fontSuperBold;
+				margin-bottom: 3rem;
+				text-align: left;
+			}
+
+			.QuickResource {
+				.caption {
+					background-color: #FFF;
+					font-size: 1.8rem;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				&:hover {
+					box-shadow: none;
+				}
+
+				img {
+					border-radius: 1rem;
+				}
+			}
+		}
+	}
+}
+
+#Footer {
+	z-index: 10;
+}

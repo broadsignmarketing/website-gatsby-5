@@ -1,0 +1,13 @@
+@media (max-width: $tablet_max_width) {}
+
+@media (max-width: $mobile_max_width) {
+	section.VerticalForm {
+		background-color: $ultra;
+
+		.form_zone {
+			padding-bottom: 5rem;
+			padding-top: 5rem;
+			width: 100%;
+		}
+	}
+}

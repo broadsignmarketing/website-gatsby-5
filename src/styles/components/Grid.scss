@@ -1,0 +1,140 @@
+@use "sass:math";
+@import "../base/dependencies";
+
+.Grid.Row {
+	align-items: stretch;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+
+	&>.Column {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+.Grid .Column {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	.Grid.Row {
+		@for $i from 1 through 12 {
+
+			&.cols-#{$i} {
+				&>.Column {
+					@include col($i);
+				}
+
+				&.no_gap>.Column {
+					$width: #{math.div(100%, $i)};
+					flex: 0 0 $width;
+					max-width: $width;
+				}
+			}
+		}
+	}
+
+	.Grid .Column {}
+}
+
+@media (min-width: $desktop_min_width) {
+	.Grid.Row {}
+
+	.Grid .Column {}
+}
+
+.theme_carolina {
+	.Grid.Row {
+		align-items: stretch;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		width: 100%;
+
+		&>.Column {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.Grid .Column {
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
+@media (min-width:$sm) {
+	.theme_carolina {
+		.Grid.Row.bp-sm {
+			@for $i from 1 through 12 {
+
+				&.cols-#{$i} {
+					&>.Column {
+						$width: #{math.div(100%, $i)};
+						$gutter: #{math.div(3 * ($i - 1), $i)}+"rem";
+						flex: 0 0 calc(#{$width} - #{$gutter});
+						max-width: calc(#{$width} - #{$gutter});
+					}
+
+					&.no_gap>.Column {
+						$width: #{math.div(100%, $i)};
+						flex: 0 0 $width;
+						max-width: $width;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:$md) {
+	.theme_carolina {
+		.Grid.Row.bp-md {
+			@for $i from 1 through 12 {
+
+				&.cols-#{$i} {
+					&>.Column {
+						$width: #{math.div(100%, $i)};
+						$gutter: #{math.div(3 * ($i - 1), $i)}+"rem";
+						flex: 0 0 calc(#{$width} - #{$gutter});
+						max-width: calc(#{$width} - #{$gutter});
+					}
+
+					&.no_gap>.Column {
+						$width: #{math.div(100%, $i)};
+						flex: 0 0 $width;
+						max-width: $width;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:$lg) {
+	.theme_carolina {
+		.Grid.Row.bp-lg {
+			@for $i from 1 through 12 {
+
+				&.cols-#{$i} {
+					&>.Column {
+						$width: #{math.div(100%, $i)};
+						$gutter: #{math.div(3 * ($i - 1), $i)}+"rem";
+						flex: 0 0 calc(#{$width} - #{$gutter});
+						max-width: calc(#{$width} - #{$gutter});
+					}
+
+					&.no_gap>.Column {
+						$width: #{math.div(100%, $i)};
+						flex: 0 0 $width;
+						max-width: $width;
+					}
+				}
+			}
+		}
+	}
+}

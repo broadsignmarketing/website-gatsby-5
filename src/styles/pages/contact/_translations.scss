@@ -1,0 +1,42 @@
+html[lang="fr"] {
+	#contact {
+		.Hero .column:nth-of-type(2) {
+			max-width: 40rem;
+			padding-left: 3rem;
+		}
+	}
+}
+
+html[lang="es"] {}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#contact {
+			.Hero {
+				.column:nth-of-type(2) {
+					max-width: 100%;
+					padding-left: 0;
+				}
+
+				.ctaBox h3 em {
+					white-space: normal;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#contact {
+			.Hero .ctaBox h3 {
+				padding-right: 0%;
+
+				em {
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

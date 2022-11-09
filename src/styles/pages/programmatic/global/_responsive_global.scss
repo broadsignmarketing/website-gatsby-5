@@ -1,0 +1,343 @@
+@media (max-width: $xl_max_width) {
+	.page_programmatic {
+
+		.fold,
+		.shin {
+			.blobs {
+				&.left {
+					left: calc(50% - 58vw);
+					top: 0;
+				}
+
+				&.right {
+					right: calc(50% - 54vw);
+				}
+			}
+		}
+	}
+}
+
+@media (max-height:$mobile_max_width) and (orientation:portrait),
+(max-width:$xs_max_width) and (orientation:landscape) {}
+
+@media (max-width: $tablet_max_width) {
+	.page_programmatic {
+		.get_started {
+			.hull {
+				border-radius: 0 2rem 2rem 0;
+				left:#{-$tankPadding};
+				max-width: 60%;
+				padding: 6rem 10% 6rem $tankPadding;
+			}
+
+			.product {
+				width: 80%;
+			}
+
+			p {
+				margin-bottom: 3rem;
+			}
+
+			.build_excitement {
+				border-radius: 2rem 0 0 2rem;
+				max-width: 55%;
+				width: 70rem;
+			}
+		}
+
+		.video .Video {
+			margin-bottom: 9rem;
+		}
+
+		.shin .blobs.left {
+			left: calc(50% - 50vw);
+		}
+
+		&.page_work_with_us {
+			.hull {
+				padding-bottom: 24rem;
+				padding-top: 12rem;
+			}
+
+			.form {
+				h3 {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (min-width: 600px),
+(max-width: $tablet_max_width) and (min-width: 575px) and (orientation:landscape) {
+	.page_programmatic {
+		/* .Billboard#programmatic_u {
+			padding-right: 3rem;
+
+			.person {
+				left: 4%;
+				width: 30% !important;
+			}
+
+			.badge {
+				transform: translate(-60%, -50%);
+			}
+
+			.content {
+				max-width: 36%;
+			}
+		} */
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	.page_programmatic {
+		.blobs {
+			max-height: 50rem;
+		}
+
+		.fold {
+			&>.Tank {
+				top: 6rem;
+			}
+
+			.blobs {
+				&.left {
+					bottom: 0;
+					top: auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $xs_max_width) {
+	.page_programmatic {
+		.fold {
+			align-items: center;
+
+			&>.Tank {
+				margin: 0;
+				max-width: 52rem;
+				text-align: center;
+				top: 0;
+			}
+
+			hr {
+				margin: 9rem 0;
+			}
+		}
+
+		.why_dooh {
+			h2 {
+				margin-bottom: 6rem;
+			}
+
+			.ImgHat {
+				max-width: 30%;
+
+				&>.Row>img {
+					max-width: 60%;
+				}
+			}
+		}
+
+		.get_started {
+			.hull {
+				max-width: calc(100% + #{$tankPaddingPhone});
+				padding-bottom: 18rem;
+				padding-right: 3rem;
+				width: calc(100% + #{$tankPaddingPhone});
+			}
+
+			.product {
+				margin-left: 10rem;
+				margin-right: auto;
+				max-width: 80rem;
+				width: calc(100% - 10rem);
+			}
+
+			h2,
+			.line {
+				margin-left: 10rem;
+				margin-right: auto;
+				max-width: 80rem;
+				width: calc(100% - 10rem);
+			}
+
+			p {
+				font-size: 2.2rem;
+			}
+
+			.build_excitement {
+				margin-top: -12rem;
+				max-height: 50rem;
+				max-width: 100%;
+				position: relative !important;
+				right:#{-$tankPaddingPhone};
+				top: 0;
+				transform: none;
+				width: 100%;
+			}
+		}
+
+		.dsps,
+		.brands {
+			.LogosList {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+
+		.video .Video {
+			margin: 6rem auto 12rem;
+			width: 100%;
+		}
+
+		#sellers_brands .logo:last-child {
+			display: none;
+		}
+
+		.shin {
+			padding-top: 24rem;
+
+			.Row {
+				flex-direction: column;
+			}
+
+			.column {
+				flex: 0 0 auto;
+				max-width: 100%;
+			}
+
+			.tagline {
+				font-size: 4.4rem;
+				margin-bottom: 6rem;
+				max-width: 100%;
+			}
+
+			p {
+				max-width: 100%;
+			}
+
+			.form {
+				padding-left: 0;
+
+				.Form {
+					max-width: 100%;
+				}
+			}
+		}
+
+		&.page_work_with_us {
+			display: flex;
+			flex-flow: column nowrap;
+
+			.blobs.left {
+				margin-top: 6rem;
+				order: 2;
+				position: relative !important;
+				width: 80%;
+			}
+
+			.hull {
+				order: 1;
+				padding-bottom: 0;
+				padding-top: 20rem;
+
+				h2 {
+					margin-bottom: 4rem;
+				}
+			}
+
+			.Row {
+				flex-direction: column;
+			}
+
+			.column {
+				flex: 1 1 auto;
+				max-width: 100%;
+				padding-left: 0;
+			}
+
+			.form {
+				margin-top: 3rem;
+				max-width: 100%;
+			}
+
+			.form .Form {
+				max-width: 100%;
+			}
+
+			.shin .tagline {
+				font-size: 3.2rem;
+			}
+		}
+
+		.submitted-message {
+			margin-bottom: 6rem;
+
+			p,
+			a {
+				font-size: 2.2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	.page_programmatic {
+		.why_dooh {
+			.column {
+				margin-bottom: 6rem;
+			}
+
+			h3 {
+				font-size: 3rem;
+			}
+
+			p {
+				font-size: 2.2rem;
+			}
+
+			.ImgHat {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+
+		.brands {
+			margin-bottom: 6rem;
+
+			.logo {
+				padding: 0 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $super_xs_max_width) and (orientation:portrait) {
+	.page_programmatic {
+		.get_started {
+			.hull {
+				border-radius: 0;
+			}
+
+			.product {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				width: 100%;
+			}
+
+			h2,
+			.line {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

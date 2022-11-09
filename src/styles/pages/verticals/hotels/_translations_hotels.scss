@@ -1,0 +1,71 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_hotels {
+		.Hero {
+			.title {
+				font-size: 5.6rem;
+
+				span:first-of-type {
+					font-size: 106.2%;
+					margin-top: 0.4rem;
+				}
+
+				span:last-of-type {
+					font-size: 166%;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		#page_vertical_hotels {
+			.Hero {
+				.title {
+					span:last-of-type {
+						margin-top: 0.4rem;
+					}
+				}
+			}
+
+			section.SpielPoster {
+				height: 40rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_hotels {
+			.Hero {
+				.title {}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_hotels {
+			.Hero {
+				.title {}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_hotels {
+			.Hero {
+				.title {
+					font-size: 3.8rem;
+				}
+			}
+		}
+	}
+}

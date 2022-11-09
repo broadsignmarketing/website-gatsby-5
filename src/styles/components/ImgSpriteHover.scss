@@ -1,0 +1,39 @@
+@import "../base/dependencies";
+
+.ImgSpriteHover {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	.sprite {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity 0.3s ease;
+	}
+
+	.normal {
+		z-index: 1;
+	}
+
+	.active {
+		opacity: 0;
+		z-index: 10;
+	}
+
+	img,
+	picture {
+		object-fit: contain;
+	}
+
+	&:hover,
+	&:focus
+
+	/* , &.active */
+		{
+		.active {
+			opacity: 1;
+		}
+	}
+}

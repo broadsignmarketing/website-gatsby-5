@@ -1,0 +1,33 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+
+	#page_vertical_smart_cities {
+		section.Hero {
+			.title {
+
+				span:first-of-type {
+					font-size: 40%;
+				}
+
+				em {}
+
+				span:last-of-type {
+					font-size: 56%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_smart_cities {
+		section.Hero {
+			.text {
+				.title {
+					font-size: 16rem;
+				}
+			}
+		}
+	}
+}

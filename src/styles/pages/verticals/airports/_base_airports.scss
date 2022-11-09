@@ -1,0 +1,68 @@
+#page_vertical_airports {
+	.Hero {
+		.text {
+			max-width: 76rem;
+		}
+
+		.title {
+			display: flex;
+			flex-flow: column nowrap;
+			font-size: 8rem;
+
+			em {
+				line-height: 66%;
+			}
+
+			span:first-of-type {
+				font-size: 123.6%;
+				line-height: 90%;
+			}
+
+			span:last-of-type {
+				font-size: 106.5%;
+			}
+		}
+	}
+
+	section.showVisitorSpiel {
+		@include bgCover;
+		background-image: url("../../../img/bg/vertical_airports_spiel_banner_bg.jpg");
+		display: flex;
+		height: 49rem;
+		justify-content: flex-start;
+		overflow: hidden;
+		position: relative;
+
+		.Tank {
+			align-items: center;
+			display: flex;
+		}
+
+		.show_visitor {
+			display: flex;
+			flex-flow: column;
+			padding-right: 6rem;
+			width: 50%;
+
+			h3 {
+				color: white;
+				font-size: 3rem;
+				margin-bottom: 3rem;
+			}
+
+			p {
+				color: white;
+				font-size: 2.2rem;
+			}
+		}
+	}
+
+	section.CardPanel {
+		.title {
+			h3 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+@media (max-width: $tablet_max_width) {
+	@media (hover:hover) and (pointer:fine) {
+		@supports(background-attachment: fixed) {
+			#page_vertical_cinema {
+				section.SpielPoster {
+					background-attachment: fixed;
+				}
+			}
+		}
+	}
+
+	#page_vertical_cinema {
+		.Hero {
+			.text {
+				max-width: 75rem;
+			}
+
+			.title span:first-of-type {
+				font-size: 44%;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	#page_vertical_cinema {
+		.Hero .title {
+			font-size: 20vw;
+		}
+	}
+}

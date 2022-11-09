@@ -1,0 +1,39 @@
+#page_vertical_banking {
+	.Hero {
+		.title {
+			color: #E3F7FA;
+			display: flex;
+			flex-flow: column nowrap;
+			font-size: 8.8rem;
+
+			em {
+				font-size: 68.4%;
+			}
+
+			span:first-of-type {
+				color: #FFFF;
+				font-size: 83.8%;
+			}
+
+			span:last-of-type {
+				color: #FFF;
+				font-size: 100%;
+			}
+		}
+	}
+
+	section.SpielPoster {
+		height: 55rem;
+		max-height: 70vh;
+	}
+}
+
+@media (hover:hover) and (pointer:fine) {
+	@supports(background-attachment: fixed) {
+		#page_vertical_banking {
+			section.SpielPoster {
+				background-attachment: fixed;
+			}
+		}
+	}
+}

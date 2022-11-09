@@ -1,0 +1,503 @@
+@include animThisWayRight;
+
+#ooh_media_software_page {
+	.Hero {
+		background-image: linear-gradient(to right, #0A26B8 0%, #441FD8 24.53%, #E43425 76.04%, #FFC909 122.69%);
+		border-bottom-right-radius: 300px;
+		height: 68rem;
+		margin-bottom: 0;
+
+		.person {
+			$w: 65.7rem;
+			$h: 65.8rem;
+			height: $h !important;
+			right: 6rem;
+			width: $w !important;
+		}
+
+		.d {
+			display: none;
+		}
+
+		.content {
+			width: 46%;
+		}
+
+		.title {
+			font-size: 28rem;
+
+			span {
+				@include fontMed;
+				font-size: 40%;
+				white-space: nowrap;
+			}
+		}
+
+		p {
+			color: white;
+		}
+
+		.intro {
+			margin-top: 3rem;
+		}
+
+		.description {
+			@include fontLighter;
+		}
+	}
+
+	.sell_more {
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+
+		p {
+			text-align: center;
+		}
+
+		h2 {
+			@include fontReg;
+			margin: 7rem 0 3rem 0;
+		}
+
+		.description_wrapper {
+			align-items: center;
+			display: flex;
+			flex-flow: column;
+		}
+
+		.sell_more_img_wrapper {
+			display: flex;
+			justify-content: center;
+			margin: 4rem 0 4rem 0;
+			width: 75%;
+
+			.desktop_img {
+				width: 100%;
+			}
+
+			.mobile_img {
+				display: none;
+			}
+		}
+
+		.ctas {
+			justify-content: space-evenly;
+			margin: 3rem 0 6rem 0;
+			width: 100%;
+
+			.CTA {
+				align-items: flex-start;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				flex-flow: column;
+				width: 40%;
+
+				&.gradient {
+					background: linear-gradient(to right, #2723C8 0%, #E43425 100%);
+				}
+
+				&:hover {
+					.inner p {
+						-webkit-text-fill-color: white;
+					}
+				}
+
+				p {
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-image: linear-gradient(to right, #E43425 9.53%, #441FD8 76.04%, #0A26B8 122.69%);
+					background-size: 100%;
+					text-align: left;
+					text-transform: uppercase;
+					-webkit-text-fill-color: transparent;
+					-moz-text-fill-color: transparent;
+				}
+
+				.type_sales {
+					@include fontLighter;
+				}
+
+				.product_name {
+					@include fontBold;
+				}
+
+				.inner {
+					padding: 2rem 4rem;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.sell_programmatically {
+		display: flex;
+		justify-content: center;
+
+		.wrapper {
+			background: $blue;
+			border-radius: 7px;
+			overflow: hidden;
+			padding: 7rem 0;
+			width: 95%;
+		}
+
+		.content_wrapper {
+			align-items: center;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			z-index: 1;
+
+		}
+
+		.content {
+			align-items: center;
+			display: flex;
+			flex-flow: column;
+			width: 51%;
+		}
+
+		h2 {
+			@include fontBold;
+			color: white;
+			margin-bottom: 1rem;
+		}
+
+		.description {
+			@include fontLighter;
+			color: white;
+			max-width: 60rem;
+			text-align: center;
+		}
+
+		.ctas {
+			justify-content: space-evenly;
+			margin-top: 5rem;
+			width: 100%;
+
+		}
+
+		a {
+			border-radius: 6px;
+			display: flex;
+			justify-content: center;
+			overflow: hidden;
+			width: 100%;
+
+			img {
+				transition: border-radius 0.6s, background-color 0.6s, box-shadow 0.6s;
+				width: 100%;
+			}
+
+			img:hover {
+				background-color: hsla(0, 0%, 100%, 0.2);
+				border-radius: 5px;
+				box-shadow: inset 0 0 2rem #FFF;
+			}
+		}
+
+		.gradient_square {
+			background: linear-gradient(115.41deg, #00C8FF -2.16%, #0500A9 27.56%, red 74.69%, #EE6800 118.13%);
+			border-radius: 360.5px;
+			filter: blur(150px);
+			height: 90%;
+			left: 30%;
+			position: absolute;
+			top: 5%;
+			-webkit-transform: rotate(15deg);
+			transform: rotate(15deg);
+			width: 43%;
+		}
+	}
+
+
+	.manage_all_things_container {
+		display: flex;
+		flex-flow: column;
+
+		.title_wrapper {
+			align-items: center;
+
+			display: flex;
+			flex-flow: column;
+			padding: 5rem 0 0 0;
+
+			div {
+				max-width: none;
+			}
+
+			h2 {
+				align-items: center;
+				display: flex;
+				margin-bottom: 1rem;
+
+				text-align: center;
+				white-space: nowrap;
+
+				.title_1 {
+					padding-right: 1.5rem;
+				}
+
+				.loop_container {
+					color: transparent;
+					display: flex;
+					height: 100%;
+					width: 145px;
+
+					.text_loop_element {
+						margin-top: 0;
+						opacity: 0;
+						position: absolute;
+						text-align: left;
+						transition: opacity 0.8s;
+						will-change: opacity;
+
+						&.active {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.light {
+				@include fontLighter;
+				color: $darkGrey;
+				line-height: 75%;
+			}
+
+			.bold {
+				@include fontBolder;
+				color: $midnightBlue;
+			}
+
+			p {
+				color: $darkGrey;
+				margin-top: 3rem;
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+		.product_container {
+			display: flex;
+			flex-flow: column;
+
+			&.mobile {
+				display: none;
+			}
+
+			&.desktop {
+				display: inherit;
+			}
+
+			.product_wrapper {
+				margin: 8rem 0 8rem 0;
+
+				.lead p {
+					width: 75%;
+
+					&.description {
+						color: $darkGrey;
+					}
+				}
+
+				&.modernize {
+					a:hover {
+						.arrow {
+							animation: thisWayRight 1.4s linear 0s infinite;
+						}
+					}
+				}
+
+				&.unlock {
+					a:hover {
+						.arrow {
+							animation: thisWayRight 1.4s linear 0s infinite;
+						}
+					}
+				}
+
+				.title {
+					line-height: 120%;
+					margin-bottom: 2rem;
+				}
+
+				.description {
+					@include fontLighter;
+				}
+
+				a {
+					@include fontBold;
+					color: $midnightBlue;
+					margin-top: 6rem;
+					text-transform: uppercase;
+
+					img {
+						padding-left: 2rem;
+					}
+				}
+			}
+		}
+	}
+
+	.platform_container {
+		padding: 4rem 0;
+
+		.band {
+			background-color: $blue;
+			height: 45rem;
+			position: absolute;
+			width: 100%;
+		}
+
+		.intro {
+			margin-bottom: 4rem;
+
+			.title_container {
+				align-items: center;
+				display: flex;
+				flex-flow: column;
+				margin-top: 5rem;
+
+				.title_wrapper {
+					align-items: center;
+					display: flex;
+					flex-flow: column;
+					padding: 0 0 3.5rem 0;
+
+					h2 {
+						color: white;
+						text-align: center;
+					}
+
+					.light {
+						@include fontLighter;
+						color: white;
+						line-height: 75%;
+					}
+
+					.bold {
+						@include fontBold;
+					}
+				}
+
+				p {
+					color: white;
+					text-align: center;
+					width: 45%;
+				}
+			}
+		}
+
+		.platform_content_container {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+
+			.Panel {
+				align-items: flex-start;
+				background-color: white;
+				border-radius: 30px;
+				box-shadow: rgba(16, 27, 30, 0.4) -1px 4px 26px;
+				display: flex;
+				flex-basis: calc(49% - 1.5rem);
+				flex-flow: column;
+				justify-content: space-between;
+				max-width: calc(49% - 1.5rem);
+				padding: 6rem;
+			}
+
+			.title {
+				@include fontBold;
+				display: flex;
+				flex-flow: column;
+				margin-bottom: 1rem;
+				text-transform: inherit;
+			}
+
+			.product {
+				@include fontReg;
+				margin-bottom: 3rem;
+				text-transform: uppercase;
+
+				h2 {
+					display: flex;
+					flex-flow: column;
+				}
+			}
+
+			.description {
+				@include fontReg;
+				color: $darkGrey;
+				margin-bottom: 2rem;
+			}
+
+			.features {
+				left: -2rem;
+				margin-bottom: 2rem;
+
+				p {
+					@include fontReg;
+					color: $darkGrey;
+					line-height: 155%;
+					padding-left: 2rem;
+					text-indent: -1rem;
+				}
+			}
+		}
+
+		.ctas {
+			margin-top: 5rem;
+			width: 90%;
+
+			.CTA {
+				align-items: flex-start;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				flex-flow: column;
+				width: 100%;
+
+				&.gradient {
+					background: linear-gradient(to right, #2723C8 0%, #E43425 100%);
+				}
+
+				&:hover {
+					.inner p {
+						-webkit-text-fill-color: white;
+					}
+				}
+
+				p {
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-image: linear-gradient(to right, #E43425 9.53%, #441FD8 76.04%, #0A26B8 122.69%);
+					background-size: 100%;
+					text-align: left;
+					text-transform: uppercase;
+					-webkit-text-fill-color: transparent;
+					-moz-text-fill-color: transparent;
+				}
+
+				.type_sales {
+					@include fontLighter;
+				}
+
+				.product_name {
+					@include fontBold;
+				}
+
+				.inner {
+					padding: 1.5rem 3rem;
+					width: 100%;
+				}
+			}
+		}
+
+		.broadsign_platform {
+			padding-right: 11rem;
+		}
+	}
+}

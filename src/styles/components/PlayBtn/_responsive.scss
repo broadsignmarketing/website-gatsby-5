@@ -1,0 +1,26 @@
+@media (max-width: $tablet_max_width) {
+	.PlayBtn {
+		$buttonSize: 12vw;
+		height: $buttonSize;
+		margin-bottom: 4vw;
+		width: $buttonSize;
+
+		div {
+			height: $buttonSize;
+			width: $buttonSize;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	.PlayBtn {
+		$buttonSize: 15vw;
+		height: $buttonSize;
+		width: $buttonSize;
+
+		div {
+			height: $buttonSize;
+			width: $buttonSize;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+#dooh_media_buyers {
+	.fold {
+		padding-bottom: 16rem;
+
+		hr {
+			display: none;
+		}
+	}
+
+	#big_voice_award {
+		margin: 0 0 6rem;
+		z-index: 1;
+	}
+}
+
+#work_with_us_media_buyers {
+	.column:not(.form_container) {
+		padding-bottom: 15rem;
+	}
+}

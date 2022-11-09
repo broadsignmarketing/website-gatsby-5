@@ -1,0 +1,466 @@
+#page_campsite {
+	.Tank {
+		margin: 0 auto;
+		max-width: 92rem;
+	}
+
+	h3 {
+		color: $blue;
+		font-family: "Roboto Black", "Roboto", Arial, Helvetica, sans-serif;
+		font-size: 3.6rem;
+		font-variant: normal;
+		margin: 0 0 3rem;
+		text-transform: none;
+	}
+
+	.Hero {
+		height: auto;
+		max-height: none;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+
+		.Tank {
+			padding-bottom: 7rem;
+			padding-top: 9rem;
+		}
+
+		h1 {
+			margin: 0;
+			text-align: center;
+		}
+
+		.logo {
+			margin: 0 auto 2rem;
+			max-width: 50rem;
+			width: 100%;
+		}
+
+		.title {
+			@include fontSuperBold;
+			color: #FFF;
+			flex-flow: row nowrap;
+			font-size: 12rem;
+			justify-content: center;
+			margin: 0 0 3rem;
+			width: 100%;
+			z-index: 10;
+		}
+
+		.tagline {
+			@include fontLighter;
+			color: #FFF;
+			flex-flow: row wrap;
+			font-size: 2.5rem;
+			justify-content: center;
+			line-height: 140%;
+			margin: 0 auto 4rem;
+			text-align: center;
+			text-transform: none;
+			width: 100%;
+			z-index: 10;
+
+			em {
+				@include fontBolder;
+				display: inline-block;
+				font-size: 5.1rem;
+				line-height: 100%;
+				margin-bottom: 3rem;
+			}
+		}
+
+		.ctas {
+			justify-content: center;
+			margin: 0 0 6rem;
+			text-align: center;
+			width: 100%;
+
+			.cta {
+				cursor: pointer;
+				padding: 1.2rem 2rem 1rem;
+
+				&:after {
+					cursor: pointer;
+					pointer-events: none;
+				}
+			}
+		}
+
+		.video_zone {
+			align-items: center;
+			border: 2px dotted #FFF;
+			border-radius: 2rem;
+			display: flex;
+			height: 44rem;
+			justify-content: center;
+			left: 50%;
+			padding: 3rem;
+			position: relative;
+			top: 0;
+			transform: translateX(-50%);
+			width: 76rem;
+			z-index: 10;
+
+			.inner {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				width: 100%;
+
+				video {
+					background-color: #1F54FF;
+					border-radius: 3rem;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+
+		#green {
+			background-color: #18D7AA;
+			bottom: 0;
+			height: 30rem;
+			left: 50%;
+			max-width: 200rem;
+			position: absolute;
+			transform: translateX(-50%);
+			width: 200rem;
+			z-index: 1;
+		}
+	}
+
+	#intro {
+		display: flex;
+		justify-content: space-between;
+		margin-top: -2rem;
+		max-width: 92rem;
+		position: relative;
+		z-index: 10;
+
+		.gatsby-image-wrapper {
+			align-items: flex-end;
+			display: flex;
+			flex: 0 0 calc(40% - 2rem);
+			max-width: 36rem;
+			width: calc(40% - 2rem);
+
+			img,
+			picture {
+				object-fit: contain !important;
+				object-position: right bottom !important;
+			}
+		}
+
+		.text {
+			display: inline-block;
+			flex: 0 0 calc(60% - 2rem);
+			max-width: 51rem;
+			padding: 15rem 0 10rem;
+			width: calc(60% - 2rem);
+
+			p {
+				font-family: "Roboto Light", "Roboto", "Arial Narrow", Helvetica, sans-serif;
+				font-size: 3rem;
+				font-weight: lighter;
+				margin: 0;
+			}
+		}
+	}
+
+	#ebook_campsite_add_real_world_kick {
+		background-color: $campsiteBlue;
+		margin: 0;
+
+		.inner {
+			max-width: 1200px;
+		}
+	}
+
+	#why {
+		background-color: #EEFAFC;
+		padding: 9rem 0 7rem;
+
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				align-items: center;
+				background-color: #FFF;
+				border-radius: 3.6rem;
+				cursor: default;
+				display: flex;
+				font-size: 2.2rem;
+				justify-content: flex-start;
+				list-style-type: none;
+				margin-bottom: 1.4rem;
+				padding: 1.8rem 3rem;
+
+				img {
+					height: 3.4rem;
+					margin-right: 1.5rem;
+					transition: transform 0.3s;
+					width: 4.6rem;
+				}
+
+				&:hover {
+					img {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+
+	#steps {
+		background-color: #EEFAFC;
+		padding: 9rem 0 8rem;
+
+		h3 {
+			margin-bottom: 4rem;
+			max-width: 80rem;
+		}
+
+		.step {
+			align-items: center;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			margin-bottom: 5.6rem;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.image {
+				flex: 0 0 13rem;
+				margin-right: 3rem;
+
+				img {
+					height: 13rem;
+					width: 13rem;
+				}
+			}
+
+			.text {
+				align-items: center;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+
+				h3 {
+					flex: 0 0 100%;
+					font-family: "Roboto Black", "Roboto", Arial, Helvetica, sans-serif;
+					font-size: 3rem;
+					font-variant: normal;
+					font-weight: bold;
+					margin: 0 0 1.4rem;
+					text-transform: none;
+					width: 100%;
+				}
+
+				p {
+					flex: 0 0 100%;
+					font-size: 2.2rem;
+					margin: 0;
+					width: 100%;
+				}
+			}
+		}
+
+		.ctas {
+			justify-content: center;
+			margin: 6rem 0 0;
+		}
+	}
+
+	#partners {
+		padding-bottom: 12rem;
+		padding-top: 9rem;
+
+		.logos {
+			text-align: center;
+
+			&>div {
+				margin: 0 auto;
+			}
+
+			img {
+				display: inline-block;
+				margin: 0 auto;
+				width: 100%;
+			}
+
+			.desktop_only {
+				max-width: 857px;
+			}
+
+			.mobile_only {
+				display: none;
+				max-width: 504px;
+			}
+		}
+	}
+
+	#campsite_climate {
+		box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.25);
+		margin-bottom: 14rem;
+
+		.PlayBtn {
+
+			&,
+			&>div {
+				height: 8rem;
+				width: 8rem;
+			}
+
+			div {
+				border-width: 0.8rem;
+				height: 8rem;
+				width: 8rem;
+			}
+		}
+	}
+
+	.video {
+		.Video {
+			max-width: 92rem;
+		}
+	}
+
+	#shin {
+		&:before {
+			@include bg;
+			background-color: rgba(#000, 0.5);
+			content: " ";
+			z-index: 1;
+		}
+
+		.Tank {
+			z-index: 10;
+		}
+
+		.ctas {
+			justify-content: center;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.CTA {
+			@include fontLighter;
+			background-color: transparent;
+			border: 1px solid #FFF;
+			border-radius: 3rem;
+			color: #FFF;
+			font-size: 2.4rem;
+			padding: calc(1.2rem + 1px) 3rem calc(1rem + 1px);
+			text-transform: none;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: rgba(#FFF, 0.2);
+			}
+		}
+	}
+}
+
+@media (max-width:$tank_max_width) {
+	#page_campsite {
+		.Tank {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width:$mobile_max_width) {
+	#page_campsite {
+		.Tank {
+			padding-left: $tankPadding;
+			padding-right: $tankPadding;
+		}
+
+		.Hero .tagline {
+			max-width: 60%;
+		}
+
+		#intro {
+			.text {
+				padding-bottom: 6rem;
+				padding-top: 12rem;
+			}
+		}
+
+		#partners {
+			.logos .desktop_only {
+				display: none;
+			}
+
+			.logos .mobile_only {
+				display: flex;
+			}
+		}
+	}
+}
+
+@media (max-width:$xs_max_width) and (orientation: portrait) {
+	#page_campsite {
+		h3 {
+			font-size: 2.8rem;
+		}
+
+		.Hero {
+			.Tank {
+				padding-bottom: 6rem;
+			}
+
+			.title {
+				font-size: 10rem;
+			}
+
+			.tagline {
+				max-width: 100%;
+				zoom: 1;
+			}
+
+			.video_zone {
+				max-height: 52vw;
+				padding: 2rem;
+			}
+
+			#green {
+				height: 20rem;
+			}
+		}
+
+		#intro {
+			align-items: center;
+			margin-top: 0rem;
+			padding-left: 1rem;
+
+			.text {
+				padding-top: 6rem;
+			}
+
+			.gatsby-image-wrapper {}
+		}
+
+		#steps {
+			.step {
+				align-items: flex-start;
+
+				.text {
+					h4 {
+						font-size: 2.6rem;
+					}
+				}
+			}
+		}
+
+		#quote {
+			blockquote {
+				font-size: 2.6rem;
+			}
+		}
+	}
+}

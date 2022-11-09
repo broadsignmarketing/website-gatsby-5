@@ -1,0 +1,190 @@
+#broadsign_publish {
+	.Hero {
+		background: linear-gradient(180deg, #18D7AA 0%, #0ECFD6 100%);
+		order: 1;
+
+		.blob1 {
+			background: linear-gradient(247.51deg, #0500A9 -2.16%, #00C8FF 37.65%, #18D7AA 84.62%);
+			height: 54rem;
+			max-width: 860px;
+			transform: translate(20%, 10%);
+			z-index: 2;
+		}
+
+		.blob2 {
+			background: linear-gradient(112.49deg, #0500A9 -2.16%, #00C8FF 37.65%, #18D7AA 84.62%);
+			height: 79rem;
+			max-width: 1280px;
+			transform: translate(-80%, 15%) rotate(37deg);
+			z-index: 1;
+		}
+	}
+
+	.Sell_smarter {
+		margin-bottom: 6rem;
+		order: 2;
+		z-index: 2;
+
+		.laptop_demo {
+			align-items: center;
+			display: flex;
+			flex-flow: row-reverse;
+			margin: 0 0 6rem;
+		}
+
+		.laptop_background {
+			background-image: url("../../../img/ui/laptop_black.png");
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex: 0 0 45%;
+			height: 100%;
+			width: 45%;
+
+		}
+
+		.slides {
+			left: 0;
+			margin: 2% auto 6rem;
+			max-width: 79%;
+			top: 0;
+			user-select: none;
+		}
+
+		.text {
+			padding-left: 3rem;
+		}
+
+		h3 {
+			font-size: 4.2rem;
+			line-height: 100%;
+		}
+	}
+
+	.Features {
+		background-color: $ultra;
+		order: 3;
+		padding-bottom: 10rem;
+
+		.Row {}
+
+		.ImgHat {
+			align-items: stretch;
+
+			img {
+				max-height: 8rem;
+				max-width: 8rem;
+				transform: translateY(-50%);
+			}
+
+			h5 {
+				font-size: 2.6rem;
+				line-height: 120%;
+				margin: 0 0 3rem;
+				text-transform: uppercase;
+				width: 100%;
+			}
+		}
+	}
+
+	.QuoteBlock {
+		background-color: $blizzard;
+		order: 4;
+
+		blockquote {
+			background-color: transparent;
+			color: #FFF;
+			margin: 0 auto;
+			max-width: 1200px;
+			padding-left: 0;
+			padding-right: 0;
+
+			.wrap:after,
+			.wrap:before {
+				color: #FFF;
+			}
+
+			p {
+				@include fontAltBold;
+				color: #FFF;
+			}
+		}
+	}
+
+	.Training,
+	.Schedule {
+		.ImgFlank {
+			.lead {
+				h5 {
+					font-size: 2.6rem;
+					margin-bottom: 1.5rem;
+					text-transform: uppercase;
+				}
+
+				p {
+					margin-bottom: 3rem;
+				}
+			}
+		}
+	}
+
+	.Training {
+		align-content: center;
+		display: flex;
+		height: 30rem;
+		margin-bottom: 8rem;
+		margin-top: 8rem;
+		order: 5;
+
+		.ImgFlank {
+			flex-flow: row-reverse;
+
+			aside,
+			.lead {
+				flex: 0 0 calc(50% - 6rem);
+				max-width: calc(50% - 6rem);
+			}
+		}
+	}
+
+	.Schedule {
+		height: 41rem;
+		margin-top: 8rem;
+		order: 6;
+
+		.ImgFlank {
+			height: 100%;
+
+			aside {
+				display: flex;
+				flex-basis: calc(50% - 6rem);
+				height: 100%;
+				justify-content: flex-end;
+				max-width: calc(50% - 6rem);
+
+				img {
+					object-fit: unset;
+					width: 100%;
+				}
+			}
+
+			.lead {
+				flex-basis: calc(50% - 6rem);
+				max-width: calc(50% - 6rem);
+				padding-bottom: 4rem;
+			}
+		}
+	}
+
+	.VideoPoster {
+		order: 7;
+	}
+
+	.Billboard {
+		order: 8;
+	}
+
+	.CTABlock {
+		justify-content: center;
+	}
+}

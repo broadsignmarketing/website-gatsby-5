@@ -1,0 +1,77 @@
+.QuickResource {
+	background: linear-gradient(to bottom right, $whisper 70%, darken($whisper, 5) 100%);
+	border-radius: 0.6rem;
+	margin: 0 0 3rem;
+	overflow: hidden;
+	transition: box-shadow 0.3s;
+
+	&:after {
+		@include bg;
+		background: linear-gradient(to bottom left, $whisper 70%, darken($whisper, 5) 100%);
+		content: "";
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s;
+	}
+
+	&>a {
+		display: block;
+		position: relative;
+		z-index: 10;
+	}
+
+	&,
+	div {
+		align-items: stretch;
+		flex-flow: column nowrap;
+		height: auto;
+		justify-content: flex-start;
+	}
+
+	img {
+		transition: opacity 0.3s;
+	}
+
+	.ImgHat {
+		.Row {
+			img {
+				height: 22rem;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.caption {
+		color: $teal;
+		font-size: 1.8rem;
+		margin-top: 0;
+		padding: 10px;
+		transition: color 0.3s;
+	}
+
+	&:hover {
+		box-shadow: 2px 2px 8px rgba(#000, 0.1);
+
+		&:after {
+			opacity: 1;
+		}
+
+		img {
+			opacity: 0.6;
+		}
+
+		.caption {
+			color: $blue;
+		}
+	}
+}
+
+.Row:not(.Grid) .QuickResource {
+	flex: 0 0 calc(33.3333% - 15px);
+	width: calc(33.3333% - 15px);
+}
+
+.Row.Grid .QuickResource {
+	margin-bottom: 3rem;
+	padding: 0;
+}

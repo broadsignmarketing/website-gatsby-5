@@ -1,0 +1,59 @@
+@import "../base/dependencies";
+
+#announcement {
+	margin-bottom: 120px;
+
+	h1 {
+		@include fontBlack;
+		color: $ash;
+		font-size: 32px;
+		margin: 1em 0;
+	}
+
+	h3 {
+		@include fontBold;
+		color: $ash;
+		font-size: 22px;
+		margin: 1em 0;
+	}
+
+	.hero {
+		margin-bottom: 36px;
+	}
+
+	p {
+		color: $ash;
+		font-size: 16px;
+		line-height: 180%;
+		margin: 0 0 2em;
+	}
+
+	ul {
+		font-size: 16px;
+		margin: 0 0 1.6em;
+		padding-left: 1.6em;
+
+		li {
+			color: $ash;
+			font-size: 16px;
+			line-height: 140%;
+			margin: 0 0 0.4em;
+		}
+	}
+}
+
+@media(min-width:$sm) {
+	#announcement {
+		h1 {
+			font-size: 42px;
+		}
+	}
+}
+
+@media(min-width:$md) {
+	#announcement {
+		h1 {
+			font-size: 54px;
+		}
+	}
+}

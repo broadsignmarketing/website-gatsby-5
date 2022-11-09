@@ -1,0 +1,49 @@
+html[lang="fr"] {}
+
+html[lang="es"] {}
+
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	html[lang="fr"] #vertical_retail {
+		.Hero {
+			h1 {
+				font-size: calc(clamp(18px, 7vw, 30px));
+				max-width: 22ch;
+			}
+
+			.blurb {
+				font-size: 17px;
+			}
+		}
+	}
+
+	html[lang="es"] #vertical_retail {
+		.Hero {
+			h1 {
+				font-size: calc(clamp(18px, 7vw, 30px));
+			}
+
+			.blurb {
+				font-size: 17px;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop_min_width) {
+
+	html[lang="fr"] #vertical_retail,
+	html[lang="es"] #vertical_retail {
+		.Hero {
+			h1 {
+				font-size: calc(clamp(30px, 3vw, 46px));
+			}
+
+			.blurb {
+				font-size: calc(clamp(18px, 1.4vw, 22px));
+				max-width: calc(min(98%, 50ch));
+			}
+		}
+	}
+}

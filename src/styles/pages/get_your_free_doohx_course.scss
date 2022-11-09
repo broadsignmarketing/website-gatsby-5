@@ -1,0 +1,190 @@
+@import "../base/dependencies";
+
+$doohxTeal:#73fbfb;
+
+@keyframes unfold {
+	0% {
+		max-width: 0%;
+	}
+
+	100% {
+		max-width: calc(100% + 20px);
+	}
+}
+
+@mixin doohxCTA {
+	@include fontReg;
+	background-color: $reflex;
+	border: 0 none;
+	border-radius: 1000px;
+	color: #FFF;
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	padding: 0.9em 1.6em 0.8em;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: $cerulean;
+		color: #FFF;
+	}
+}
+
+#get_your_free_doohx_course {
+	h1 {
+		@include fontSuperBold;
+		display: inline-block;
+		font-size: calc(min(9vw, 96px));
+		margin: 0 auto;
+		max-width: 18ch;
+		text-align: center;
+		width: 100%;
+	}
+
+	.hero_tagline {
+		color: #333;
+		font-size: calc(min(32px, 6vw));
+		max-width: 42ch;
+	}
+
+	.hero_cta {
+		@include doohxCTA;
+	}
+
+	.doohx-teal-underline {
+		display: inline-block;
+		height: 1.2em;
+		margin: 0 auto;
+		position: relative;
+
+		span {
+			color: #000;
+			position: relative;
+			z-index: 10;
+		}
+
+		&:after {
+			animation: 0.5s ease-out 0s 1 normal forwards running unfold;
+			background-color: $doohxTeal;
+			bottom: 0em;
+			content: "";
+			height: 0.4em;
+			left: -10px;
+			max-width: 0%;
+			position: absolute;
+			width: calc(100% + 20px);
+			z-index: 1;
+		}
+
+		&:nth-of-type(2):after {
+			animation-delay: 0.4s;
+		}
+
+		&:nth-of-type(3):after {
+			animation-delay: 0.8s;
+		}
+	}
+
+	.banner {
+		background: linear-gradient(to bottom right, #092DB3 30%, #76346A 70%);
+
+		p {
+			font-size: calc(min(5vw, 30px));
+		}
+	}
+
+	.badge {
+		height: 1.6em;
+		letter-spacing: 0.1em;
+	}
+
+	.doohx_logo {
+		max-width: 400px;
+		width: 80vw;
+	}
+
+	.text-doohx-teal {
+		color: $doohxTeal !important;
+	}
+
+	.card {
+		box-shadow: 0px 4px 20px rgba(#000, 0.2);
+		width: 100%;
+	}
+
+	.lucky_winners {
+		font-size: calc(min(60px, 10vw));
+
+		h2 {
+			font-size: 4.2em;
+		}
+
+		h3 {
+			font-size: 1em;
+		}
+
+		p {
+			font-size: 22px;
+		}
+
+		.doohx-teal-underline:after {
+			bottom: -0.2em;
+			height: 0.7em;
+		}
+	}
+
+	.Form {
+		.field {
+			width: 100%;
+
+			label:not(.hs-error-msg):not(.hs-form-booleancheckbox-display) {
+				display: none;
+			}
+
+			.input input {
+				border: 1px solid #EFEFEF;
+				border-radius: 4px;
+				color: $ash;
+				font-size: 16px;
+				height: auto;
+				max-height: none;
+				padding: 10px 15px 9px;
+
+				&::placeholder {
+					color: #8e918f;
+				}
+
+				&.error {
+					border-color: rgba($red, 0.6);
+					color: $red;
+					margin-top: 4px;
+
+					&::placeholder {
+						color: rgba($red, 0.6);
+					}
+				}
+			}
+
+			&.hs-fieldtype-booleancheckbox label {
+				align-items: flex-start;
+			}
+		}
+
+		div.actions {
+			margin-top: 15px;
+			text-align: right;
+
+			input[type=submit].hs-button {
+				@include doohxCTA;
+			}
+		}
+	}
+}
+
+@media (min-width:$sm) {
+	#get_your_free_doohx_course {
+		.lucky_winners {
+			font-size: min(60px, 5vw);
+		}
+	}
+}

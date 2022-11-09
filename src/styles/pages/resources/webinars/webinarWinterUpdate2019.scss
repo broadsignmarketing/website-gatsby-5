@@ -1,0 +1,551 @@
+@import "../../../base/dependencies";
+
+.page_webinarWinterUpdate2019 {
+	.Hero {
+		height: 45rem;
+	}
+
+	.Tank {
+		margin-bottom: 12rem;
+		margin-top: 5rem;
+
+		.Row {
+			justify-content: space-around;
+		}
+
+		.text_zone {
+			align-items: flex-start;
+			flex-basis: calc(40% - 1.5rem);
+			max-width: calc(40% - 1.5rem);
+
+			&>h3 {
+				@include fontLighter;
+				color: $butterfly;
+				font-size: 2.5rem;
+				margin-bottom: 3rem;
+				text-transform: none;
+
+			}
+
+			&>p {
+				@include fontBold;
+			}
+
+			.more {
+				font-size: 1.8rem;
+			}
+		}
+
+		.highlights {
+			margin: 3rem 0;
+			padding-left: 10px;
+
+			&>p {
+				@include fontLighter;
+				font-size: 1.8rem;
+				padding-left: 10px;
+				position: relative;
+
+				strong {
+					@include fontBold;
+				}
+			}
+
+			&>p:before {
+				bottom: auto;
+				color: $butterfly;
+				content: "\25BA ";
+				font-size: 13px;
+				left: -10px;
+				position: absolute;
+				top: 1px;
+			}
+
+		}
+
+		.form_zone {
+			align-items: flex-start;
+			flex-basis: calc(40% - 1.5rem);
+			max-width: calc(40% - 1.5rem);
+
+			&>p {
+				font-size: 2rem;
+				margin-bottom: 2rem;
+			}
+
+			.Form {
+				form {
+
+					.hs_error_rollup {
+						margin: 2rem 0;
+
+						ul li {
+							list-style-type: none;
+
+							label {
+								@include fontBold;
+								color: $red;
+								font-size: 1.5rem;
+								line-height: 120%;
+
+							}
+						}
+					}
+
+					.hs-form-booleancheckbox {
+						padding-top: 0;
+
+						.hs-form-booleancheckbox-display {
+							span {
+								color: $smoke;
+								font-size: 1.2rem;
+							}
+
+							.hs-input:before {
+								border: 2px solid #000;
+								border-radius: 25%;
+							}
+
+						}
+					}
+
+					.hs-submit {
+						display: flex;
+						justify-content: flex-start;
+
+						.actions {
+							.hs-button {
+								background-color: $blue;
+								border-color: $blue;
+								border-radius: 25px;
+								color: #FFF;
+							}
+
+							.hs-button:hover {
+								background-color: #FFF;
+								color: $midnightBlue;
+							}
+						}
+					}
+
+					.field {
+						display: flex;
+						flex: 0 0 100%;
+						margin: 0 0 0.5rem;
+						max-width: 100%;
+						width: 100%;
+
+						label>span {
+							@include fontReg;
+							color: $smoke;
+							font-size: 1.5rem;
+						}
+
+						.input {
+							select {
+								border-color: $smoke;
+								color: $smoke;
+
+							}
+
+							input {
+								@include fontReg;
+								border-color: $smoke;
+								font-size: 1.5rem;
+								margin: 0;
+								width: 100%;
+								z-index: 1;
+								-webkit-text-fill-color: $smoke;
+
+							}
+
+							input:focus {
+								outline: none;
+								-webkit-text-fill-color: $smoke;
+							}
+
+							.inputs-list {
+								li {
+									list-style-type: none;
+
+									label {
+										span {
+											a {
+												color: $butterfly;
+												text-decoration: underline;
+
+											}
+
+											&:after {
+												color: $smoke;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					label {
+						.hs-form-required {
+							color: $smoke;
+						}
+
+						.error.hs-form-required {
+							color: $red;
+						}
+					}
+
+					.hs_submit {
+						.actions {
+							margin-bottom: 0;
+							margin-top: 0;
+
+						}
+
+						.hs-button {
+							font-size: 1.3rem;
+							padding: 1rem 10rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page_thankYouWebinarWinterUpdate2019 {
+	.Hero {
+		height: 75rem;
+		margin-bottom: 12rem;
+		max-height: 75rem;
+
+		.Tank {
+			align-items: center;
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+
+	.title1 {
+		@include fontBold;
+		color: #FFF;
+		font-size: 5rem;
+		line-height: 110%;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	.title2 {
+		display: flex;
+
+		&>p {
+			@include fontLighter;
+			color: #FFF;
+			flex: 0 0 60%;
+			font-size: 4.3rem;
+			text-transform: uppercase;
+		}
+
+		.logos {
+			flex: 0 0 40%;
+		}
+	}
+}
+
+
+.page_thankYouWebinarWinterUpdate2019 {
+	.ctas {
+		@include flexCenter;
+		margin-bottom: 6rem;
+		margin-top: 6rem;
+
+		.CTA {
+			@include fontReg;
+			border-color: $midnightBlue;
+			color: $midnightBlue;
+			font-size: 1.6rem;
+			padding: 1.8rem 6rem 1.6rem;
+
+			&:hover {
+				background-color: $midnightBlue;
+				color: #FFF;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	.page_webinarWinterUpdate2019 .Tank {
+		.Row {
+			justify-content: space-between;
+		}
+
+		.text_zone,
+		.form_zone {
+			flex-basis: calc(50% - 3rem);
+			max-width: calc(50% - 3rem);
+		}
+	}
+
+	.page_thankYouWebinarWinterUpdate2019 {
+		.Video {
+			width: 65vw;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	.page_webinarWinterUpdate2019 {
+		.Hero {
+			height: 75rem;
+			max-height: 75rem;
+		}
+
+		.Tank {
+
+			.text_zone,
+			.form_zone {
+				flex-basis: calc(100% - 1.5rem);
+				max-width: calc(100% - 1.5rem);
+			}
+
+			.form_zone {
+				&>p {
+					margin-top: 2rem;
+				}
+			}
+
+			.Row {
+				flex-flow: column wrap;
+			}
+		}
+	}
+
+	.page_thankYouWebinarWinterUpdate2019 {
+		.Hero {
+			height: 75rem;
+			max-height: 75rem;
+		}
+
+		.Tank {
+			.Row {
+				flex-flow: column;
+
+				.column {
+					flex-basis: calc(100% - .6rem);
+					margin-bottom: 7rem;
+					max-width: calc(100% - .6rem);
+				}
+			}
+		}
+
+		.Video {
+			width: 80vw;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	.page_webinarWinterUpdate2019 {
+		.Hero {
+			height: 30rem;
+			max-height: 30rem;
+		}
+	}
+}
+
+
+html[lang="fr"] {
+	.page_webinarWinterUpdate2019 {}
+
+	.page_thankYouWebinarWinterUpdate2019 {
+		.title2 {
+			&>p {
+				font-size: 3.3rem;
+			}
+		}
+	}
+}
+
+html[lang="es"] {
+	.page_webinarWinterUpdate2019 {
+		.hull {
+			&>.Tank {
+				margin-top: 0;
+				padding-bottom: 14rem;
+				padding-top: 20rem;
+			}
+		}
+
+		h1 {
+			color: #FFF;
+			font-size: 9rem;
+			text-align: center;
+			width: 100%;
+
+			span {
+				display: block;
+				font-size: 86%;
+				line-height: 80%;
+				white-space: nowrap;
+			}
+
+			em {
+				display: block;
+				font-size: 100%;
+				line-height: 90%;
+				white-space: nowrap;
+			}
+		}
+
+		.Video {
+			margin-bottom: 4rem;
+			max-width: 72rem;
+			width: 100%;
+		}
+
+		.blog_recent_posts {
+			&>p {
+				@include fontLighter;
+				font-size: 3.2rem;
+				margin-bottom: 6rem;
+			}
+
+			&.style_neon {
+				margin-bottom: 12rem;
+				margin-top: 3rem;
+
+				aside .title {
+					@include fontBold;
+					color: $blue;
+					font-size: 1.8rem;
+					font-variant: normal;
+					text-transform: none;
+					transition: color 0.6s;
+				}
+
+				.blog_post:hover {
+					aside .title {
+						color: $teal;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tank_max_width) {
+	html[lang="es"] {
+		.page_webinarWinterUpdate2019 {
+			.blog_recent_posts {
+				&>p {
+					font-size: 4rem;
+					max-width: 100%;
+				}
+
+				.blog_post:hover aside {
+					.title {
+						font-size: 2.4rem;
+					}
+
+				}
+
+				.link {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		.page_webinarWinterUpdate2019 {}
+
+		.page_thankYouWebinarWinterUpdate2019 {}
+	}
+
+	html[lang="es"] {
+		.page_webinarWinterUpdate2019 {}
+
+		.page_thankYouWebinarWinterUpdate2019 {}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		.page_webinarWinterUpdate2019 {}
+	}
+
+	html[lang="es"] {
+		.page_webinarWinterUpdate2019 {
+			.hull>.Tank {
+				padding-bottom: 8vw;
+				padding-top: 10vw;
+			}
+
+			h1 {
+				font-size: 9vw;
+			}
+
+			.blog_recent_posts {
+				&>p {
+					font-size: 3rem;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	.page_webinarWinterUpdate2019 {
+		.Hero {
+			max-height: 26rem;
+		}
+	}
+
+	html[lang="es"] {
+		.page_webinarWinterUpdate2019 {
+			padding-bottom: 0;
+
+			.hull>.Tank {
+				padding-bottom: 14vw;
+				padding-top: 20vw;
+			}
+
+			h1 {
+				font-size: 10vw;
+			}
+
+			.Row.cols-2>div {
+				flex-basis: 100%;
+				margin-bottom: 6rem;
+				max-width: 100%;
+			}
+
+			&.webinar_registration.thank_you .blog_recent_posts.style_neon {
+				margin-bottom: 6rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	.page_webinarWinterUpdate2019 {
+		.Hero {
+			max-height: 26rem;
+		}
+	}
+
+	html[lang="fr"] {
+		.page_webinarWinterUpdate2019 {}
+
+		.page_thankYouWebinarWinterUpdate2019 {}
+	}
+
+	html[lang="es"] {
+		.page_webinarWinterUpdate2019 {}
+	}
+}

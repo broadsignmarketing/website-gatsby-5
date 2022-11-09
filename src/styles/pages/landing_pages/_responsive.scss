@@ -1,0 +1,46 @@
+@media (min-width: $tank_max_width) {
+	.landing_page {
+		&#page_buy_dooh.page_work_with_us {
+			.fold .column:not(.form)>p {
+				margin-bottom: 40rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {}
+
+@media (max-width: $mobile_max_width) {
+	.landing_page {
+		&.page_event {
+			.hull {
+				.inner {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $super_xs_max_width) {
+	.landing_page {
+		&#page_buy_dooh.page_work_with_us {
+			display: flex;
+			flex-flow: column nowrap;
+
+			.blobs.left {
+				max-width: 98%;
+				order: 2;
+				position: relative !important;
+				width: 98%;
+			}
+
+			.fold {
+				order: 1;
+				padding-bottom: 6rem;
+			}
+		}
+	}
+}

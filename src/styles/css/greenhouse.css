@@ -1,0 +1,276 @@
+/* BREAKPOINTS */
+/* Standard Tank Paddings */
+/* Standard Breakpoints */
+/* Exceptions/Precision */
+/* New Breakpoints, 2022 */
+/* COLORS */
+/* Blue */
+/* Teal / Highlight Blue */
+/* Red */
+/* Grey */
+/* Greens */
+/* DSP Pages */
+/* Ayuda */
+/* Campsite */
+/* Others */
+/* Utility Colors */
+/* For Hero Headers */
+/* HEADER */
+/* CAROLINA THEME */
+/* INPUT STYLES */
+.input_style_gray, .input_style_neon {
+  background: linear-gradient(to right, #E43425 31.77%, #441FD8 71.88%, #0A26B8 100%);
+  border-radius: 4px;
+  padding: 2px;
+}
+.input_style_gray input, .input_style_neon input,
+.input_style_gray select,
+.input_style_neon select {
+  appearance: none;
+  background: white none;
+  border: 0 none;
+  border-radius: 2px;
+  padding: 0.6em 0.6em 0.5em 0.6em;
+  transition: background-color 0.3s;
+  width: 100%;
+  z-index: 1;
+}
+.input_style_gray input:focus, .input_style_neon input:focus,
+.input_style_gray select:focus,
+.input_style_neon select:focus {
+  /* background-color: rgba(#FFF, 0.9); */
+}
+.input_style_gray input:focus, .input_style_neon input:focus, .input_style_gray input:focus-visible, .input_style_neon input:focus-visible,
+.input_style_gray select:focus,
+.input_style_neon select:focus,
+.input_style_gray select:focus-visible,
+.input_style_neon select:focus-visible {
+  outline: none;
+}
+.input_style_gray input.with_icon, .input_style_neon input.with_icon,
+.input_style_gray select.with_icon,
+.input_style_neon select.with_icon {
+  padding-left: 2em;
+}
+.input_style_gray input.clearable, .input_style_neon input.clearable,
+.input_style_gray select.clearable,
+.input_style_neon select.clearable {
+  padding-right: 2.4em;
+}
+.input_style_gray .input_field_icon, .input_style_neon .input_field_icon {
+  height: 80%;
+  left: 0.6em;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: transform 0.3s;
+  width: 1em;
+  z-index: 10;
+}
+.focused.input_style_gray .input_field_icon, .focused.input_style_neon .input_field_icon {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.input_style_gray {
+  background: #ECECEC none;
+  padding: 1px;
+  transform: translateY(-1px);
+}
+.input_style_gray .inner {
+  transform: translateY(-1px);
+}
+
+/*
+These animations won't be included by default. To use one of them, include the mixin in your stylesheet.
+Examples :
+@include animBarrel;
+@include animFadeIn;
+@include animFadeInNoBlur;
+@include animFadeOut;
+@include animFadeOutNoBlur;
+@include animFlare;
+@include animSlideInFromRight;
+@include animThisWayRight;
+@include animUnblur;
+*/
+/*
+THIS FILE IS SPECIAL. THIS IS TO BE THE BASICS FOR ALL THE BLOGS, CUSTOMER SPOTLIGHTS AND OTHERS.
+WE ARE SEPARATING IT THIS WAY SO WE CAN REUSE THOSE STYLINGS IN THE CMS AS WELL.
+*/
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap'); */
+body #wrapper {
+  max-width: 980px;
+  padding: 120px 40px 0;
+}
+
+body:after {
+  background-image: url("https://f.hubspotusercontent10.net/hubfs/297064/images/BroadSign%20Logos/broadsign_logo_192x45.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 50px;
+  left: 50%;
+  max-width: 980px;
+  position: absolute;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.jfdhlfjkddflkjfkld {
+  color: #000;
+}
+
+#wrapper #app_body {
+  margin: 0 auto !important;
+  max-width: 100%;
+  padding: 0 !important;
+}
+#wrapper #app_body img {
+  height: 300px;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#wrapper #app_body #logo {
+  display: inline-block;
+  object-fit: contain;
+  object-position: left center;
+}
+#wrapper #app_body #header {
+  padding-right: 0;
+  padding-top: 300px;
+}
+#wrapper #app_body #header > a {
+  color: #001464;
+}
+#wrapper #app_body #header > a:hover {
+  color: #00C8FF;
+}
+#wrapper #app_body #header a#apply_button {
+  background-color: #001464;
+  border: 0 none;
+  color: #FFF;
+  padding: 12px 20px;
+  top: 370px;
+  transition: background-color 0.3s;
+}
+#wrapper #app_body #header a#apply_button:hover {
+  background-color: #00C8FF;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+#wrapper #app_body .app-title {
+  font-family: "Roboto Black", "Roboto", "Arial Black", "Arial", "Helvetica", sans-serif;
+  font-variant: small-caps;
+  font-weight: 900;
+  line-height: 80%;
+  text-transform: lowercase;
+  color: #001464;
+  font-size: 62px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+#wrapper #app_body .company-name {
+  color: #505969;
+  font-size: 13px;
+}
+#wrapper #app_body > .location {
+  color: #505969;
+  font-size: 13px;
+}
+#wrapper #app_body #content {
+  font-family: "Roboto Light", "Roboto Regular", "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  color: #001464;
+  line-height: 140%;
+}
+#wrapper #app_body #content p {
+  font-size: 15px;
+  line-height: 160%;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#wrapper #app_body #content ul {
+  padding-left: 20px;
+}
+#wrapper #app_body #content ul li {
+  font-size: 15px;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+#wrapper #app_body #application {
+  background: linear-gradient(to bottom, #F6F7FA 0%, #DFE3E8 100%);
+  border-radius: 10px;
+  color: #001464;
+  margin: 60px auto;
+  padding: 40px 30px;
+}
+#wrapper #app_body #application .heading {
+  font-family: "Roboto Black", "Roboto", "Arial Black", "Arial", "Helvetica", sans-serif;
+  font-variant: small-caps;
+  font-weight: 900;
+  line-height: 80%;
+  text-transform: lowercase;
+  color: #001464;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+#wrapper #app_body #application .required-fields {
+  color: #FF0000;
+}
+#wrapper #app_body #application #submit_buttons {
+  text-align: center;
+}
+#wrapper #app_body #application #submit_buttons input {
+  background-color: #001464;
+  border: 0 none;
+  margin: 0 auto;
+  padding: 12px 20px;
+  transition: background-color 0.3s;
+}
+#wrapper #app_body #application #submit_buttons input:hover {
+  background-color: #00C8FF;
+}
+
+#footer {
+  background-color: #001645;
+  bottom: -30px;
+  color: #99A1B5;
+  height: 100px;
+}
+#footer a {
+  font-family: "Roboto Bold", "Roboto", "Arial", "Helvetica", sans-serif;
+  font-weight: 700;
+  color: #00C8FF;
+  text-decoration: none !important;
+  transition: color 0.3s;
+}
+#footer a img {
+  filter: saturate(0) brightness(100);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+#footer a:hover {
+  color: #FFF;
+}
+#footer a:hover img {
+  opacity: 0.4;
+}
+
+@media (max-width: 800px) {
+  #wrapper #app_body #application {
+    max-width: 100%;
+  }
+  #wrapper #app_body #application form {
+    margin: 0 auto;
+    max-width: 550px;
+  }
+}
+
+/*# sourceMappingURL=greenhouse.css.map */

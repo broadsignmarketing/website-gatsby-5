@@ -1,0 +1,109 @@
+.template_butterfly {
+	.bg {
+		@include bg;
+		position: absolute !important;
+	}
+
+	.Tank {
+		@include flexCenter;
+	}
+
+	.modal {
+		align-items: stretch;
+		background: linear-gradient(to bottom, #FFF 0%, rgba(255, 255, 255, 0.5) 100%);
+		bottom: auto;
+		display: flex;
+		flex: 0 1 90rem;
+		flex-flow: row nowrap;
+		justify-content: stretch;
+		margin: 18rem auto;
+		max-width: 100%;
+		min-height: 90rem;
+		padding: 0;
+		position: relative;
+		top: auto;
+		width: 90rem;
+
+		.column {}
+
+		.info {
+			flex: 1 1 calc(100% - 30rem);
+			max-width: 100%;
+			padding: 6rem 9rem;
+			width: calc(100% - 30rem);
+
+			.header {
+				display: flex;
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+
+		.form {
+			align-items: center;
+			background-color: #16C4C9;
+			display: flex;
+			flex: 1 0 30rem;
+			flex-flow: column nowrap;
+			justify-content: center;
+			max-width: 100%;
+			padding: 5rem;
+			width: 30rem;
+
+			.header {
+				display: flex;
+				margin-bottom: 3rem;
+				max-width: 100%;
+				width: 8rem;
+			}
+
+			.Form form {
+				.field {
+					.input {
+						@include inputWebkitAutofills(#16C4C9, #FFF);
+					}
+
+					&.hs-fieldtype-booleancheckbox label {
+						span {
+							@include fontReg;
+							font-size: 1.2rem;
+							max-width: calc(100% - 3rem);
+							width: calc(100% - 3rem);
+							flex-basis: calc(100% - 3rem);
+
+							a {
+								line-height: 120%;
+								text-decoration: underline;
+							}
+						}
+
+						input:before {
+							height: 1.6rem;
+							max-height: 1.6rem;
+							max-width: 1.6rem;
+							width: 1.6rem;
+						}
+					}
+
+					&.error {
+						margin-bottom: 0;
+					}
+
+					.hs-error-msgs li label {
+						background-color: rgba(255, 220, 220, 0.8);
+						border: 1px solid $red;
+						border-radius: 0.4rem;
+						display: inline-block;
+						font-size: 1.2rem;
+						margin: 0 0 1rem;
+						padding: 0.4rem 0.6rem;
+					}
+				}
+
+				.hs_error_rollup {
+					margin: 0 0 3rem;
+				}
+			}
+		}
+	}
+}

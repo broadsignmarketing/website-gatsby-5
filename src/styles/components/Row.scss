@@ -1,0 +1,34 @@
+@use "sass:math";
+@import "../base/dependencies";
+
+.Row {
+	@for $i from 1 through 12 {
+
+		&.cols-#{$i}>div,
+		&.cols-#{$i}>aside {
+			$width: #{math.div(100%, $i)};
+			$gutter: #{math.div(3*($i - 1), $i)}+"rem";
+			flex: 0 0 calc(#{$width} - #{$gutter});
+			max-width: calc(#{$width} - #{$gutter});
+		}
+	}
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	.Row {
+		@for $i from 1 through 12 {
+
+			&.cols-#{$i}>div,
+			&.cols-#{$i}>aside {
+				$width: #{math.div(100%, $i)};
+				$gutter: #{math.div(1.2*($i - 1), $i)}+"rem";
+				flex: 0 0 calc(#{$width} - #{$gutter});
+				max-width: calc(#{$width} - #{$gutter});
+			}
+		}
+	}
+}

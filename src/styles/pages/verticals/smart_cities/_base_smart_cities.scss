@@ -1,0 +1,31 @@
+#page_vertical_smart_cities {
+	section.Hero {
+		.title {
+			font-size: 18rem;
+
+			span:first-of-type {
+				font-size: 51%;
+			}
+
+			em {
+				margin-top: -1.2rem;
+			}
+
+			span:last-of-type {
+				font-size: 41%;
+			}
+		}
+
+		.tagline {
+			max-width: 700px;
+		}
+	}
+
+	.SpielPoster {
+
+		h3,
+		p {
+			max-width: 640px;
+		}
+	}
+}

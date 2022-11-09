@@ -1,0 +1,95 @@
+#sitemap {
+	padding-bottom: 9rem;
+	padding-top: 12rem;
+
+	h1 {
+		font-size: 3.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.search_query_field {
+		border: 1px solid #DDD;
+		border-radius: 0.6rem;
+		font-size: 1.6rem;
+		margin-bottom: 3rem;
+		padding: 1rem;
+		width: 100%;
+	}
+
+	table {
+		border-collapse: collapse;
+		row-gap: 1rem;
+
+		tr {
+			cursor: default;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: #EEF;
+			}
+
+			&.success:not(.error) {
+				background-color: #CFC;
+
+				&:hover {
+					background-color: #AFA;
+				}
+			}
+
+			&.error {
+				background-color: #FCC;
+
+				&:hover {
+					background-color: #FAA;
+				}
+			}
+		}
+
+		td {
+			border-bottom: 2px solid #DDD;
+			padding: 1rem;
+		}
+	}
+
+	a {
+		cursor: pointer;
+		opacity: 0.6;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.js {
+		font-size: 1.4rem;
+		white-space: nowrap;
+	}
+
+	.checkbox {
+		button {
+			appearance: none;
+			background-color: transparent;
+			border: 0 none;
+			cursor: pointer;
+			font-size: 2em;
+			padding: 0;
+
+			&.big {
+				font-size: 2.6em;
+			}
+		}
+	}
+
+	.flag {
+		box-shadow: 2px 2px 4px #AAA;
+		height: 2rem;
+		object-fit: cover;
+		transition: transform 0.3s;
+		width: 3rem;
+
+		&:hover {
+			transform: scale(1.4);
+		}
+	}
+}

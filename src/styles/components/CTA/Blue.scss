@@ -1,0 +1,10 @@
+@import "../../base/dependencies";
+@import "cta_bases";
+
+.CTA.blue {
+	@include CTAVariations($blue);
+}
+
+.CTA.reflex {
+	@include CTAVariations($reflex);
+}

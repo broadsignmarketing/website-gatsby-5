@@ -1,0 +1,27 @@
+#page_vertical_healthcare {
+	.Hero {
+		.title {
+			display: flex;
+			flex-flow: column nowrap;
+			font-size: 12rem;
+
+			span:first-of-type {
+				font-size: 48%;
+			}
+
+			span:last-of-type {
+				font-size: 108.5%;
+			}
+		}
+	}
+
+	.QuoteBlock {
+		blockquote p {
+			max-width: 900px;
+		}
+	}
+
+	.VerticalShinDemoOffer {
+		margin-top: 8rem;
+	}
+}

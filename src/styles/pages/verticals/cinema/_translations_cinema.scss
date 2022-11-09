@@ -1,0 +1,47 @@
+html[lang="es"] {}
+
+html[lang="fr"] #page_vertical_cinema {
+	.Hero {
+		.title {
+			font-size: 14rem;
+
+			span:first-of-type {
+				font-size: 72.8%;
+				line-height: 68%;
+				order: 1;
+			}
+
+			span:last-of-type {
+				color: #FFFF;
+				font-size: 53%;
+				order: 2;
+			}
+
+			em {
+				color: #FFFF;
+				font-size: 118.5%;
+				line-height: 89%;
+				order: 3;
+			}
+		}
+	}
+}
+
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] #page_vertical_cinema {
+		.Hero {
+			.title {}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_cinema {
+		.Hero {
+			.title {
+				font-size: 11rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+@media (max-width: $tablet_max_width) {
+	#page_ooh_from_home {}
+
+	#ooh_from_home_webinars {
+		.hull {
+			min-height: 550px;
+		}
+
+		.Video {
+			width: 100%;
+		}
+
+		.blog_recent_posts {
+			h2 {
+				font-size: 3rem;
+				text-align: left;
+			}
+
+			.thumbnail {
+				height: 14rem;
+			}
+
+			.title {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation: landscape) {
+	#page_ooh_from_home {}
+}
+
+@media (max-width: $tablet_max_width) and (orientation: portrait) {
+	#page_ooh_from_home {}
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_ooh_from_home {
+		.Hero {
+			height: auto;
+			max-height: 100vh;
+			padding-bottom: 6rem;
+			padding-top: 6rem;
+		}
+
+		.u_videos {}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait) {
+	#page_ooh_from_home {}
+}
+
+@media (max-width: $xs_max_width) and (orientation: landscape) {
+	#page_ooh_from_home {
+		.Hero {
+			max-height: none;
+
+			#neck .column {
+				flex-basis: 100%;
+				margin-bottom: 3rem;
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait),
+(max-width: $xs_max_width) {}
+
+@media (max-width: $xs_max_width) and (orientation: portrait) {
+	#page_ooh_from_home {
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: $super_xs_max_width) and (orientation: portrait) {
+	#page_ooh_from_home {}
+}

@@ -1,0 +1,137 @@
+#thank-you-ebook {
+	.thank_you_ebook_container {
+		align-items: center;
+		background: linear-gradient(to right, #70D0F9 0%, #2D78E6 50%, #0E4FDD 100%);
+		display: flex;
+		margin-bottom: 5rem;
+
+		&>.Tank {
+			&>.Row {}
+		}
+
+		.logo_wrapper {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 3rem;
+			padding-top: 3rem;
+		}
+
+		.ebook_invite {
+			height: 58rem;
+			justify-content: center;
+		}
+
+		.ebook_text {
+			align-items: flex-start;
+			display: flex;
+			flex-basis: 65%;
+			justify-content: center;
+			max-width: 65%;
+			width: 65%;
+
+			h3,
+			span {
+				color: #9DE2EB;
+				display: inline-block;
+				font-family: "Roboto Black", "Roboto Black", "Roboto", "Arial Black", Arial, Helvetica, sans-serif;
+				font-size: 3.6rem;
+				line-height: 105%;
+				text-transform: uppercase;
+			}
+
+			p {
+				color: #FFF;
+				font-family: "Roboto", Arial, Helvetica, sans-serif;
+				font-size: 2.3rem;
+				margin-top: 3rem;
+			}
+
+			span {
+				color: #FFF;
+			}
+		}
+
+		.ebook_image {
+			align-items: flex-end;
+			display: flex;
+			flex-basis: 35%;
+			max-width: 35%;
+			width: 35%;
+
+			.gatsby-image-wrapper {
+				margin-right: -6rem;
+				max-width: calc(100% + 6rem);
+			}
+		}
+
+		.CTA {
+			margin-top: 3rem;
+		}
+	}
+
+	.SideBar {
+		display: block;
+		margin: 6rem auto 8rem;
+		max-width: 1200px;
+		overflow-y: unset;
+		padding: 0;
+		right: 0;
+
+		h5 {
+			font-size: 3.6rem;
+		}
+
+		.download {
+			display: none;
+		}
+
+		.lunch {
+			display: none;
+		}
+
+		.dsps {
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+
+			.dsp_wrapper {
+				flex: 0 0 calc(33% - 1.5rem);
+				height: 25rem;
+				width: calc(33% - 1.5rem);
+
+				img {
+					border-radius: 0.8rem;
+					box-shadow: 4px 4px 20px #AAA;
+					height: 18rem;
+					margin-bottom: 1rem;
+					max-height: 18rem;
+					object-position: right center;
+					transition: box-shadow 0.3s;
+				}
+
+				p {
+					@include fontBold;
+					color: $teal;
+					font-size: 1.8rem;
+					transition: color 0.3s;
+				}
+
+				&:hover {
+					img {
+						box-shadow: 6px 6px 22px #888;
+					}
+
+					p {
+						color: darken($teal, 16);
+					}
+				}
+
+				&:nth-child(4),
+				&:nth-child(5),
+				&:nth-child(6) {
+					display: none;
+				}
+			}
+		}
+	}
+}

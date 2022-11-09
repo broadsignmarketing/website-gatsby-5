@@ -1,0 +1,383 @@
+#resources {
+	z-index: 50;
+
+	.Hero {
+		background-size: unset;
+		margin-bottom: 0;
+
+		.hero_container {
+			margin: 0 0 8rem 14rem;
+			text-shadow: .2rem .2rem .6rem #0073A3, .2rem .2rem .6rem #0073A3;
+
+			.title {
+				font-size: 9rem;
+
+				span {
+					font-size: 100%;
+				}
+			}
+
+			.tagline {
+				@include fontAltBolder;
+				color: white;
+				display: inline-block;
+				font-size: 3rem;
+				line-height: 4rem;
+				width: 60%;
+
+				em {
+					white-space: nowrap;
+				}
+			}
+
+			.ctas {
+				align-self: flex-end;
+				justify-content: flex-end;
+
+				.cta {
+					border-color: #FFF;
+
+					&:hover {
+						border-color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	.hull {
+		margin-bottom: 9rem;
+		margin-top: 6rem;
+	}
+
+	h2 {
+		@include fontSuperBold;
+		color: $blue;
+		flex: 0 0 100%;
+		font-size: 4.8rem;
+		margin-bottom: 4rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.resource {
+		appearance: none;
+		background-color: transparent;
+		border: 0 none;
+		cursor: pointer;
+		padding: 0;
+
+		.link {
+			@include fontBolder;
+			color: $teal;
+			font-size: 1.8rem;
+			margin: 1.5rem 0 0;
+			position: relative;
+			transition: color 0.6s;
+		}
+
+		img {
+			transition: opacity 0.6s;
+		}
+
+		&:hover {
+
+			.ImgHat {
+				.Row {
+					box-shadow: 4px 4px 12px #AAA;
+				}
+			}
+
+			.link {
+				color: $blue;
+			}
+
+			img {
+				opacity: 0.6;
+			}
+		}
+
+		.ImgHat>.Row {
+			box-shadow: 4px 4px 12px #DDD;
+			overflow: hidden;
+			transition: box-shadow 0.6s;
+
+			&>img {
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+
+		&.programmatic_u {
+			.ImgHat .Row img {
+				max-width: 90%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	.gradient_border {
+		border-bottom: 2px solid;
+		-o-border-image: linear-gradient(to right, #19cdff 15%, #1e1bb2 45%, #ff1919 90%);
+		border-image: linear-gradient(to right, #19cdff 15%, #1e1bb2 45%, #ff1919 90%);
+		border-image-slice: 1;
+		margin-bottom: 6rem;
+	}
+
+	.featured,
+	.ebooks {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		width: 100%;
+
+		.resource {
+			flex: 0 0 calc(50% - 3rem);
+			margin-bottom: 6rem;
+			max-width: 47rem;
+			width: calc(50% - 3rem);
+
+			.ImgHat {
+				h3 {
+					font-size: 2.3rem;
+					margin-bottom: 1rem;
+					text-align: left;
+				}
+
+				p {
+					font-size: 1.8rem;
+					margin-bottom: 1rem;
+				}
+
+				.Row {
+					height: 22rem;
+					margin-bottom: 3rem;
+					max-height: 20vw;
+
+					img {
+						height: 100%;
+						width: 100%;
+					}
+				}
+
+				.column {
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+
+	.webinars {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+
+		.resource {
+			width: 100%;
+
+			.ImgFlank {
+				.lead {
+					align-items: flex-start;
+				}
+			}
+
+			&:nth-child(odd) .ImgFlank {
+				flex-flow: row-reverse;
+
+				.lead {
+					align-items: flex-end;
+				}
+
+				h3,
+				p,
+				.description {
+					text-align: right;
+				}
+			}
+
+			p,
+			.description {
+				font-size: 1.8rem;
+				text-align: left;
+			}
+
+			&:hover {
+				.ImgFlank aside img {
+					box-shadow: 4px 4px 12px #AAA;
+				}
+			}
+		}
+
+		.upcoming_tag {
+			@include fontBolder;
+			align-items: center;
+			background-color: rgba(#000, 0.4);
+			color: #FFF;
+			display: flex;
+			font-size: 1.4rem;
+			justify-content: center;
+			left: calc(50% - 3rem);
+			line-height: 200%;
+			max-width: 30%;
+			padding-right: 1rem;
+			position: absolute;
+			text-shadow: 2px 2px 4px #000;
+			text-transform: uppercase;
+			top: 6rem;
+			transform: translateX(-100%);
+			width: 20rem;
+			z-index: 100;
+
+			&:before {
+				border-color: transparent rgba(#000, 0.4) transparent transparent;
+				border-style: solid;
+				border-width: 1.4rem 2rem 1.4rem 0;
+				box-sizing: border-box;
+				content: "";
+				display: inline-block;
+				left: 0;
+				position: absolute;
+				top: 0;
+				transform: translateX(-100%);
+				width: 3rem;
+			}
+		}
+
+		.ImgFlank {
+			margin-bottom: 2.5rem;
+			margin-top: 2.5rem;
+			width: 100%;
+
+			.lead {
+				flex-basis: calc(50% - 3rem);
+				max-width: calc(50% - 3rem);
+			}
+
+			aside {
+				flex-basis: calc(50% - 3rem);
+				max-width: calc(50% - 3rem);
+
+				img {
+					border-radius: 3rem;
+					box-shadow: 4px 4px 12px #DDD;
+					transition: box-shadow 0.6s, opacity 0.6s;
+					width: 100%;
+				}
+			}
+
+			h3 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+				text-align: start;
+			}
+
+			.description {
+				color: $blue;
+				font-size: 1.6rem;
+				line-height: 140%;
+				margin-bottom: 1rem;
+				margin-top: 1rem;
+
+				p {
+					font-size: 1.6rem;
+					margin-bottom: 0.4em;
+				}
+
+				ul {
+					font-size: 1.6rem;
+					padding-left: 1em;
+				}
+
+				ul li {
+					margin-bottom: 0.4em;
+				}
+			}
+		}
+	}
+
+	.Form {
+		min-height: 15rem;
+
+		.CTA {
+			border-radius: 6px;
+			margin-top: 3rem;
+		}
+
+		form {
+			.field {
+				width: 100%;
+
+				label>span {
+					@include fontBolder;
+					color: $grey;
+					font-size: 1.4rem;
+				}
+
+				&.hs_consent_to_privacy_policy label>span {
+					@include fontReg;
+					font-size: 1.2rem;
+				}
+
+				.input input:not([type="checkbox"]),
+				.input select,
+				.input textarea {
+					@include fontBold;
+					border: 1px solid #E8E8E8;
+					border-radius: 6px;
+					color: #9A9A9A;
+					font-size: 1.4rem;
+					height: auto;
+					min-height: 4.8rem;
+					padding: 1.4rem;
+				}
+			}
+
+			div.actions input[type="submit"].hs-button {
+				border-radius: 6px;
+				font-size: 1.6rem;
+				text-transform: none;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.Modal.modal_resources {
+	.title {
+		@include fontSuperBold;
+		color: $darkGrey;
+		flex: 0 0 auto;
+		font-size: 3rem;
+		line-height: 120%;
+		margin-bottom: 2rem;
+		text-align: left;
+		width: 100%;
+	}
+
+	.thumb {
+		border-radius: 6px;
+		flex: 0 0 auto;
+		height: 20rem;
+		margin-bottom: 3rem;
+		width: 100%;
+	}
+
+	.description {
+		@include fontReg;
+		flex: 0 0 auto;
+		font-size: 1.8rem;
+		margin-bottom: 4rem;
+
+		&:empty {
+			display: none;
+		}
+	}
+
+	.form_title {
+		@include fontBolder;
+		color: $darkGrey;
+		font-size: 2.4rem;
+		line-height: 80%;
+		margin-bottom: 2rem;
+	}
+}

@@ -1,0 +1,38 @@
+#page_vertical_cinema {
+	.Hero {
+		.title {
+			color: #E3F7FA;
+			font-size: 15rem;
+
+			span,
+			em {
+				line-height: 70%;
+			}
+
+			span:first-of-type {
+				font-size: 45%;
+			}
+
+			span:last-of-type {
+				font-size: 79.5%;
+			}
+
+			em {}
+		}
+
+	}
+
+	section.SpielPoster {
+		background-position: 60% center;
+		height: 56rem;
+		max-height: 70vh;
+	}
+
+	.cp_logos .logos {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.cp_logos.single_column .logos {
+		grid-template-columns: 1fr;
+	}
+}

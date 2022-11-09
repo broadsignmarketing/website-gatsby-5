@@ -1,0 +1,14 @@
+@media (max-width: $tablet_max_width) {
+	.Video {
+		max-width: 100%;
+		width: 80vw;
+
+		.poster .tagline {}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	.Video {
+		.poster .tagline {}
+	}
+}

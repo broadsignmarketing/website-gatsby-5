@@ -1,0 +1,26 @@
+html[lang="fr"] {
+	.page_programmatic {
+		.get_started {
+			.CTA {
+				padding-left: 1.4rem;
+				padding-right: 1.4rem;
+			}
+		}
+	}
+}
+
+html[lang="es"] {}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait),
+(max-width: $xs_max_width) {
+	html[lang="fr"] {
+		.page_programmatic {
+			.get_started {
+				.CTA {
+					padding-left: 2.4rem;
+					padding-right: 2.4rem;
+				}
+			}
+		}
+	}
+}

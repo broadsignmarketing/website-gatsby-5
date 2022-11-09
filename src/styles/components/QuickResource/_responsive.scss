@@ -1,0 +1,49 @@
+@media (max-width: $tank_max_width) {}
+
+@media (max-width: $tablet_max_width) {}
+
+@media (max-width: $mobile_max_width) {}
+
+@media (max-width: $xs_max_width) {
+
+	.QuickResource,
+	.Row:not(.Grid) .QuickResource {
+		flex-basis: 100%;
+		width: 100%;
+	}
+
+	.QuickResource {
+		.ImgHat img {
+			object-fit: cover;
+			width: 100%;
+		}
+
+		.caption {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+
+	.QuickResource,
+	.Row:not(.Grid) .QuickResource {
+		flex-basis: 100%;
+		width: 100%;
+	}
+
+	.QuickResource {
+		.ImgHat img {
+			object-fit: cover;
+		}
+	}
+}
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	.Row.Grid .QuickResource {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: $desktop_min_width) {}

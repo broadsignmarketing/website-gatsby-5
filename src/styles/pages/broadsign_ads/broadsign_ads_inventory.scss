@@ -1,0 +1,283 @@
+@import "../../base/dependencies";
+
+#broadsign_ads__inventory {
+	$sectionPaddingTop: 60px;
+	$sectionPaddingBottom: 66px;
+
+	h1 {
+		font-size: calc(min(9vw, 46px));
+	}
+
+	.inventory__hero_img {
+		max-width: 506px;
+	}
+
+	.inventory_item {
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		transition: opacity 1s;
+		z-index: 1;
+
+		h3 {
+			font-size: 20px;
+			margin-bottom: 1em;
+			text-transform: none;
+		}
+
+		h5 {
+			font-size: 24px;
+			margin-bottom: 1em;
+		}
+
+		p {
+			color: $ash;
+			font-size: 16px;
+			line-height: 160%;
+		}
+
+		.inventory_item__hero {
+			&_img {
+				height: 60vw;
+				max-height: 490px;
+			}
+		}
+
+		.intro {
+			padding-bottom: $sectionPaddingBottom;
+			padding-top: $sectionPaddingTop;
+		}
+
+		.environment {
+			padding-bottom: $sectionPaddingBottom;
+			padding-top: $sectionPaddingTop;
+
+			.note {
+				color: #263F5D;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+		}
+
+		.why {
+			padding-bottom: $sectionPaddingBottom;
+			padding-top: $sectionPaddingTop;
+		}
+
+		.specs {
+			padding-bottom: $sectionPaddingBottom;
+			padding-top: $sectionPaddingTop;
+		}
+
+		.inspiration {
+			padding-bottom: $sectionPaddingBottom;
+			padding-top: $sectionPaddingTop;
+		}
+
+		.samples {
+			padding-bottom: $sectionPaddingBottom;
+			padding-top: $sectionPaddingTop;
+		}
+
+		&.active {
+			opacity: 1;
+			pointer-events: all;
+			position: relative;
+			z-index: 10;
+		}
+
+		.inventory__thumbnail {
+			&__image {
+				height: 30vw;
+				max-height: 200px;
+			}
+
+			&__name {
+				font-size: 14px;
+			}
+
+			&__cta {
+				font-size: 13px;
+
+				&:after {}
+			}
+		}
+	}
+
+	.inventory__follow_img {
+		max-width: 60vw;
+	}
+
+	.BroadsignAdsCarousel {
+		margin-top: 60px;
+	}
+
+	.inventory_sample {
+		height: 60vw;
+		max-height: 400px;
+		object-fit: cover;
+	}
+
+	.inspiration_card {
+		&__thumb_wrapper {
+			overflow: hidden;
+		}
+	}
+
+	.Inventory__Why {
+		.collapse {
+			border-bottom: 1px solid $ash;
+
+			.unfold {
+				margin-left: 1em;
+			}
+
+			.q {
+				@include fontBold;
+				cursor: pointer;
+
+				.unfold {
+					transition: transform 0.3s;
+
+					img {
+						height: 12px;
+						width: 12px;
+					}
+				}
+			}
+
+			.a {
+				line-height: 160%;
+				margin: 0;
+				max-height: 0vh;
+				overflow: hidden;
+				padding-bottom: 0px;
+				transition: max-height 0.3s, padding-bottom 0.3s;
+			}
+
+			&.active {
+				.q {
+					.unfold {
+						transform: scaleY(-1);
+						transition-duration: 0.6s;
+					}
+				}
+
+				.a {
+					max-height: 100vh;
+					padding-bottom: 16px;
+					transition-duration: 0.6s;
+				}
+			}
+
+			&:last-of-type {
+				border: 0 none;
+			}
+		}
+
+		&__tab {
+			@include activeWithGradientUnderline;
+			cursor: pointer;
+			flex: 0 1 auto;
+			text-transform: uppercase;
+		}
+
+		&__par {
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			transition: opacity 0.6s ease;
+
+			&.active {
+				opacity: 1;
+				position: relative;
+			}
+		}
+	}
+
+	.Inventory__Specs {
+		margin-top: 36px;
+
+		.panel>.grid {
+			border-bottom: 1px solid $ash;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding-bottom: 8px;
+			padding-top: 12px;
+
+			&:last-of-type {
+				border: 0 none;
+			}
+		}
+
+		.prop_name {}
+
+		.prop_value {}
+	}
+
+	.inspiration_card__thumb {
+		height: 80vw;
+		max-height: 330px;
+		object-fit: cover;
+	}
+
+	.border-ash {
+		border-color: rgba($ash, 0.5) !important;
+	}
+}
+
+html[lang="fr"] {
+	#broadsign_ads__inventory {
+		h1 {
+			font-size: calc(min(9vw, 44px));
+		}
+	}
+}
+
+@media (min-width:$sm) {
+	#broadsign_ads__inventory {
+		.inventory_item {
+			.inventory__thumbnail__image {
+				height: 60vw;
+			}
+		}
+
+		.EnvironmentReview__prop_icon {
+			bottom: 2px;
+		}
+
+		.inventory_sample {
+			height: 30vw;
+			max-height: 500px;
+		}
+
+		.inspiration_card {
+			&__thumb_wrapper {
+				max-height: none;
+			}
+
+			&__description_wrapper {
+				overflow-y: hidden;
+			}
+		}
+
+		.inventory__follow_img {
+			max-width: 285px;
+		}
+	}
+
+	.inspiration_card__thumb {
+		height: 100%;
+		max-height: none;
+		object-fit: cover;
+	}
+}
+
+@media (min-width:$md) {
+	#broadsign_ads__inventory {
+		.inventory_item {}
+	}
+}

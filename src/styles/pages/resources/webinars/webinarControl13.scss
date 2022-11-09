@@ -1,0 +1,163 @@
+@import "../../../base/dependencies";
+
+#page_webinarControl13 {
+	.hull {
+		h3 {
+			@include fontBolder;
+			color: $blizzard;
+			font-size: 5rem;
+			line-height: 5rem;
+			text-transform: uppercase;
+		}
+
+		.Row {
+			flex-flow: row-reverse;
+		}
+
+		.Panel {
+			h3 {
+				font-size: 2.5rem;
+				margin: 0 0 2rem;
+			}
+		}
+
+		.text_zone {
+			align-items: flex-start;
+
+			display: flex;
+			flex-flow: column;
+
+			h5 {
+				@include fontAltBolder;
+				font-size: 2.8rem;
+				line-height: 4rem;
+				margin: 0;
+				text-transform: inherit;
+			}
+
+			p {
+				font-weight: bold;
+				margin-bottom: 2.5rem;
+				margin-top: 2.5rem;
+
+			}
+
+			ul {
+				li {
+					@include fontAlt;
+					background-color: #e3f7fa;
+					display: block;
+					font-size: 1.8rem;
+					line-height: 2.4rem;
+					margin-bottom: 0.4rem;
+					padding: 2.5rem;
+				}
+			}
+		}
+
+		.form_zone {
+			.Panel {
+				h3 {
+					@include fontAltBolder;
+					color: #001464;
+					font-size: 2.3rem;
+					line-height: 3.6rem;
+				}
+			}
+		}
+
+		#broadsign_control_13_webinar.Video {
+			max-width: 90rem;
+		}
+	}
+}
+
+#page_thankYouWebinarControl13 {
+	h3 {
+		@include fontAltBolder;
+		color: $blue;
+		font-family: "Merriweather Black", Merriweather, serif;
+		font-size: 3rem;
+		line-height: 160%;
+		margin-top: 6rem;
+		text-transform: none;
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	#page_webinarControl13 {}
+
+	#page_thankYouWebinarControl13 {}
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_webinarControl13 {
+		.hull {
+			.Row {
+				flex-flow: column-reverse;
+			}
+		}
+	}
+
+	#page_thankYouWebinarControl13 {}
+}
+
+@media (max-width: $xs_max_width) {
+	#page_webinarControl13 {}
+
+	#page_thankYouWebinarControl13 {}
+}
+
+html[lang="fr"] {
+	#page_webinarControl13 {}
+
+	#page_thankYouWebinarControl13 {}
+}
+
+html[lang="es"] {
+	#page_webinarControl13 {}
+
+	#page_thankYouWebinarControl13 {}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		#page_webinarControl13 {}
+
+		#page_thankYouWebinarControl13 {}
+	}
+
+	html[lang="es"] {
+		#page_webinarControl13 {}
+
+		#page_thankYouWebinarControl13 {}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		#page_webinarControl13 {}
+
+		#page_thankYouWebinarControl13 {}
+	}
+
+	html[lang="es"] {
+		#page_webinarControl13 {}
+
+		#page_thankYouWebinarControl13 {}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#page_webinarControl13 {}
+
+		#page_thankYouWebinarControl13 {}
+	}
+
+	html[lang="es"] {
+		#page_webinarControl13 {}
+
+		#page_thankYouWebinarControl13 {}
+	}
+}

@@ -1,0 +1,49 @@
+@import "../base/dependencies";
+
+#page_not_found {
+	overflow: hidden;
+
+	h1 {
+		display: none;
+	}
+
+	h2 {
+		display: none;
+		font-size: 2.6rem;
+		margin-bottom: 3rem;
+	}
+
+	#hull {
+		align-items: flex-start;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		min-height: 70vh;
+		padding-bottom: 12rem;
+		padding-top: 12rem;
+
+		h1 {
+			@include fontSuperBold;
+			color: $titleTeal;
+			font-size: 6.2rem;
+			margin: 0 auto 6rem;
+		}
+
+		p {
+			font-size: 2.2rem;
+			margin: 0 auto 6rem;
+		}
+
+		.links {
+
+			p {
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

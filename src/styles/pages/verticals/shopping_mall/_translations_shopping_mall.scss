@@ -1,0 +1,59 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_shopping_mall {
+		section.Hero {
+
+			.title {
+				font-size: 8rem;
+
+				span:first-of-type {
+					font-size: 92.4%;
+					line-height: 72%;
+					order: 1;
+				}
+
+				em {
+					order: 3;
+				}
+
+				span:last-of-type {
+					font-size: 93.4%;
+					order: 2;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_shopping_mall {
+
+			section.Hero {
+				.title {}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_shopping_mall {
+
+			section.Hero {
+				.title {
+					font-size: 4.4rem;
+
+					span:first-of-type {
+						line-height: 90%;
+					}
+
+					em {
+						font-size: 165%;
+					}
+				}
+			}
+		}
+	}
+}

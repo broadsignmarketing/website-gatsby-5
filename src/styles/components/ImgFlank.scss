@@ -1,0 +1,151 @@
+@import "../base/dependencies";
+
+.ImgFlank {
+	align-content: stretch;
+	align-items: stretch;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	&.invert {
+		aside {
+			order: 2;
+		}
+
+		.lead {
+			order: 1;
+		}
+	}
+
+	aside {
+		align-items: center;
+		display: flex;
+		flex: 0 0 calc(50% - 1.5rem);
+		flex-flow: column nowrap;
+		justify-content: center;
+		max-width: calc(50% - 1.5rem);
+		order: 1;
+	}
+
+	.lead {
+		align-items: flex-start;
+		display: flex;
+		flex: 1 0 calc(50% - 1.5rem);
+		flex-flow: column nowrap;
+		justify-content: center;
+		max-width: calc(50% - 1.5rem);
+		order: 2;
+	}
+}
+
+.wrapperCollapse {
+	border-bottom: 1px solid #DFE3E8;
+	border-top: 1px solid #DFE3E8;
+	padding-bottom: 5rem;
+	padding-top: 5rem;
+
+	h2 {
+		font-size: 2.6rem;
+		font-weight: bold;
+		line-height: 120%;
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 1rem 0;
+	}
+
+	aside {
+		align-items: center;
+		flex-basis: calc(30% - 1.5rem);
+		justify-content: flex-start;
+		max-width: calc(30% - 1.5rem);
+	}
+
+	.Panel {
+		align-items: flex-start;
+		border-radius: 2rem;
+		box-shadow: .8rem .8rem 2rem rgba(#000, 0.15);
+		flex-basis: calc(70% - 1.5rem);
+		justify-content: flex-start;
+		max-width: calc(70% - 1.5rem);
+		padding: 6rem;
+
+		.collapse {
+			.content {
+				padding-top: 0rem;
+				transition: padding 0.3s, max-height 0.3s;
+			}
+
+			.title_container {
+				margin: 3rem 0 0;
+
+				button {
+					background: transparent none;
+					border: 0 none;
+				}
+
+				.title {
+					color: $teal;
+					font-size: 1.8rem;
+					text-transform: capitalize;
+					transition: color 0.3s;
+
+					&:before {
+						border-color: transparent transparent transparent $teal;
+						border-style: solid;
+						border-width: 0.6rem 0 0.6rem 1rem;
+						content: "";
+						display: inline-block;
+						height: 0;
+						margin-right: 1rem;
+						transition: border-color 0.3s, transform 0.3s;
+						width: 0;
+					}
+
+					&:hover {
+						color: $blue;
+						cursor: pointer;
+
+						&:before {
+							border-left-color: $blue;
+						}
+					}
+				}
+			}
+
+			&.open {
+				.content {
+					max-height: 60rem;
+					padding-top: 3rem;
+				}
+
+				.title_container {
+					.title {
+						&:before {
+							transform: rotate(90deg);
+						}
+					}
+				}
+			}
+
+			.Form form div.actions {
+				text-align: right;
+
+				input[type="submit"].hs-button {
+					border-radius: 3rem;
+					display: inline-block;
+				}
+			}
+		}
+
+		.submitted-message {
+			@include fontAltBolder;
+			color: $blue;
+			font-size: 2.3rem;
+			line-height: 160%;
+			text-align: center;
+		}
+	}
+}

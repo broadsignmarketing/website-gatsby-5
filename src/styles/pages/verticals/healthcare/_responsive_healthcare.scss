@@ -1,0 +1,27 @@
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	#page_vertical_healthcare {
+		.Hero .Tank .tagline {
+			max-width: 90%;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_healthcare {
+		.Hero {
+			.Tank {
+				.title {
+					font-size: 13vw;
+				}
+
+				.tagline {
+					max-width: 100%;
+				}
+			}
+		}
+
+		.QuoteBlock blockquote {
+			margin: 0 auto 6rem;
+		}
+	}
+}

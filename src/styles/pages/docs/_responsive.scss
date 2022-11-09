@@ -1,0 +1,102 @@
+@media (max-width: $tablet_max_width) and (orientation:portrait),
+(max-width: $mobile_max_width) {
+	#page_docs {
+		#hull {
+			.column {
+				flex: 1 1 auto;
+			}
+
+			&>.Row {
+				justify-content: space-between;
+
+				&>.column {
+					flex-basis: calc(50% - 1.5rem);
+					margin-left: auto;
+					margin-right: auto;
+					max-height: none;
+					max-width: calc(50% - 1.5rem);
+
+					&:nth-of-type(even) {
+						margin-right: 0;
+					}
+
+					&:nth-of-type(odd) {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		.docs_card {
+			max-width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+
+			.column {
+				padding: 0 3rem;
+			}
+
+			.view_link {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait),
+(max-width: $super_xs_max_width) {
+	#page_docs {
+		#intro {
+			h1 {
+				font-size: 12vw;
+			}
+
+			.tagline {
+				font-size: 5vw;
+			}
+		}
+
+		#hull {
+			&>.Row {
+				justify-content: center;
+
+				&>.column {
+					flex-basis: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+
+
+		.docs_card {
+			max-width: 100%;
+
+			&>.Row {
+				flex: 0 0 auto;
+			}
+
+			.column {
+				flex: 0 0 auto;
+
+				img {
+					height: auto;
+					max-height: auto;
+				}
+			}
+
+			.note {
+				font-size: 2.2rem;
+			}
+
+			.motto {
+				font-size: 3.2rem;
+				margin-bottom: 3rem;
+			}
+
+			.view_link {
+				font-size: 2.4rem;
+				position: relative;
+			}
+		}
+	}
+}

@@ -26,28 +26,35 @@ module.exports = {
 		siteUrl: process.env.SITE_URL || "https://broadsign.com",
 	},
 	plugins: [
-		`gatsby-plugin-image`,
 		{
-			resolve: `gatsby-source-filesystem`,
+			resolve: "gatsby-plugin-sharp",
 			options: {
-				name: `images`,
-				path: `${__dirname}/src/images`,
+				defaultQuality: 80,
+				stripMetadata: true,
+				defaults: {
+					formats: ["auto", "webp", "avif"],
+					placeholder: "blurred",
+					quality: 80,
+					breakpoints: [600, 1200],
+				},
 			},
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
-			resolve: `gatsby-plugin-manifest`,
+			resolve: "gatsby-transformer-sharp",
+		},
+		{
+			resolve: "gatsby-plugin-image",
+		},
+		{
+			resolve: "gatsby-plugin-manifest",
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
-				start_url: `/`,
-				background_color: `#663399`,
-				// This will impact how browsers show your PWA/website
-				// https://css-tricks.com/meta-theme-color-and-trickery/
-				// theme_color: `#663399`,
-				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				name: "Broadsign",
+				short_name: "Broadsign",
+				start_url: "/",
+				background_color: "#FFFFFF",
+				theme_color: "#001464",
+				display: "minimal-ui",
+				icon: "static/icons/icon.png",
 			},
 		},
 		{
@@ -55,6 +62,34 @@ module.exports = {
 			options: {
 				path: `${__dirname}/locales`,
 				name: `locale`,
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "pages",
+				path: `${__dirname}/src/pages/`,
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "queries",
+				path: `${__dirname}/src/queries/`,
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "img",
+				path: `${__dirname}/src/img/`,
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "static_img",
+				path: `${__dirname}/static/img/`,
 			},
 		},
 		{
@@ -83,6 +118,36 @@ module.exports = {
 					},
 				],
 			},
+		},
+		{
+			resolve: "gatsby-plugin-alias-imports",
+			options: {
+				alias: {
+					"@annex": "src/assets/annex.tsx",
+					"@assets": "src/assets",
+					"@bsTypes": "src/assets/types.tsx",
+					"@components": "src/components",
+					"@hooks": "src/hooks",
+					"@icons": "src/img/icons",
+					"@i18n": "src/i18n",
+					"@img": "src/img",
+					"@logos": "static/img/logos",
+					"@meta": "static/meta",
+					"@partials": "src/partials",
+					"@route": "src/router/route.js",
+					"@router": "src/router/router.json",
+					"@sass": "src/styles",
+					"@static": "static",
+					"@templates": "src/templates",
+					"@uberflip": "src/assets/uberflip.js",
+					"@utils": "src/utils",
+					"@videos": "static/videos",
+				},
+				extensions: ["js"],
+			},
+		},
+		{
+			resolve: "gatsby-plugin-sass",
 		},
 	],
 }

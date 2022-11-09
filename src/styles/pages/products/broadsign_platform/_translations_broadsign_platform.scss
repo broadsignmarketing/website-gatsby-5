@@ -1,0 +1,135 @@
+html[lang="fr"] {
+	#page_broadsign_platform {
+		.Hero .Tank {
+			.content {
+				margin-left: 0;
+				width: 50%;
+
+				.ctas .CTA {
+					padding: 1em 3rem;
+					white-space: normal;
+				}
+			}
+		}
+	}
+}
+
+html[lang="pt"] {
+	#page_broadsign_platform {
+		.Hero .content .ctas {
+			.CTA {
+				max-height: none;
+				white-space: normal;
+			}
+		}
+
+		.products .products_wrapper .column h3 {
+			max-width: 14ch;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		#page_broadsign_platform {
+			.Hero .Tank {
+				margin-top: 8rem;
+
+				.content {
+					width: 100%;
+
+					p {
+						font-size: 4rem;
+					}
+
+					.ctas {
+						width: 75%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		#page_broadsign_platform {
+			.Hero {
+
+				.Tank {
+					.content {
+
+						.ctas {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#page_broadsign_platform {
+			.Hero {
+				.illustration {
+					bottom: -22%;
+					left: -15%;
+					width: 125%;
+				}
+
+				.Tank {
+					margin-top: 3rem;
+
+					.content .ctas .CTA {
+						font-size: 2rem;
+
+						.demo_btn {
+							width: 100%;
+						}
+					}
+				}
+			}
+
+			.demo .ImgFlank .lead .CTA {
+				width: 85%;
+			}
+
+			.QuoteBlock blockquote .wrap .quote {
+				font-size: 2.8rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $super_xs_max_width) {
+	html[lang="fr"] {
+		#page_broadsign_platform {
+			.Hero {
+				.Tank .content {
+					.ctas .CTA {
+						width: 100%;
+					}
+
+					.ctas .demo_btn {
+						width: 75%;
+					}
+
+					.blog_recent_posts {
+						display: none;
+					}
+				}
+
+				.illustration {
+					bottom: -33%;
+					left: -54%;
+					width: 200%;
+				}
+			}
+		}
+	}
+}
+
+html[lang="es"] {}

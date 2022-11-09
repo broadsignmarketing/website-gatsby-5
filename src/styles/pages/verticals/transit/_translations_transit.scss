@@ -1,0 +1,33 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_transit {
+		.Hero {
+			.title {
+				font-size: 13rem;
+
+				span:first-of-type {
+					font-size: 33%;
+					margin-bottom: 1rem;
+					white-space: normal;
+				}
+
+				em {
+					white-space: normal;
+				}
+			}
+
+		}
+	}
+
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_transit {
+		.Hero {
+			.title {
+				font-size: 9rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+#page_vertical_casino {
+    .Hero {
+        .title {
+            display: flex;
+            flex-flow: column nowrap;
+            font-size: 16rem;
+
+            em {
+                font-size: 100%;
+                line-height: 70%;
+            }
+            span:first-of-type {
+                font-size: 43.6%;
+                margin-top: 0.2rem;
+            }
+            span:last-of-type {
+                font-size: 37.7%;
+            }
+        }
+    }
+
+    .modal {
+        width: 40%;
+    }
+
+    .VideoPoster {
+        align-items: center;
+        background-image: none;
+        display: flex;
+        flex-flow: row;
+        height: 42rem;
+        justify-content: center;
+
+        .text {
+            @include flexCenter;
+            align-items: flex-start;
+            display: flex;
+            flex: 0 0 60%;
+            flex-flow: column;
+            max-width: 60%;
+            padding-right: 3rem;
+
+            h3 {
+                @include fontSuperBold;
+                color: #FFF;
+                font-size: 3rem;
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+
+            p {
+                color: #fff;
+            }
+        }
+
+        .video_zone {
+            align-items: center;
+            display: flex;
+            flex: 0 0 40%;
+            height: 100%;
+            justify-content: center;
+            max-width: 40%;
+
+			&>button{
+				@include bg;
+			}
+
+            img {
+                cursor: pointer;
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+                object-position: center center;
+            }
+        }
+
+        .Video {
+            height: 27vw;
+            margin: 0 0 0 1rem;
+            max-height: 27vw;
+            max-width: 48vw;
+            width: 48vw;
+        }
+    }
+}

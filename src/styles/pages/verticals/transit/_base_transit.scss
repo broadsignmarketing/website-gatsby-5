@@ -1,0 +1,67 @@
+#page_vertical_transit {
+	.Hero {
+		.title {
+			font-size: 18rem;
+
+			span {
+				font-size: 38.8%;
+				white-space: nowrap;
+			}
+
+			em {
+				line-height: 65%;
+			}
+		}
+	}
+
+	section.TransitSpiel {
+		height: 49rem;
+		max-height: 80vh;
+		padding: 0;
+
+		.Tank {
+			align-items: center;
+			display: flex;
+
+			.TransitSpielWrap {
+				max-width: 42rem;
+				width: 40%;
+			}
+		}
+	}
+
+	.cp_logos.clients .logos {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+
+		.logo {
+			display: flex;
+			flex: 0 0 30%;
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+			max-width: 34rem;
+
+			&:nth-child(4) {
+				margin-left: auto;
+			}
+
+			&:nth-child(5) {
+				margin-right: auto;
+			}
+
+			img {
+				display: inline-block;
+				flex: 1 1 auto;
+				height: auto;
+				max-width: 20rem;
+				overflow: hidden;
+				width: 100%;
+			}
+		}
+	}
+
+	.cp_logos.partners .logos {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}

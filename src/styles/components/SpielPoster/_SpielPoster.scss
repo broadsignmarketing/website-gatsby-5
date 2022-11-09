@@ -1,0 +1,25 @@
+.SpielPoster {
+	@import "../../misc/bg";
+	@include bgCover;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+	padding: 12rem 0;
+	position: relative;
+
+	h3 {
+		@include fontSuperBold;
+		color: #FFF;
+		cursor: default;
+		font-size: 3rem;
+		line-height: 110%;
+		margin: 0 0 2rem;
+		user-select: none;
+	}
+
+	p {
+		color: #FFF;
+		cursor: default;
+		user-select: none;
+	}
+}

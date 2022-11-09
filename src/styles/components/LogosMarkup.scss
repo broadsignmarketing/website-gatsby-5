@@ -1,0 +1,24 @@
+@import "../base/dependencies";
+
+.LogosMarkup {
+	min-height: 41px;
+	height: 54px;
+
+	.LogosMarkup_grid {
+		margin-left: -30%;
+	}
+
+	.logo {
+		box-sizing: border-box;
+		height: 41px;
+		margin: 0 calc(min(14vw, 80px)) 0 0;
+		object-fit: contain;
+		object-position: center;
+	}
+}
+
+@media (min-width:$sm) {
+	.LogosMarkup {
+		.logo {}
+	}
+}

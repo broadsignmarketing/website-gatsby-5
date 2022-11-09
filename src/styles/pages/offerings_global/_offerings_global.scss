@@ -1,0 +1,465 @@
+// --- Ebook Pages CSS global ---
+
+#demo_old,
+.ebook {
+	.Hero {
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		.Tank {
+			align-items: flex-start;
+
+			.content {
+				align-items: center;
+				max-width: 50%;
+				width: 50%;
+
+				.title {
+					@include fontAlt;
+					color: white;
+					font-size: 6.2rem;
+				}
+
+				img {
+					max-width: 70%;
+					position: absolute;
+					width: 55%;
+				}
+			}
+		}
+	}
+
+	.hull {
+		margin-bottom: 5rem;
+		margin-top: 3.5rem;
+
+		h1 {
+			@include fontSuperBold;
+			color: $titleTeal;
+			font-size: 6.2rem;
+			margin-bottom: 3rem;
+		}
+
+		.form_zone {
+			flex: 0 0 50%;
+			margin-top: 2rem;
+
+			.Panel {
+				h3 {
+					font-size: 2.6rem;
+					margin: 2rem 0 3.5rem;
+				}
+
+			}
+
+			.Form {
+
+				input:not(.hs-button),
+				select {
+					border: 1px solid #cccccc;
+					padding-left: 0.6rem;
+					padding-right: 0.6rem;
+				}
+
+				.actions {
+					display: flex;
+					justify-content: center;
+					margin-bottom: 3rem;
+					margin-top: 6rem;
+				}
+			}
+		}
+
+		.text_zone {
+			align-items: flex-start;
+			padding-top: 2rem;
+
+			h3 {
+				font-size: 2.8rem;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				margin-bottom: 3rem;
+				margin-top: 3rem;
+			}
+
+			ul {
+				margin-left: 2rem;
+
+				li {
+					font-size: 1.8rem;
+					line-height: 200%;
+					list-style-position: outside;
+				}
+			}
+		}
+	}
+}
+
+#demo_old {
+	padding-bottom: 6rem;
+}
+
+// --- Ebook Pages CSS Specific ---
+
+#ebook_dynamic_interactive_content {
+	.Hero {
+		align-items: center;
+		background-color: #243acb;
+		display: flex;
+		flex-flow: row;
+		height: 60rem;
+		margin-bottom: 9rem;
+		max-height: 60rem;
+		overflow: hidden;
+
+		.title_container {
+			padding: 10rem 0 10rem 10rem;
+			width: 55%;
+
+			h3 {
+				color: white;
+				font-family: "Merriweather", serif;
+				font-size: 6rem;
+				margin: auto 0;
+			}
+		}
+
+		.img_container {
+			width: 45%;
+
+			img {
+				width: 130%;
+			}
+		}
+	}
+
+	.hull {
+		.Row {
+			flex-flow: row-reverse;
+		}
+
+		.Panel {
+			h3 {
+				font-size: 2.5rem;
+				margin: 0 0 2rem;
+			}
+		}
+
+		.text_zone {
+			h3 {
+				font-size: 2.3rem;
+			}
+
+			ul {
+				li {
+					line-height: 250%;
+				}
+			}
+		}
+	}
+}
+
+#ebook_adding_digital_to_your_ooh_network {
+	section.Hero {
+		align-items: flex-end;
+
+		.Tank {
+			align-items: center;
+			margin: 0 0 0 auto;
+			max-width: 50%;
+			padding-right: 80px;
+
+			&>img {
+				height: calc(100% - 8rem);
+				left: auto;
+				object-fit: contain;
+				opacity: 0.4;
+				position: absolute;
+				right: 80px;
+				top: 4rem;
+				width: calc(100% - 80px);
+			}
+
+			.title {
+				@include fontAlt;
+				font-size: 4vw;
+				font-variant: normal;
+				line-height: 140%;
+				text-transform: none;
+			}
+		}
+	}
+}
+
+#ebook_media_buyers_pdooh {
+	padding-bottom: 12rem;
+
+	.Hero {
+		height: auto;
+		margin-bottom: 12rem;
+		max-height: none;
+
+		.Tank {
+			padding-bottom: 0;
+			padding-top: 6rem;
+		}
+
+		h1 {
+			@include fontBolder;
+			color: #FFF;
+			font-size: calc(min(8vw, 30px));
+			font-variant: normal;
+			line-height: 140%;
+			padding-bottom: 3rem;
+			text-transform: none;
+		}
+	}
+
+	.booklet {
+		margin-bottom: -6rem;
+		width: 100%;
+	}
+
+	.hull>.Row {
+		flex-flow: row wrap;
+	}
+
+	.text_zone {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.form_zone {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	h2 {
+		@include fontReg;
+		font-size: 2.8rem;
+		text-transform: none;
+	}
+
+	h3 {
+		font-size: 2.8rem;
+		margin-bottom: 1em;
+		text-transform: none;
+	}
+
+	ul li {
+		font-size: 2rem;
+		line-height: 140%;
+		margin-bottom: 2rem;
+	}
+
+	.Form .actions {
+		margin-top: 2rem;
+	}
+
+	&.thank_you {
+		.Panel {
+			padding: 3rem;
+		}
+
+		.blurb {
+			margin: 3rem auto;
+		}
+	}
+}
+
+#ebook_optimize_ooh_sales {
+	.Hero {
+		h1 {
+			margin: 0;
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.title {
+			margin: 0 0 6rem;
+			max-width: 42rem;
+			width: 40%;
+		}
+	}
+
+	.hull {
+		column-gap: 6rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		h2 {
+			@include fontBolder;
+			font-size: 2.8rem;
+			margin-bottom: 3rem;
+			text-transform: none;
+		}
+
+		h3 {
+			@include fontBolder;
+			font-size: 2.6rem;
+			margin-bottom: 1rem;
+			margin-top: 0;
+			text-transform: none;
+
+			em {
+				white-space: nowrap;
+			}
+		}
+
+		h4 {
+			@include fontReg;
+			font-size: 2.8rem;
+			margin-bottom: 3rem;
+		}
+
+		p {
+			font-size: 2.2rem;
+			margin-bottom: 4rem;
+			margin-top: 0;
+		}
+	}
+
+	.form_zone {
+		h3 {
+			margin-bottom: 3rem;
+			text-transform: uppercase;
+		}
+	}
+
+	&.thank_you {
+		h1 {
+			margin-top: 6rem;
+		}
+
+		#intro {
+			padding: 0 $tankPadding;
+		}
+
+		.Panel {
+			border-radius: 1rem;
+			padding-bottom: 6rem;
+			padding-top: 6rem;
+		}
+	}
+}
+
+// Thank you Ebook Pages CSS global
+
+.thank_you_ebook {
+	padding-bottom: 6rem;
+
+	.Hero {
+		margin-bottom: 5rem;
+	}
+
+	h1 {
+		@include fontSuperBold;
+		color: $mint;
+		font-size: 6.2rem;
+		line-height: 90%;
+		margin-bottom: 6rem;
+	}
+
+	.Panel {
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+		text-align: center;
+
+		p.blurb {
+			font-size: 2.6rem;
+			font-weight: bold;
+			margin-top: 3rem;
+		}
+	}
+
+	.resources {
+		h3 {
+			font-size: 3.2rem;
+			line-height: 120%;
+			margin-bottom: 2rem;
+			text-transform: none;
+		}
+	}
+}
+
+// --- Thank you page ebook specific ---
+#thank-you-ebook_adding_digital_to_your_ooh_network {
+	section.Hero {
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		.Tank {
+			align-items: flex-end;
+
+			.content {
+				align-items: center;
+				max-width: 50%;
+				width: 50%;
+
+				.title {
+					@include fontAlt;
+					color: white;
+					font-size: 6.2rem;
+				}
+
+				img {
+					max-width: 70%;
+					position: absolute;
+					width: 55%;
+				}
+			}
+		}
+	}
+}
+
+#page_thank_you_interactive_content {
+	.Hero {
+		background-color: #243acb;
+		display: flex;
+		flex-flow: row;
+		height: 60rem;
+		margin-bottom: 9rem;
+		max-height: 60rem;
+		overflow: hidden;
+
+		.title_container {
+			padding: 10rem 0 10rem 10rem;
+			width: 55%;
+
+			h3 {
+				color: white;
+				font-family: "Merriweather", serif;
+				font-size: 6rem;
+
+			}
+		}
+
+		.img_container {
+			width: 45%;
+
+			img {
+				width: 130%;
+			}
+		}
+	}
+}
+
+#page_thank_you_7_habits,
+#page_thank_you_5_mistakes {
+	h1 {
+		margin-top: 6rem;
+	}
+}
+
+#page_thank_you_generic,
+#page_thank_you_pricing,
+#page_thank_you_7_habits,
+#page_thank_you_5_mistakes {
+	.Panel {
+		padding-bottom: 6rem;
+		padding-top: 6rem;
+	}
+}

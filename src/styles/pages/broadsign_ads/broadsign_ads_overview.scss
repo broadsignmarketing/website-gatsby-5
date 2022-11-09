@@ -1,0 +1,293 @@
+$heroFormInputHeight: 45px;
+
+#broadsign_ads__overview {
+	h1 {
+		font-size: calc(min(10vw, 48px));
+	}
+
+	.bg-campsite-green {
+		.link_reflex_arrow {
+			&:after {
+				filter: saturate(0) brightness(100);
+				height: 0.8em;
+				margin-left: 0.4em;
+				transition: filter 0.3s ease;
+			}
+
+			&:hover:after {
+				filter: saturate(1) brightness(1);
+			}
+		}
+	}
+
+	.Loading {
+		min-height: 10rem;
+
+		.line {
+			border-color: #FFF #FFF #FFF transparent;
+		}
+	}
+
+	.Form {
+		align-items: center;
+		display: flex;
+		min-height: 0;
+
+		/* Patch */
+		&>div {
+
+			&,
+			&>div {
+				width: 100%;
+			}
+		}
+
+		.Loading {
+			margin-top: 3rem;
+		}
+
+		form {
+			align-items: center;
+			display: flex;
+			flex-flow: column nowrap;
+			overflow: hidden;
+			position: relative;
+
+			fieldset {
+				height: $heroFormInputHeight;
+				margin: 0 0 15px;
+			}
+
+			.field,
+			.field>label {
+				margin: 0;
+			}
+		}
+
+		input {
+			border: 0 none;
+			border-radius: 100px;
+			font-size: 14px;
+			height: $heroFormInputHeight;
+			margin: 0;
+
+			&[type="email"] {
+				background-color: #FFF;
+				order: 0;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+
+		.hs_submit,
+		.actions {
+			height: $heroFormInputHeight;
+			width: 100%;
+		}
+
+		input[type=submit].hs-button {
+			background-color: $reflex;
+			border: 0 none;
+			border-radius: 100px;
+			letter-spacing: 0.1em;
+			top: 0;
+			width: 100%;
+
+			&:hover {
+				background-color: $cerulean;
+				color: #FFF !important;
+			}
+		}
+
+		.submitted-message {
+			padding-bottom: 10px;
+		}
+	}
+
+	.feature_01_img {
+		max-height: 310px;
+	}
+
+	.feature_02_img {
+		max-height: 250px;
+	}
+
+	.feature_03_img {
+		max-height: 250px;
+	}
+
+
+
+
+	blockquote p {
+		&:before {
+			content: "“";
+			display: inline;
+		}
+
+		&:after {
+			content: "”";
+			display: inline;
+		}
+	}
+
+	.campaign_card {
+		&__stats {
+			.icon {
+				height: 24px;
+				object-fit: contain;
+				width: 24px;
+			}
+		}
+
+		&__company_wrapper {
+			cursor: default;
+			flex: 1 1 calc(100% - 30vw);
+		}
+
+		&__company {
+			height: 40px;
+			max-width: 80%;
+			width: 120px;
+		}
+
+		&__prop_value {
+			p {
+				color: inherit;
+				display: block;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width:$xsMax) {
+	#broadsign_ads__overview {
+		$animationSpeed: 0.6s;
+
+		.BroadsignAdsCarousel__item {
+			transition: opacity 0.6s ease 0s;
+		}
+
+		.campaign_card {
+			padding-bottom: 10vh;
+			padding-top: 10vh;
+			transform-style: preserve-3d;
+			perspective: 800px;
+
+			&__thumbnail_wrapper {
+				height: 100%;
+				left: 50%;
+				max-height: calc(80vh - 80px);
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%) rotate3d(0, 1, 0, 0deg);
+				transition: transform $animationSpeed ease-out $animationSpeed;
+				will-change: transform;
+			}
+
+			&__thumbnail {
+				max-height: calc(80vh - 80px);
+			}
+
+			&__company_wrapper {
+				transform: rotate3d(0, 1, 0, 90deg);
+				transition: transform $animationSpeed ease-in 0s;
+				will-change: transform;
+			}
+
+			&.flipped {
+				.campaign_card__thumbnail_wrapper {
+					transform: translate(-50%, -50%) rotate3d(0, 1, 0, -90deg);
+					transition: transform $animationSpeed ease-in 0s;
+				}
+
+				.campaign_card__company_wrapper {
+					transform: rotate3d(0, 1, 0, 0deg);
+					transition: transform $animationSpeed ease-out $animationSpeed;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:$sm) {
+	#broadsign_ads__overview {
+		h1 {
+			font-size: calc(min(6vw, 48px));
+		}
+
+		.feature_01_img {
+			max-height: none;
+			max-width: 445px;
+		}
+
+		.feature_02_img {
+			max-height: none;
+			max-width: 455px;
+		}
+
+		.feature_03_img {
+			max-height: none;
+			max-width: 390px;
+		}
+
+		.campaign_card {
+			height: 500px;
+
+			&__stat {
+
+				.icon {
+					max-height: 3vw;
+					max-width: 3vw;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:$md) {
+	#broadsign_ads__overview {
+		.Form {
+
+			form {
+				border-radius: 100px;
+				flex-flow: row nowrap;
+
+				fieldset {
+					margin: 0;
+				}
+
+				.field>label {
+					/* margin: 0; */
+				}
+			}
+
+			.input {
+				height: $heroFormInputHeight;
+			}
+
+			.hs_submit,
+			.actions {
+				height: $heroFormInputHeight;
+				position: absolute;
+				right: -1px;
+				top: 0;
+				width: auto;
+			}
+
+			input[type="email"] {
+				padding-right: 20ch;
+			}
+
+			input[type=submit].hs-button {
+				position: absolute;
+				right: -1px;
+				top: 0;
+				width: auto;
+			}
+		}
+	}
+}

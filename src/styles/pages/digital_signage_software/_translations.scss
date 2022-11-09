@@ -1,0 +1,18 @@
+html[lang="fr"] {}
+
+html[lang="es"] {}
+
+html[lang="de"] {}
+
+html[lang="nl"] {}
+
+html[lang="ja"] {}
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	#digital_signage_software {}
+}
+
+@media (min-width: $desktop_min_width) {
+	#digital_signage_software {}
+}

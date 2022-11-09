@@ -1,0 +1,75 @@
+html[lang="en"] #broadsign_control {
+	.Hero {
+		.CTA {
+			white-space: nowrap;
+		}
+	}
+}
+
+html[lang="fr"] #broadsign_control {
+	.Hero {
+		h1 {
+			span {
+				font-size: 70%;
+			}
+		}
+	}
+}
+
+html[lang="de"] #broadsign_control {
+	.Hero {
+		h1 {
+			font-size: 7rem;
+
+			span {
+				font-size: 86%;
+				max-width: 12ch;
+			}
+		}
+	}
+
+	.take_charge {
+		height: 42rem;
+
+		aside img {
+			transform: scale(1.2);
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	html[lang="de"] #broadsign_control {
+		.DQuote h3 {
+			font-size: 3.4rem;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	html[lang="fr"] #broadsign_control {
+		.sales h4 {
+			font-size: 2.3rem;
+		}
+	}
+
+	html[lang="de"] #broadsign_control {
+
+		.intro h3 {
+			font-size: 4rem;
+		}
+
+		.take_charge {
+			height: 46rem;
+
+			h2 {
+				font-size: 3.2rem;
+			}
+
+			.ImgFlank {
+				left: -20%;
+				max-width: 120%;
+				width: 120%;
+			}
+		}
+	}
+}

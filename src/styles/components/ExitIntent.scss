@@ -1,0 +1,211 @@
+@import "../base/dependencies";
+
+@keyframes wiggle {
+	0% {
+		transform: translateY(0%);
+	}
+
+	20% {
+		transform: translateY(-1%);
+	}
+
+	50% {
+		transform: translateY(1%);
+	}
+
+	80% {
+		transform: translateY(-1%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@include animFadeIn;
+@include animFadeOutNoBlur;
+
+#leadinModal-1860868 {
+	margin: 0;
+	max-height: 100vh;
+	padding: 0;
+
+	.leadinModal-close {
+		&:before {
+			color: #000;
+			font-size: 4rem;
+			opacity: 0.3;
+			padding-right: 6px;
+			transition: color 0.3s, opacity 0.3s;
+		}
+
+		&:hover:before {
+			color: #FFF;
+			opacity: 1;
+		}
+	}
+
+	.leadinModal-content {
+		@include fadeInOnce(1s);
+		background: rgba($blue, 0.6) url("../../img/resources/ebook_optimize_ooh_sales_popup_bg.jpg");
+		background-size: 100% 100%;
+		height: 44rem;
+		left: 50%;
+		max-height: 90vh;
+		max-width: 90vw;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 60rem;
+	}
+
+	.leadinModal-content-wrapper,
+	.leadin-content-body {
+		height: 100%;
+	}
+
+	.dyno-image {
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.dyno-image-inner {
+		height: 100%;
+		width: 100%;
+
+		img {
+			height: 100%;
+			left: auto;
+			max-width: 125%;
+			object-fit: contain;
+			position: absolute;
+			right: -25%;
+			top: 0;
+			width: 125%;
+		}
+
+		&:hover {
+			img {
+				animation: wiggle 5s ease-in-out 0s forwards infinite;
+			}
+		}
+	}
+
+	.leadin-preview-wrapper {
+		display: flex;
+		flex-flow: column nowrap;
+		font-size: 1rem;
+		height: 100%;
+		justify-content: center;
+
+		&>span,
+		&>div {
+			margin: 0;
+			width: 50%;
+		}
+
+		h4 {
+			color: #FFF;
+			cursor: default;
+			font-size: 3.2em;
+			margin: 0;
+			max-width: 14ch;
+		}
+
+		p {
+			@include fontLighter;
+			color: #FFF;
+			cursor: default;
+			font-size: 2em;
+			line-height: 140%;
+			margin: 1em 0;
+			max-width: 20ch;
+		}
+
+		strong {
+			@include fontBold;
+		}
+	}
+
+	.leadin-button {
+		background-color: $blue !important;
+		border: 1px solid $blue;
+		border-radius: 6rem;
+		font-size: 1.8em;
+		font-weight: bold;
+		padding: 0.7em 1.4em;
+		width: auto;
+
+		&:hover {
+			background-color: #FFF !important;
+			color: $blue !important;
+		}
+	}
+
+	&.leadinModal-closing {
+		animation: 1s ease-out 0s 1 normal forwards running fadeOutNoBlur;
+	}
+}
+
+@media (max-width: 768px) {
+	#leadinModal-1860868 {
+		.dyno-image {
+			width: 50% !important;
+		}
+
+		.dyno-image-inner img {
+			max-height: 1000rem;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#leadinModal-1860868 {
+		.leadinModal-close:before {
+			font-size: 6rem;
+		}
+
+		.leadinModal-content {
+			height: auto;
+			overflow-y: auto;
+		}
+
+		.dyno-image {
+			height: 40vw;
+			margin: 0 !important;
+			max-height: 30vh;
+			position: relative;
+			width: 100% !important;
+		}
+
+		.dyno-image-inner img {
+			height: 40vw;
+			max-height: 30vh;
+			right: auto;
+			width: 100%;
+		}
+
+		.leadin-preview-wrapper {
+			font-size: 1.2rem;
+
+			&>div,
+			&>span {
+				text-align: center;
+				width: 100%;
+			}
+
+			h4 {
+				margin-top: 1em;
+				max-width: 100%;
+			}
+
+			p {
+				margin-bottom: 2em;
+				max-width: 100%;
+			}
+		}
+	}
+}

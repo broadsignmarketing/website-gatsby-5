@@ -1,0 +1,436 @@
+@import "../../../base/dependencies";
+
+%localCTA {
+	background-color: $orange;
+	border-color: $orange;
+	color: #FFF;
+	display: inline-block;
+	margin: 0 auto;
+	width: auto;
+
+	&:hover,
+	&:active {
+		background-color: #FFF;
+		color: $orange;
+	}
+}
+
+#page_modernize_ooh_business {
+	$qBlue: #0033A1;
+
+	.Hero {
+		height: auto;
+		max-height: initial;
+
+		.ipad {
+			bottom: 0;
+			flex-basis: calc(55% - 3rem);
+			height: calc(100% - 36rem);
+			left: 0;
+			max-width: 80rem;
+			pointer-events: none;
+			position: absolute;
+			user-select: none;
+			width: 80rem;
+			z-index: 1;
+		}
+
+		&>.Tank {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			position: static;
+		}
+
+		.text_zone,
+		.form_zone {
+			z-index: 10;
+		}
+
+		.text_zone {
+			flex: 1 1 calc(50% + 6rem);
+			margin-top: 14rem;
+			max-width: 80rem;
+			padding-right: 6rem;
+
+			h1 {
+				@include fontAlt;
+				color: #FFF;
+				font-size: 5.6rem;
+				font-variant: normal;
+				line-height: 120%;
+				text-transform: none;
+			}
+		}
+
+		.form_zone {
+			flex: 1 1 calc(50% - 6rem);
+			margin-bottom: 4rem;
+			margin-top: 4rem;
+			max-width: 55rem;
+			padding: 6rem;
+
+			h3 {
+				@include fontSuperBold;
+				color: #FFF;
+				font-size: 4rem;
+				margin-bottom: 6rem;
+			}
+
+			form select option {
+				background-color: $blue;
+			}
+
+			.actions {
+				padding-top: 2rem;
+				text-align: center;
+
+				input {
+					@extend %localCTA;
+				}
+			}
+		}
+	}
+
+	.hull {
+		margin-top: 6rem;
+
+		.quote {
+			flex: 1 1 calc(50% + 6rem);
+			max-width: 69rem;
+			padding-right: 6rem;
+
+			h2 {
+				color: $orange;
+				font-size: 2.8rem;
+				margin-bottom: 3rem;
+				text-align: left;
+				width: 100%;
+			}
+
+			p {
+				@include fontBold;
+				font-size: 2.8rem;
+			}
+
+			.QuoteBlock {
+				$qTeal: #57D4E8;
+
+				blockquote {
+					border-radius: 0;
+					margin: 10rem 0 12rem;
+					padding: 6rem;
+
+					.wrap:after,
+					.wrap:before,
+					.signature:after {
+						display: none;
+					}
+
+					.signature:before {
+						margin-left: 0;
+						top: 0;
+					}
+				}
+
+				.quote_sign {
+					color: $qTeal;
+					font-family: "Gotham Bold", "Arial", "sans serif";
+					left: 50%;
+					position: absolute;
+					top: -8rem;
+					transform: translateX(-50%);
+					width: 7rem;
+				}
+
+				p {
+					@include fontAlt;
+					color: $qTeal;
+					font-size: 1.8rem;
+				}
+
+				.signature {
+					@include fontAlt;
+					color: $qTeal;
+					font-size: 1.4rem;
+					font-style: initial;
+					font-variant: normal;
+					letter-spacing: 0;
+					text-transform: none;
+				}
+			}
+		}
+
+		.features {
+			flex: 1 1 calc(50% - 6rem);
+			max-width: 61rem;
+
+			h2 {
+				font-size: 2.4rem;
+				margin-bottom: 2rem;
+				text-align: left;
+				width: 100%;
+			}
+
+			h3 {
+				color: $orange;
+				font-size: 1.8rem;
+				margin-bottom: 1.6rem;
+				text-align: left;
+				width: 100%;
+			}
+
+			p {
+				@include fontBold;
+				font-size: 1.8rem;
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	&.thank_you {
+		padding-bottom: 0;
+
+		.Hero {
+			height: 86rem;
+
+			&>.Tank {
+				flex-flow: row wrap;
+			}
+
+			.ipad {
+				flex-basis: 100%;
+				height: 54rem;
+				left:-#{$tankPadding};
+				max-width: 100%;
+				width: 100%;
+			}
+
+			.text_zone {
+				flex-basis: 100%;
+				max-width: 100%;
+				padding: 0;
+			}
+
+			.Panel {
+				align-items: center;
+				background: linear-gradient(to bottom, rgba($qBlue, 0.9) 10%, rgba($blue, 0.8) 90%);
+				border-radius: 2rem;
+				box-shadow: 4px 4px 16px rgba(#000, 0.8);
+				display: flex;
+				flex-basis: 100%;
+				flex-flow: column nowrap;
+				justify-content: center;
+				max-width: 100%;
+				padding: 12rem;
+				z-index: 100;
+
+				p {
+					color: #FFF;
+					margin-bottom: 3rem;
+				}
+			}
+
+			h3 {
+				color: #FFF;
+				display: inline-block;
+				font-size: 3.4rem;
+				margin-bottom: 3rem;
+			}
+
+
+			.CTA {
+				@extend %localCTA;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: $tablet_max_width) {
+	#page_modernize_ooh_business {
+		.hull {
+			margin-bottom: 12rem;
+
+			.quote .QuoteBlock blockquote {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait) {
+	#page_modernize_ooh_business {
+
+		.Hero .text_zone,
+		.Hero .form_zone,
+		.hull .quote,
+		.hull .features {
+			flex: 0 0 calc(50% - 3rem);
+			max-width: calc(50% - 3rem);
+		}
+
+		.Hero .text_zone,
+		.hull .quote {
+			padding: 0;
+		}
+
+		.Hero {
+			.text_zone {
+				h1 {
+					font-size: 4.2rem;
+				}
+			}
+
+			.ipad {
+				left: -8rem;
+			}
+		}
+	}
+
+
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_modernize_ooh_business {
+		.hull {
+			.Row {
+				flex-flow: row wrap;
+			}
+		}
+
+		.Hero .text_zone h1 {
+			font-size: 4.4rem;
+		}
+
+		.Hero .form_zone {
+			padding: 4rem;
+		}
+
+		.Hero .text_zone,
+		.hull .quote {
+			padding: 0;
+		}
+
+		.Hero .text_zone,
+		.Hero .form_zone,
+		.hull .quote,
+		.hull .features {
+			flex-basis: calc(50% - 1.5rem);
+			max-width: calc(50% - 1.5rem);
+		}
+	}
+
+
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#page_modernize_ooh_business {
+
+		.Hero .text_zone,
+		.Hero .form_zone,
+		.hull .quote,
+		.hull .features {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		.Hero {
+			&>.Tank {
+				flex-flow: row wrap;
+			}
+
+			.text_zone {
+				margin-top: 9rem;
+
+				h1 {
+					font-size: 5.2rem;
+				}
+			}
+
+			.form_zone {
+				margin-top: 3rem;
+			}
+
+			.ipad {
+				flex-basis: 100%;
+				height: auto;
+				left: -#{$tankPaddingPhone};
+				max-width: 100%;
+				position: relative !important;
+				width: 100%;
+			}
+		}
+
+		.hull .quote .QuoteBlock blockquote,
+		.features {
+			margin-top: 6rem;
+		}
+
+		&.thank_you {
+			.Hero {
+				.ipad {
+					position: absolute !important;
+				}
+
+				.Panel {
+					padding: 9rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	#page_modernize_ooh_business {
+		&.thank_you {
+			.Hero {
+				height: 80rem;
+
+				.Panel {
+					padding: 6rem 3rem;
+				}
+			}
+		}
+	}
+}
+
+html[lang="fr"] {
+	#page_modernize_ooh_business {}
+}
+
+html[lang="es"] {
+	#page_modernize_ooh_business {}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {
+		#page_modernize_ooh_business {}
+	}
+
+	html[lang="es"] {
+		#page_modernize_ooh_business {}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		#page_modernize_ooh_business {}
+	}
+
+	html[lang="es"] {
+		#page_modernize_ooh_business {}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	html[lang="fr"] {
+		#page_modernize_ooh_business {}
+	}
+
+	html[lang="es"] {
+		#page_modernize_ooh_business {}
+	}
+}

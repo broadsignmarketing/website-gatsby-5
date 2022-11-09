@@ -1,0 +1,113 @@
+@import "../base/dependencies";
+
+.SpynavTabs {
+	a {
+		align-items: center;
+		display: flex;
+		height: 100%;
+	}
+
+	.main {
+		margin-right: min(34px, 4.8vw);
+		padding-right: min(34px, 4.8vw);
+		position: relative;
+
+		&:after {
+			border-right: 1px solid $ash;
+			content: "";
+			height: 20px;
+			left: auto;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.ending {
+		margin-left: auto;
+
+		.CTA {
+			min-height: 0;
+		}
+	}
+
+	&.spynav_mobile {
+		height: 40px;
+
+		.current_section {
+			button {
+				cursor: pointer;
+
+				span {
+					@include activeWithGradientUnderline;
+					height: 40px;
+					padding-top: 2px;
+				}
+			}
+		}
+
+		.subnav {
+			left: 0%;
+			max-height: 0vh;
+			overflow: hidden;
+			top: 100%;
+			transition: max-height 0.3s ease, padding 0.3s ease;
+		}
+
+		&:before {
+			transform: translateY(2px);
+		}
+
+		&.active {
+			.subnav {
+				max-height: 50vh;
+			}
+
+			&:before {
+				transform: translateY(2px) rotate(180deg);
+			}
+		}
+	}
+
+	&.desktop {
+		.spylink {
+			margin-right: clamp(10px, 2vw, 75px);
+
+			&:after {
+				transition-delay: 0s;
+			}
+		}
+	}
+
+	&__unfold {
+		display: none;
+
+		&.active {
+			display: flex;
+		}
+	}
+}
+
+@media (min-width:$sm) {
+	.SpynavTabs {
+		.main {
+			margin-right: min(34px, 1.2vw);
+			padding-right: min(34px, 1.2vw);
+		}
+
+		&.desktop {}
+
+		&.mobile {}
+	}
+}
+
+@media (min-width:$md) {
+	.SpynavTabs {
+		&.desktop {
+			.spylink {
+				margin-right: clamp(15px, 4vw, 75px);
+			}
+		}
+	}
+}

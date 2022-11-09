@@ -1,0 +1,32 @@
+#page_downtime {
+	#overlay {
+		@include bg;
+		@include flexCenter;
+		background-color: #FFF;
+		height: 100%;
+		max-width: 100%;
+		position: fixed;
+		z-index: 9999999999999999999999999999;
+
+		.inner {
+			@include bg;
+			@include flexCenter;
+		}
+
+		img#logo {
+			height: 6rem;
+			margin: 0 auto 3rem;
+			width: 100%;
+		}
+
+		p {
+			display: inline-block;
+			margin: 0 0 3rem;
+			text-align: center;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

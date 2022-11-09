@@ -1,0 +1,151 @@
+@media (max-width: $xl_max_width) {
+	main[id^="page_vertical_"] {
+		.Hero {
+			max-height: 80vh;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	main[id^="page_vertical_"] {
+		.Hero {
+			@include bgCover;
+			align-items: stretch;
+			height: 66rem;
+			max-height: 80vh;
+
+			.text {
+				max-width: 80%;
+			}
+		}
+
+		#features .ImgHat>.Row {
+			height: 10rem;
+			min-height: 10rem;
+
+			img {
+				max-height: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+
+	@supports(background-attachment: fixed) {
+		main[id^="page_vertical_"] {
+			.VerticalShinDemoOffer {
+				background-attachment: fixed;
+			}
+		}
+	}
+
+	main[id^="page_vertical_"] {
+		.Hero {
+			.text {
+				max-width: 100%;
+			}
+		}
+
+		#features .ImgHat>.Row {
+			img {
+				max-height: 10rem;
+				max-width: 22rem;
+			}
+		}
+
+		.VerticalShinDemoOffer {}
+	}
+}
+
+@media (max-width: 599px) and (orientation:portrait) {
+	main[id^="page_vertical_"] {
+		.Pane {}
+
+		#features {
+			.ImgHat {
+				flex-flow: row nowrap;
+				justify-content: space-between;
+
+				.Row {
+					height: auto;
+					width: 25%;
+
+					img {
+						max-height: 10rem;
+						max-width: 22rem;
+						width: 100%;
+					}
+				}
+
+				.column {
+					width: 75%;
+				}
+			}
+
+			.Pane:nth-child(odd) {
+				.ImgHat {
+					flex-flow: row nowrap;
+
+					.column {
+						padding-left: 3rem;
+					}
+				}
+			}
+
+			.Pane:nth-child(even) {
+				.ImgHat {
+					flex-flow: row-reverse nowrap;
+
+					.column {
+						padding-right: 3rem;
+					}
+				}
+			}
+		}
+
+		.CardPanel {
+			.card {
+				flex: 0 1 100%;
+				margin:0 auto 6rem;
+				max-width: 360px;
+
+				img {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:landscape) {
+	main[id^="page_vertical_"] {
+		.Hero {
+			height: 60rem;
+			max-height: 60rem;
+			min-height: 100vh;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	main[id^="page_vertical_"] {
+		.Hero .title {
+			font-size: 13rem;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	main[id^="page_vertical_"] {}
+}
+
+@media (hover:hover) and (pointer:fine) and (max-width: $mobile_max_width) {
+	@supports(background-attachment: fixed) {
+		main[id^="page_vertical_"] {
+			.VerticalShinDemoOffer {
+				background-attachment: fixed;
+			}
+		}
+	}
+}

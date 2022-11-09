@@ -1,71 +1,274 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
-import Header from "../components/header"
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import classnames from "classnames"
 
-import Seo from "../components/seo"
+import CTA from "@components/CTA"
+import Form from "@components/Form"
+import Hero from "@components/Hero"
+import { GatsbyImage as Img } from "gatsby-plugin-image"
+import Layout from "@components/layout"
+const LogosList = React.lazy(() => import("@components/LogosList"))
+import Link from "@components/LocalizedLink"
+import Modal from "@components/Modal"
+import SubHeroBanner from "@partials/index__SubHeroBanner"
+import Tank from "@components/Tank"
+import VideoPoster from "@components/VideoPoster"
 
-import Layout from "../components/layout"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+const BlogPosts = React.lazy(() => import("@partials/index__BlogPosts"))
+const EBooks = React.lazy(() => import("@partials/index__EBooks"))
+const Quotes = React.lazy(() => import("@partials/index__Quotes"))
 
-// import * as styles from "../components/index.module.css"
+import cta_arrow_slim from "@img/pages/index/arrow_right_slim_midnightBlue.svg"
+import media_buyers from "@img/pages/index/icon_media_buyers.svg"
+import media_owners from "@img/pages/index/icon_media_owners.svg"
 
-const IndexPage = () => {
-	const { t } = useTranslation()
+import "@sass/components/ImgFlank.scss"
+import "@sass/pages/home.scss"
+
+export default function IndexPage({
+	pageContext: { l, dicoPath },
+	location: { pathname },
+	data,
+}) {
+	const [openModal, setOpenModal] = useState(false)
+
+	if (l === "cn") {
+		return <Layout path={pathname} />
+	}
+
+	const T = {
+		translate: txt => {
+			return txt
+		},
+	}
+
+	const route = txt => {
+		return txt
+	}
 
 	return (
-		<Layout>
-			<main>
-				<StaticImage
-					src="../images/example.png"
-					loading="eager"
-					width={64}
-					quality={95}
-					formats={["auto", "webp", "avif"]}
+		<Layout path={pathname} id="home">
+			<Hero>
+				<Tank div>
+					<div className="text">
+						<h1 className="title">{T.translate("Hero.title")}</h1>
+						<p className="tagline">{T.translate("Hero.tagline")}</p>
+						<div className="ctas version_lp">
+							<Link
+								className={classnames(
+									"hero_cta",
+									`lang_${l}`,
+									"free_trial",
+									"cta_lp"
+								)}
+								to={route("freeTrial", l)}
+							>
+								<CTA className="span custom">
+									{T.translate("Hero.ctaFreeTrial")}
+								</CTA>
+								<CTA className="span custom arrow">
+									<img
+										src={cta_arrow_slim}
+										height="20"
+										width="20"
+										alt=""
+									/>
+								</CTA>
+							</Link>
+							<button
+								className={classnames(
+									"hero_cta",
+									`lang_${l}`,
+									"free_trial",
+									"cta_modal"
+								)}
+								onClick={() => {
+									setOpenModal(true)
+								}}
+							>
+								<CTA className="span custom">
+									{T.translate("Hero.ctaFreeTrial")}
+								</CTA>
+								<CTA className="span custom arrow">
+									<img
+										src={cta_arrow_slim}
+										height="20"
+										width="20"
+										alt=""
+									/>
+								</CTA>
+							</button>
+						</div>
+					</div>
+				</Tank>
+				<Img
 					alt=""
-					style={{ marginBottom: `var(--space-3)` }}
+					className="hero bg hidden sm:inline-block"
+					image={data.Hero.childImageSharp.gatsbyImageData}
+					objectPosition="center bottom"
+					loading="eager"
+					style={{
+						bottom: "0px",
+						position: "absolute",
+						transformOrigin: "center bottom",
+						top: "auto",
+					}}
 				/>
-				<h1>
-					<Header></Header>
-				</h1>
-				<h1>
-					<Trans>Welcome to my Gatsby site!</Trans>
-				</h1>
-				<p>
-					<Trans>My name is Shanika</Trans>
-				</p>
-				<p>
-					<Trans>My profession is SSE</Trans>
-				</p>
-				<p>
-					<Trans>My Birthday is 1990/10/10</Trans>
-				</p>
-				<p>{t("message")}</p>
-			</main>
+				<Img
+					alt=""
+					className="hero bg inline-block sm:hidden"
+					image={data.HeroMobile.childImageSharp.gatsbyImageData}
+					objectPosition="center bottom"
+					loading="eager"
+					style={{
+						bottom: "0px",
+						position: "absolute",
+						transformOrigin: "center bottom",
+						top: "auto",
+					}}
+				/>
+			</Hero>
+			{l !== "es" && (
+				<section className="branches Tank">
+					<Link className="branch" to={route("broadsignPlatform")}>
+						<img
+							src={media_owners}
+							className="icon"
+							alt="Media owners"
+							height="80"
+							width="80"
+							loading="lazy"
+						/>
+						<div className="desc">
+							<h2 className="media_type font_size_3">
+								{T.translate("branches.mediaOwners.title")}
+							</h2>
+							<p className="font_size_2">
+								{T.translate("branches.mediaOwners.p")}
+							</p>
+							<hr />
+							<span className="cta text-reflex font_size_1_6 uppercase font-black">
+								{T.translate("branches.mediaOwners.cta")}
+							</span>
+						</div>
+					</Link>
+					<Link className="branch" to={route("launchPDOOHCampaign")}>
+						<img
+							src={media_buyers}
+							className="icon"
+							alt="Media buyers"
+							height="80"
+							width="80"
+							loading="lazy"
+						/>
+						<div className="desc">
+							<h2 className="media_type font_size_3">
+								{T.translate("branches.mediaBuyers.title")}
+							</h2>
+							<p className="font_size_2">
+								{T.translate("branches.mediaBuyers.p")}
+							</p>
+							<hr />
+							<span className="cta text-reflex font_size_1_6 uppercase font-black">
+								{T.translate("branches.mediaBuyers.cta")}
+							</span>
+						</div>
+					</Link>
+				</section>
+			)}
+			<SubHeroBanner />
+			{["es"].includes(l) && (
+				<Link
+					to={`${route("resources", "es")}?w=iem`}
+					className="ilumina_el_mundo_banner"
+				>
+					<div className="flash" />
+					<div className="inner">
+						<p>Conozca nuestra plataforma</p>
+						<CTA className="span round cerulean">Mira Aquí</CTA>
+					</div>
+				</Link>
+			)}
+			<VideoPoster
+				title={T.translate("videoTitle")}
+				className="client_reel"
+				YTid="mWA31Igrvk0"
+				playBtnStyle="solid"
+				bg="transparent"
+				poster={
+					data.clientReelVideoPoster.childImageSharp.gatsbyImageData
+				}
+			>
+				<span className="client_reel_title">
+					{T.translate("videoTitle")}
+				</span>
+			</VideoPoster>
+			{/* <React.Suspense>
+				<Quotes></Quotes>
+			</React.Suspense> */}
+			{/* <React.Suspense>
+				<BlogPosts posts={data.posts.nodes}></BlogPosts>
+			</React.Suspense> */}
+			{/* <React.Suspense>
+				<EBooks></EBooks>
+			</React.Suspense> */}
+			<React.Suspense>
+				<LogosList list="media_owners" variation="grey">
+					<h2 before="true" className="font_size_3_4">
+						{T.translate("logosList.title")}
+					</h2>
+				</LogosList>
+			</React.Suspense>
+			<section className="shin">
+				<Tank div>
+					<CTA className="pink" to={route("freeTrial")}>
+						{T.translate("shin.freeTrial")}
+					</CTA>
+					<CTA className="custom" to={route("demo")}>
+						{T.translate("shin.demo")}
+					</CTA>
+				</Tank>
+			</section>
+			{openModal && (
+				<Modal variant="form" onClose={() => setOpenModal(false)}>
+					<Form form="freeTrial" fields="boxes" bg="light"></Form>
+				</Modal>
+			)}
 		</Layout>
 	)
 }
 
-export const query = graphql`
-	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
-			edges {
-				node {
-					ns
-					data
-					language
-				}
+export const queryIndex = graphql`
+	query IndexContent($language: String!) {
+		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
+			childImageSharp {
+				gatsbyImageData
 			}
+		}
+		HeroMobile: file(relativePath: { eq: "pages/index/hero_mobile.jpg" }) {
+			childImageSharp {
+				gatsbyImageData
+			}
+		}
+
+		clientReelVideoPoster: file(
+			relativePath: { eq: "pages/index/poster_client_reel.jpg" }
+		) {
+			childImageSharp {
+				gatsbyImageData
+			}
+		}
+
+		posts: allUberflipItem(
+			limit: 2
+			sort: { fields: date, order: DESC }
+			filter: {
+				language: { eq: $language }
+				stream: { eq: "blog" }
+				date: { ne: "2022-08-18" }
+			}
+		) {
+			...ufItems
 		}
 	}
 `
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
-
-export default IndexPage

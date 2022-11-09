@@ -1,0 +1,38 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_casino {
+		.Hero {
+
+			.title {
+				font-size: 17rem;
+
+				em {
+					bottom: 0.4rem;
+					order: 2;
+					position: relative;
+				}
+
+				span:first-of-type {
+					font-size: 26.6%;
+					order: 1;
+				}
+
+				span:last-of-type {
+					font-size: 28.7%;
+					order: 3;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] #page_vertical_casino {
+		.Hero {
+			.title {
+				font-size: 14rem;
+			}
+		}
+	}
+}

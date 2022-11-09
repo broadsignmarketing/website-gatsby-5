@@ -1,0 +1,11 @@
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+.SideBar {
+	display: none;
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:landscape) {
+	.SideBar {
+		display: none;
+		}
+	}

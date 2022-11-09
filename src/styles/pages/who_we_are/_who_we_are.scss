@@ -1,0 +1,334 @@
+#who_we_are {
+	.Hero {
+		max-height: 57.7rem;
+
+		.title {
+			font-size: 20rem;
+			margin-bottom: 0;
+
+			em {
+				@include fontSuperBold;
+				left: -0.6rem;
+				position: relative;
+			}
+
+			span {
+				font-size: 40%;
+			}
+		}
+	}
+
+	.intro {
+		font-size: 4rem;
+		margin-top: 6rem;
+
+		h2 {
+			@include fontSuperBold;
+			color: $titleTeal;
+			line-height: 80%;
+			margin-bottom: 3.5rem;
+		}
+
+		.Row {
+			flex-wrap: wrap;
+		}
+
+		.pars {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 3rem;
+		}
+
+		.stats {
+			margin-top: 6rem;
+			flex-wrap: wrap;
+		}
+
+		.item {
+			justify-content: flex-start;
+
+			h3 {
+				@include fontReg;
+				color: $blue;
+				font-size: 1.7rem;
+				font-weight: normal;
+				margin-bottom: 0;
+				margin-top: 3rem;
+				text-align: center;
+				text-transform: uppercase;
+
+				strong {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			img {
+				height: 11rem;
+				max-width: 14rem;
+				object-fit: contain;
+				object-position: center bottom;
+				width: 100%;
+			}
+
+			&.screens {
+				img {
+					max-width: 12rem;
+				}
+			}
+		}
+
+		.Video {
+			background-color: $blue;
+			margin-top: 10rem;
+
+			.bg {
+				opacity: 0.6;
+				transition: opacity 0.3s;
+			}
+
+			&:hover {
+				.bg {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.leadership {
+		font-size: 5.2rem;
+
+		h2 {
+			color: $mint;
+			font-size: 5rem;
+			line-height: 90%;
+			margin-bottom: 6rem;
+			margin-top: 3rem;
+		}
+
+		.gradient_line {
+			background: linear-gradient(to right, #19CDFF 15%, #1E1BB2 45%, #FF1919 90%);
+			height: 2px;
+			margin-bottom: 8rem;
+			margin-top: 8rem;
+		}
+
+		.profiles {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			margin: 0 auto 6rem;
+			max-width: 1000px;
+			position: relative;
+			z-index: 10000;
+		}
+
+		.profile {
+			@include flexCenter;
+			border-radius: 3rem;
+			flex: 0 0 calc(33% - 0.2vw);
+			margin: .4vw;
+			max-width: 28rem;
+			position: relative;
+			width: calc(33% - 0.2vw);
+
+			&>.gatsby-image-wrapper,
+			&>.gatsby-image-outer-wrapper>.gatsby-image-wrapper {
+				overflow: hidden;
+			}
+
+			&:hover {
+				border-radius: 3rem;
+				width: 100%;
+
+				.text {
+					opacity: 1;
+				}
+			}
+
+			.CTA {
+				padding: 0.65em 1.8em 0.6em;
+			}
+		}
+
+		.profile-wrapper {
+			height: 30rem;
+			max-height: 30vw;
+			width: 30rem;
+
+			.gatsby-image-wrapper {
+				border-radius: 3rem;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.profile_container {
+			@include bg;
+			max-width: 100%;
+			position: absolute;
+
+			.text {
+
+				br,
+				em {
+					display: none;
+				}
+			}
+		}
+
+		.text {
+			@include flexCenter;
+			@include bg;
+			border-radius: 3rem;
+			opacity: 0;
+			overflow: hidden;
+			padding: 3rem;
+			transition: opacity 0.3s;
+			user-select: none;
+
+			.bg {
+				@include bg;
+				background: linear-gradient(to right, $red 0%, #A00040 25%, #32008A 50%, #0700A7 63%, #0424B8 75%, $teal 100%);
+				opacity: 0.7;
+				z-index: 1;
+			}
+
+			.name {
+				@include fontBold;
+				color: #FFF;
+				cursor: default;
+				display: block;
+				font-size: 2.6rem;
+				margin-bottom: 0.6em;
+				position: relative;
+				text-align: center;
+				text-transform: none;
+				z-index: 10;
+			}
+
+			.title {
+				@include fontReg;
+				color: #FFF;
+				cursor: default;
+				font-size: 2rem;
+				margin: 0 0 2rem;
+				position: relative;
+				text-align: center;
+				z-index: 10;
+			}
+		}
+	}
+}
+
+.Modal.modal_leader_profile {
+	.card {
+		align-items: stretch;
+		background-color: #CACDD2;
+		justify-content: space-between;
+		max-height: calc(100% - 80px);
+		max-width: calc(100% - 80px);
+		padding: 0;
+		width: 120rem;
+	}
+
+	.profile_picture {
+		background-color: #cacdd2;
+		display: flex;
+		flex: 0 0 40%;
+		max-width: 40%;
+		position: relative;
+
+		&.mobile {
+			display: none;
+			max-width: 100%;
+		}
+	}
+
+	.description {
+		background-color: #CACDD2;
+		display: flex;
+		flex: 0 0 60%;
+		flex-flow: column;
+		height: 100%;
+		max-width: 80%;
+		overflow-y: scroll;
+		padding: 6rem;
+
+		.name {
+			@include fontSuperBold;
+			color: $blue;
+			font-size: 62px;
+			margin: 0 0 0.5em;
+		}
+
+		.title {
+			@include fontBolder;
+			color: $blue;
+			display: inline-block;
+			font-size: 20px;
+			margin: 0 0 1em;
+			text-transform: none;
+
+			br {
+				display: none;
+			}
+
+			em {
+				@include fontReg;
+				box-sizing: border-box;
+				color: #1A68B3;
+				display: inline-block;
+				font-size: 90%;
+				line-height: 120%;
+				margin-top: 1em;
+				padding-right: 0.3em;
+				width: 100%;
+			}
+
+			strong {
+				@include fontBold;
+				display: inline;
+			}
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 150%;
+			margin: 0 0 1em;
+		}
+	}
+}
+
+@media screen and (hover:none) {
+	#who_we_are .leadership .profile {
+		.text {
+			align-items: flex-start;
+			justify-content: flex-end;
+			opacity: 1;
+		}
+
+		.bg {
+			display: none;
+		}
+
+		.name {
+			font-size: 2.2rem;
+			line-height: 100%;
+			text-align: left;
+			text-shadow: 1px 1px 2px $blue, 1px 1px 2px $blue, 2px 2px 4px #000;
+		}
+
+		.title {
+			font-size: 1.6rem;
+			line-height: 120%;
+			margin: 0 0 1rem;
+			text-align: left;
+			text-shadow: 1px 1px 2px $blue, 1px 1px 2px $blue, 2px 2px 4px #000, 2px 2px 4px #000;
+		}
+
+		.CTA {
+			box-shadow: 2px 2px 6px #000;
+		}
+	}
+}

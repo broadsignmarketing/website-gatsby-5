@@ -1,0 +1,43 @@
+@import "../base/dependencies";
+
+.Panel {
+	/* COLOR */
+	$allColors: ("reflex":$reflex,
+			"cerulean":$cerulean,
+			"scarlet":$scarlet,
+			"ash":$ash,
+			"soft":$soft,
+			"ultra":$ultra,
+			"light":$light,
+			"medium":$medium,
+			/* Everything below here has to go*/
+			"blizzard":$blizzard,
+			"blue":$blue,
+			"red":$red,
+			"teal":$teal,
+			"midnightBlue":$midnightBlue,
+			"whisper":$whisper,
+			"mint":$mint,
+			"spring":$spring);
+
+	@each $name,
+	$color in $allColors {
+		&.#{$name} {
+			background-color: $color;
+		}
+	}
+
+	padding: 3rem;
+
+	&>*:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: $tablet_max_width) {}
+
+@media (max-width: $mobile_max_width) {
+	.Panel {
+		padding: 3rem 4rem;
+	}
+}

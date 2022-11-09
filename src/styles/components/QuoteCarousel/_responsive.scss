@@ -1,0 +1,53 @@
+@media (orientation:landscape),
+(min-width: $mobile_min_width) {}
+
+@media (min-width: $mobile_min_width) and (orientation:landscape),
+(min-width: $tablet_min_width) {
+	.QuoteCarousel {
+		font-size: 20px;
+		font-size: calc(min(20px, 2vw));
+
+		&.theme_disco blockquote {
+			width: 80%;
+		}
+
+		.arrow {
+			width: 1.6em;
+		}
+	}
+}
+
+@media (min-width: $tablet_min_width) and (orientation:landscape),
+(min-width: $desktop_min_width) {
+	.QuoteCarousel {
+		font-size: 24px;
+		font-size: calc(min(24px, 2vw));
+
+		&.theme_lightpanel {
+			border-radius: 2.4em;
+			max-width: 1200px;
+			width: calc(100% - 80px);
+
+			.quote {}
+
+			cite {}
+
+			.arrow {
+				max-height: 140px;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop_min_width) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1280px) {
+	.QuoteCarousel {
+		&.error {
+			border-radius: 1rem;
+			max-width: 1200px;
+		}
+	}
+}

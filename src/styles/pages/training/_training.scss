@@ -1,0 +1,75 @@
+#page_training {
+	#intro {
+		margin-bottom: 6rem;
+		margin-top: 3rem;
+
+		h1 {
+			@include fontSuperBold;
+			color: $titleTeal;
+			font-size: 6.2rem;
+			line-height: 80%;
+			margin-bottom: 3.6rem;
+		}
+
+		p {
+			font-size: 2.2rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.training {
+		margin-top: 6rem;
+
+		h3 {
+			font-size: 3.2rem;
+			line-height: 100%;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		.ImgHat {
+			.column {
+				align-items: flex-start;
+				margin-top: 4rem;
+
+				p {
+					margin-top: 3rem;
+				}
+			}
+		}
+	}
+
+	.quotes {
+		margin-bottom: 9rem;
+		margin-top: 6rem;
+
+		.ImgHat {
+			flex-basis: calc(47% - 15px);
+			max-width: calc(47% - 15px);
+
+			p {
+				margin-bottom: 2rem;
+			}
+
+			.Row {
+				margin-bottom: 2rem;
+			}
+
+			.column {
+				align-items: flex-start;
+
+				.user {
+					font-weight: 800;
+				}
+			}
+		}
+
+		.vertical_line {
+			border-left: 1px solid $dim;
+			border-right: 1px solid $mint;
+			flex-basis: 0;
+			max-width: 0;
+			width: 0;
+		}
+	}
+}

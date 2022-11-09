@@ -1,0 +1,51 @@
+@media (max-width: $tablet_max_width) {}
+
+@media (max-width: $mobile_max_width) {
+	.thank_you {
+		.Hero {
+			margin-bottom: 0;
+			max-height: 40vh;
+		}
+
+		#intro {
+			padding: 0;
+
+			.Panel {
+				padding-left: 4rem;
+				padding-right: 4rem;
+
+				.CTA {
+					height: auto;
+					max-height: none;
+					white-space: normal;
+				}
+			}
+		}
+
+		.resources {
+			h3 {
+				font-size: 2.2rem;
+			}
+
+			.CardPanel {
+				margin-top: 2rem;
+
+				.title {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	.thank_you {
+		#intro {
+			.Panel {
+				h1 {}
+			}
+		}
+	}
+}

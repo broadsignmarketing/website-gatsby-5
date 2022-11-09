@@ -1,0 +1,17 @@
+html[lang="fr"] {
+	#careers {
+		.Hero h1 em {
+			display: inline-block;
+		}
+
+		.locations .Panel .CTA {
+			letter-spacing: 0;
+			white-space: nowrap;
+		}
+
+		.benefits .box_description {
+			font-size: 0.75em;
+			line-height: 140%;
+		}
+	}
+}

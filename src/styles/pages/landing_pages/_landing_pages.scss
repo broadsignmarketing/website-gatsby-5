@@ -1,0 +1,97 @@
+.landing_page {
+	&.page_event {
+		#page_bg {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.Hero {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: auto;
+			padding-bottom: 6rem;
+			padding-top: 6rem;
+		}
+
+		.hull {
+			margin: 0;
+			max-width: 100%;
+			padding: 0;
+			width: 100%;
+
+			.inner {
+				max-width: $tank_max_width;
+				padding: 6rem $tankPadding 12rem;
+			}
+		}
+
+		.text_zone {}
+
+		.form_zone {
+			.Panel {
+				border-radius: 4rem;
+				padding: 6rem 4rem;
+			}
+		}
+
+		.title {
+			@include fontSuperBold;
+			color: $mint;
+			font-size: 6.2rem;
+			margin-bottom: 6rem;
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.subtitle {
+			@include fontBolder;
+			font-size: 4rem;
+			margin-bottom: 3rem;
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.tagline {
+			@include fontBolder;
+			font-size: 3.2rem;
+			margin-bottom: 3rem;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	&#page_buy_dooh.page_work_with_us {
+		min-height: calc(100vh - 50rem);
+
+		.blobs.left {
+			bottom: -5px;
+			left: -5px;
+			max-width: 86rem;
+			object-fit: contain;
+			object-position: left bottom;
+			width: 50%;
+		}
+
+		.fold {
+			min-height: 56vw;
+		}
+	}
+}
+
+@media (hover:hover) and (pointer:fine) {
+	@supports(background-attachment: fixed) {
+		.landing_page {
+			&.page_event {
+				#page_bg {
+					background-attachment: fixed;
+				}
+
+				.Hero {
+					background-attachment: fixed;
+				}
+			}
+		}
+	}
+}

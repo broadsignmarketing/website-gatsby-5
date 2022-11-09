@@ -1,0 +1,90 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_outdoor {
+		.cp_logos .logos {
+			.logo {
+				flex: 0 0 30vw;
+				margin: 0 0 3rem;
+				max-width: 20vw;
+
+				img {
+					max-width: 20vw;
+					width: 120rem;
+				}
+
+				&.intersection,
+				&.clearchannel,
+				&.g2d {
+					img {
+						max-width: 16vw;
+					}
+				}
+
+				&.global img {
+					transform: scale(1.3);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) and (orientation:portrait),
+(max-width: $mobile_max_width) {
+	#page_vertical_outdoor {
+		.QuoteCarousel {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_vertical_outdoor {
+		.cp_logos .logos {
+			$maxWidth: 25vw;
+
+			.logo {
+				flex: 0 0 $maxWidth;
+				margin: 1rem auto;
+				max-width: $maxWidth;
+
+				img {
+					max-width: $maxWidth;
+				}
+
+				&.intersection,
+				&.clearchannel,
+				&.g2d {
+					img {
+						max-width: $maxWidth;
+					}
+				}
+
+				&.global img {
+					transform: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#page_vertical_outdoor {
+
+		section.Hero {
+			.title {
+				font-size: 18vw;
+			}
+		}
+
+		section.SpielPoster {
+			.outdoor_spiel_wrapper {
+				width: 100%;
+			}
+		}
+
+
+
+		.Lattice {
+			margin-bottom: 0;
+		}
+	}
+}

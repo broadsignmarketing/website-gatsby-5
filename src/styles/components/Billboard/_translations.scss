@@ -1,0 +1,52 @@
+html[lang="fr"] {
+	.Billboard {
+		&#big_voice_award {
+			.img {
+				background: transparent url("../../img/resources/campsite_big_voice_billboard_fr.svg") center center no-repeat;
+			}
+		}
+	}
+
+	.page_programmatic {
+		.Billboard {
+			&#programmatic_u {
+				h3 {
+					font-size: 2.2rem;
+				}
+			}
+		}
+	}
+}
+
+html[lang="es"] {}
+
+@media (max-width: $mobile_max_width) {
+	html[lang="fr"] {
+		.page_programmatic {
+			.Billboard#programmatic_u {
+				.CTA {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation: portrait),
+(max-width: $xs_max_width) {
+	html[lang="fr"] {
+		.page_programmatic {
+			.Billboard#programmatic_u {
+				h3 {
+					font-size: 2.4rem;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				.CTA {
+					font-size: 2.2rem;
+				}
+			}
+		}
+	}
+}

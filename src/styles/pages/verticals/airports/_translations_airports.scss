@@ -1,0 +1,45 @@
+html[lang="es"] {}
+
+html[lang="fr"] {
+	#page_vertical_airports {
+		.Hero {
+			.title {
+				font-size: 12rem;
+
+				span:first-of-type {
+					color: $dim;
+					font-size: 47.6%;
+					line-height: 82%;
+					order: 1;
+				}
+
+				span:last-of-type {
+					font-size: 52%;
+					line-height: 82%;
+					order: 2;
+				}
+
+				em {
+					line-height: 96%;
+					order: 3;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="fr"] {}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	html[lang="fr"] {
+		#page_vertical_airports {
+			.Hero {
+				.title {
+					font-size: 7.6rem;
+				}
+			}
+		}
+	}
+}

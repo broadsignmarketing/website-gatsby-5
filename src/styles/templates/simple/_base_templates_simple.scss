@@ -1,0 +1,67 @@
+.template_simple {
+	.hull {
+		margin-bottom: 6rem;
+		margin-top: 6rem;
+
+		&>h3 {
+			margin-bottom: 3rem;
+		}
+
+		.text_zone {
+
+			ul,
+			li {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+
+		.form_zone {
+			flex: 0 0 50%;
+			margin-top: 0.6rem;
+
+			.Panel {
+				h3 {
+					font-size: 2.6rem;
+					margin: 2rem 0 3.5rem;
+				}
+
+				.Form {
+					form {
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: space-between;
+					}
+
+					.field {
+						flex: 0 0 calc(50% - 1.5rem);
+						width: calc(50% - 1.5rem);
+
+						&.hs_consent_to_privacy_policy {
+							flex: 0 0 100%;
+							width: 100%;
+						}
+					}
+
+					input,
+					select {
+						border: 1px solid #cccccc;
+					}
+
+					.hs_submit {
+						width: 100%;
+					}
+
+					.actions {
+						display: flex;
+						justify-content: center;
+						margin: 6rem 0 3rem;
+						max-width: 100%;
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

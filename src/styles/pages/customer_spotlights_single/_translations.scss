@@ -1,0 +1,34 @@
+html[lang="fr"] {}
+
+html[lang="es"] {
+}
+
+@media (max-width: $tablet_max_width) {
+	html[lang="es"] .blog.customer_spotlight.single {
+
+		.success_label,
+		.title,
+		.hull>.column.col_content {
+			flex-basis: 100%;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait),
+(max-width: $xs_max_width) {
+	html[lang="es"] {
+		.blog.customer_spotlight.single {
+			.success_label {}
+
+			.title {}
+
+			.hull {
+				&>.column.col_meta {}
+
+				&>.column.col_content {}
+			}
+		}
+	}
+}

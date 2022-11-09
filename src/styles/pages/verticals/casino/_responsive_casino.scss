@@ -1,0 +1,84 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_casino {
+		.VideoPoster {
+			padding-left: $tankPadding;
+			padding-right: $tankPadding;
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) {
+	#page_vertical_casino {
+		.VideoPoster {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			.text {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#page_vertical_casino {
+		.Hero {
+			.text {
+				max-width: 70rem;
+			}
+
+			.title {
+				display: flex;
+				flex-flow: column nowrap;
+			}
+		}
+
+		.VideoPoster {
+			align-items: center;
+			flex-flow: column;
+			height: auto;
+
+			.text {
+				align-items: center;
+				display: flex;
+				flex-flow: column;
+				max-width: 80%;
+				padding-left: 0;
+				padding-top: 3rem;
+				width: 80%;
+			}
+
+			.video_zone {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 3rem;
+				margin-top: 5rem;
+				max-width: 100%;
+				width: 100%;
+
+				.Video {
+					height: 50vw;
+					max-height: 50vw;
+					max-width: 90vw;
+					width: 90vw;
+				}
+			}
+		}
+
+		.QuoteBlock {
+			blockquote {
+				margin: 6rem auto 0;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_casino {
+		.Hero {
+			.title {
+				font-size: 20vw;
+			}
+		}
+	}
+}

@@ -1,0 +1,176 @@
+@import "../../../base/dependencies";
+
+.page_webinar7PasosClave {
+	.hull {
+		background: $blue;
+		overflow: hidden;
+
+		&>.Tank {
+			margin-top: 0;
+			padding-bottom: 14rem;
+			padding-top: 20rem;
+			z-index: 10;
+		}
+
+		.bg {
+			z-index: 1;
+		}
+
+		.gradient {
+			border-radius: 100%;
+			filter: blur(7rem);
+			height: 120rem;
+			position: absolute;
+			width: 120rem;
+
+			&.top_right {
+				background: linear-gradient(0deg, #FF0000 3.3%, #0505A9 60.14%, #0539C0 69.11%, #0585E2 82.08%, #05B6F7 92.05%, #05C8FF 97.03%);
+				left: 18vw;
+				top: -36vw;
+				z-index: 1;
+			}
+
+			&.middle_left {
+				background: linear-gradient(0deg, #FF0000 3.3%, #0505A9 60.14%, #0539C0 69.11%, #0585E2 82.08%, #05B6F7 92.05%, #05C8FF 97.03%);
+				left: -22vw;
+				top: calc(50% - 60rem);
+				transform: rotate(-1.53deg);
+				z-index: 2;
+			}
+
+			&.bottom_center {
+				background: linear-gradient(104.96deg, #FFB077 6.46%, #F5532F 18.88%, #0505A9 50.46%, #0539C0 57.4%, #0585E2 67.44%, #05B6F7 75.15%, #05C8FF 79.01%);
+				left: calc(50% - 60rem);
+				top: 8rem;
+				z-index: 3;
+			}
+
+			&.bottom_right {
+				background: linear-gradient(0deg, #FF0000 3.3%, #0505A9 60.14%, #0539C0 69.11%, #0585E2 82.08%, #05B6F7 92.05%, #05C8FF 97.03%);
+				left: 34vw;
+				top: 6rem;
+				z-index: 4;
+			}
+		}
+	}
+
+	.Video.HubspotVideo {
+		box-shadow: 4px 4px 20px rgba(#000, 0.6);
+		margin-bottom: 4rem;
+		max-width: 90rem;
+		width: 100%;
+	}
+
+	.blog_recent_posts {
+		margin-bottom: 6rem;
+		margin-top: 9rem;
+
+		&>p {
+			@include fontLighter;
+			font-size: 3.2rem;
+			margin-bottom: 6rem;
+		}
+
+		&.style_neon {
+
+			aside .title {
+				@include fontBold;
+				color: $blue;
+				font-size: 1.8rem;
+				font-variant: normal;
+				text-transform: none;
+				transition: color 0.6s;
+			}
+
+			.blog_post:hover {
+				aside .title {
+					color: $teal;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tank_max_width) {
+	.page_webinar7PasosClave {
+		.blog_recent_posts {
+			&>p {
+				font-size: 4rem;
+				max-width: 100%;
+			}
+
+			.blog_post:hover aside {
+				.title {
+					font-size: 2.4rem;
+				}
+
+			}
+
+			.link {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	.page_webinar7PasosClave {}
+}
+
+@media (max-width: $mobile_max_width) {
+	.page_webinar7PasosClave {
+		.hull>.Tank {
+			padding-bottom: 8vw;
+			padding-top: 10vw;
+		}
+
+		h1 {
+			font-size: 9vw;
+		}
+
+		.blog_recent_posts {
+			&>p {
+				font-size: 3rem;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	.page_webinar7PasosClave {
+
+		padding-bottom: 0;
+
+		.Hero {
+			max-height: 26rem;
+		}
+
+		.hull>.Tank {
+			padding-bottom: 14vw;
+			padding-top: 20vw;
+		}
+
+		h1 {
+			font-size: 10vw;
+		}
+
+		.Row.cols-2>div {
+			flex-basis: 100%;
+			margin-bottom: 6rem;
+			max-width: 100%;
+		}
+
+		.blog_recent_posts.style_neon {
+			margin-bottom: 6rem;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) {
+	.page_webinar7PasosClave {
+		.Hero {
+			max-height: 26rem;
+		}
+	}
+}

@@ -1,23 +1,50 @@
 {
-	"name": "gatsby-starter-default",
-	"private": true,
-	"description": "A simple starter to get up and developing quickly with Gatsby",
-	"version": "0.1.0",
-	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
+	"author": "Kevin Gagnon",
+	"email": "kevin.gagnon@broadsign.com",
+	"contributors": [
+		{
+			"name": "Valentin Lachere",
+			"email": "valentin.lachere@broadsign.com",
+			"url": "https://www.linkedin.com/in/valentin-lacher%C3%A9/"
+		},
+		{
+			"name": "Michel Maroun",
+			"email": "michoma94@outlook.com",
+			"url": "https://www.linkedin.com/in/michel-maroun-b564a5126/"
+		},
+		{
+			"name": "Charbel Chahine",
+			"email": "chahine.charbel@me.com",
+			"url": "https://www.linkedin.com/in/charbelchahine/"
+		}
+	],
+	"license": "MIT",
+	"name": "broadsign",
+	"short_name": "Broadsign",
+	"description": "Broadsign - Leading digital signage solutions provider",
+	"version": "4.0.0",
 	"dependencies": {
+		"classnames": "^2.3.2",
 		"gatsby": "^5.0.0",
+		"gatsby-plugin-alias-imports": "^1.0.5",
 		"gatsby-plugin-gatsby-cloud": "^5.0.0",
 		"gatsby-plugin-image": "^3.0.0",
 		"gatsby-plugin-manifest": "^5.0.0",
 		"gatsby-plugin-react-i18next": "^2.0.5",
+		"gatsby-plugin-sass": "^6.0.0",
 		"gatsby-plugin-sharp": "^5.0.0",
 		"gatsby-source-filesystem": "^5.0.0",
 		"gatsby-transformer-sharp": "^5.0.0",
 		"i18next": "^22.0.4",
+		"node-fetch": "^3.2.10",
 		"primeflex": "^3.3.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-i18next": "^12.0.0"
+		"react-hubspot-form": "^1.3.7",
+		"react-i18next": "^12.0.0",
+		"request": "^2.88.2",
+		"sass": "^1.56.1",
+		"use-delayed-render": "^0.0.7"
 	},
 	"devDependencies": {
 		"prettier": "^2.7.1"
@@ -25,7 +52,6 @@
 	"keywords": [
 		"gatsby"
 	],
-	"license": "0BSD",
 	"scripts": {
 		"build": "gatsby build",
 		"dev": "gatsby develop",

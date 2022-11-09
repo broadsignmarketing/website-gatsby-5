@@ -1,0 +1,68 @@
+@media (max-width: $tablet_max_width) {
+	#page_vertical_airports {
+		.Hero {
+			.text {
+				max-width: 85%;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile_max_width) and (orientation:portrait) {
+	#page_vertical_airports {
+		.Hero {
+			.text {
+				max-width: 100%;
+			}
+		}
+
+		section.showVisitorSpiel {
+			background-image: url("../../../img/bg/airports_banner_bg_sm.jpg");
+			background-position: top center;
+			height: 80rem;
+
+			.Tank {
+				align-items: center;
+				display: flex;
+				flex-flow: column;
+				justify-content: flex-end;
+
+				.show_visitor {
+					@include flexCenter;
+					flex: 0 0 28rem;
+					padding-right: 0;
+					width: 100%;
+
+					h3 {
+						width: 100%;
+					}
+
+					p {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+
+		.QuoteBlock blockquote {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: $xs_max_width) and (orientation:portrait) {
+	#page_vertical_airports {
+		.Hero .title {
+			font-size: 8.4vw;
+		}
+
+		section.showVisitorSpiel .Tank .show_visitor {
+			flex: 0 0 40rem;
+			height: 40rem;
+		}
+
+		.QuoteBlock blockquote p {
+			font-size: 2.5rem;
+		}
+	}
+}
