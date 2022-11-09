@@ -14,9 +14,9 @@ import SubHeroBanner from "@partials/index__SubHeroBanner"
 import Tank from "@components/Tank"
 import VideoPoster from "@components/VideoPoster"
 
-const BlogPosts = React.lazy(() => import("@partials/index__BlogPosts"))
-const EBooks = React.lazy(() => import("@partials/index__EBooks"))
-const Quotes = React.lazy(() => import("@partials/index__Quotes"))
+// const BlogPosts = React.lazy(() => import("@partials/index__BlogPosts"))
+// const EBooks = React.lazy(() => import("@partials/index__EBooks"))
+// const Quotes = React.lazy(() => import("@partials/index__Quotes"))
 
 import cta_arrow_slim from "@img/pages/index/arrow_right_slim_midnightBlue.svg"
 import media_buyers from "@img/pages/index/icon_media_buyers.svg"
@@ -239,6 +239,29 @@ export default function IndexPage({
 }
 
 export const queryIndex = graphql`
+	query IndexContent {
+		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
+			childImageSharp {
+				gatsbyImageData
+			}
+		}
+		HeroMobile: file(relativePath: { eq: "pages/index/hero_mobile.jpg" }) {
+			childImageSharp {
+				gatsbyImageData
+			}
+		}
+
+		clientReelVideoPoster: file(
+			relativePath: { eq: "pages/index/poster_client_reel.jpg" }
+		) {
+			childImageSharp {
+				gatsbyImageData
+			}
+		}
+	}
+`
+/*
+export const queryIndex = graphql`
 	query IndexContent($language: String!) {
 		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
 			childImageSharp {
@@ -272,3 +295,4 @@ export const queryIndex = graphql`
 		}
 	}
 `
+ */
