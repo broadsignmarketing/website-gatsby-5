@@ -1,0 +1,20 @@
+$border-radius-props: ("border-noround": 0,
+	"border-round": var(--border-radius),
+	"border-circle": 50%,
+	"rounded-xl": 12px,
+	"rounded-2xl": 16px,
+	"rounded-4": 4px,
+	"rounded-8": 8px,
+	"rounded-10": 10px,
+	"rounded-12": 12px,
+	"rounded-full": 1000px,
+	"pill": 1000px,
+);
+
+$border-radius-directions: ("border-round-left": ("border-top-left-radius", "border-bottom-left-radius"),
+	"border-round-top": ("border-top-left-radius", "border-top-right-radius"),
+	"border-round-right": ("border-top-right-radius", "border-bottom-right-radius"),
+	"border-round-bottom": ("border-bottom-left-radius", "border-bottom-right-radius"));
+
+@include border-radius-class($border-radius-directions);
+@include style-class("border-radius", $border-radius-props, true);
