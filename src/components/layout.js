@@ -19,11 +19,11 @@ export default function Layout({ id, className, children, path, seo = {} }) {
 		)
 	}
 
-	const isContact = path.match(
+	/* const isContact = path.match(
 		/\/(contact|fr\/nous-rejoindre|es\/contacto)\//
 	)
 		? true
-		: false
+		: false */
 
 	return (
 		<div id="global" className={classnames(isContact ? "is_contact" : "")}>
