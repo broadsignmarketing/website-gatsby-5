@@ -19,7 +19,7 @@
 
 const request = require("request")
 
-exports.sourceNodes = ({ actions, createContentDigest }) => {
+/* exports.sourceNodes = ({ actions, createContentDigest }) => {
 	const { createNode, createRedirect } = actions
 
 	function uberflipAuthHeaders(token) {
@@ -481,7 +481,7 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
 
 	createParentNodes()
 	uberflipConnect()
-}
+} */
 
 exports.createSchemaCustomization = ({ actions }) => {
 	actions.createTypes(`
