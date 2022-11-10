@@ -88,7 +88,7 @@ module.exports = {
 				path: `${__dirname}/static/img/`,
 			},
 		}, */
-		{
+		/* {
 			resolve: `gatsby-plugin-react-i18next`,
 			options: {
 				localeJsonSourceName: `locale`,
@@ -102,7 +102,7 @@ module.exports = {
 					keySeparator: false,
 					nsSeparator: false,
 				},
-				/* pages: [
+				 pages: [
 					{
 						matchPath: "/:lang?/blog/:uid",
 						getLanguageFromPath: true,
@@ -112,9 +112,9 @@ module.exports = {
 						matchPath: "/preview",
 						languages: ["en"],
 					},
-				], */
+				],
 			},
-		},
+		}, */
 		{
 			resolve: "gatsby-plugin-alias-imports",
 			options: {

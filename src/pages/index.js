@@ -135,7 +135,7 @@ export const Head = () => <Seo title="Home" />;
 
 export default IndexPage;
 
-export const query = graphql`
+/* export const query = graphql`
 	query ($language: String!) {
 		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index"] } }) {
 			edges {
@@ -147,4 +147,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`; */
