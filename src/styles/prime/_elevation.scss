@@ -1,0 +1,6 @@
+$shadows: ("shadow-none": "none",
+	"shadow-A": "0px 14px 24px rgba(158, 158, 158, 0.1)",
+	"shadow-B": "0px 14px 24px rgba(0, 0, 0, 0.2)",
+);
+
+@include style-class('box-shadow', $shadows, true);

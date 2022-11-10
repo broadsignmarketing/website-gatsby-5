@@ -1,0 +1,183 @@
+/*
+These animations won't be included by default. To use one of them, include the mixin in your stylesheet.
+Examples :
+@include animBarrel;
+@include animFadeIn;
+@include animFadeInNoBlur;
+@include animFadeOut;
+@include animFadeOutNoBlur;
+@include animFlare;
+@include animSlideInFromRight;
+@include animThisWayRight;
+@include animUnblur;
+*/
+
+@mixin animBarrel {
+	@keyframes barrel {
+		0% {
+			transform: rotateX(0deg);
+		}
+
+		50% {
+			transform: rotateX(90deg);
+		}
+
+		100% {
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+@mixin animFadeIn {
+	@keyframes fadeIn {
+		0% {
+			filter: blur(10px);
+			opacity: 0;
+		}
+
+		100% {
+			filter: blur(0px);
+			opacity: 1;
+		}
+	}
+}
+
+@mixin animFadeInNoBlur {
+	@keyframes fadeInNoBlur {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin animFadeOut {
+	@keyframes fadeOut {
+		0% {
+			filter: blur(0px);
+			opacity: 1;
+		}
+
+		100% {
+			filter: blur(10px);
+			opacity: 0;
+		}
+	}
+}
+
+@mixin animFadeOutNoBlur {
+	@keyframes fadeOutNoBlur {
+		0% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
+}
+
+@mixin animFlare {
+	@keyframes flare {
+		0% {
+			filter: drop-shadow(0 0 0rem rgba(#FFF, 1));
+			opacity: 0;
+		}
+
+		40% {
+			filter: drop-shadow(0 0 3rem rgba(#FFF, 1)) drop-shadow(0 0 1rem rgba(#FFF, 0.5));
+			opacity: 0.8;
+		}
+
+		50% {
+			filter: drop-shadow(0 0 3rem rgba(#FFF, 1)) drop-shadow(0 0 3rem rgba(#FFF, 1));
+			opacity: 1;
+		}
+
+		100% {
+			filter: drop-shadow(0 0 6rem rgba(#FFF, 0)) drop-shadow(0 0 6rem rgba(#FFF, 0));
+			opacity: 1;
+		}
+	}
+}
+
+@mixin animPopFromBottom {
+	@keyframes popFromBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(10rem);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0rem);
+		}
+	}
+}
+
+@mixin animSlideInFromRight {
+	@keyframes slideInFromRight {
+		0% {
+			opacity: 0;
+			position: relative;
+			transform: translateX(10rem);
+		}
+
+		100% {
+			opacity: 1;
+			position: relative;
+			transform: translateX(0%);
+		}
+	}
+}
+
+@mixin animThisWayRight {
+	@keyframes thisWayRight {
+		0% {
+			transform: translateX(0);
+		}
+
+		35% {
+			transform: translateX(0.8rem);
+		}
+
+		85% {
+			transform: translateX(-0.2rem);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
+	}
+}
+
+@mixin animUnblur {
+	@keyframes unblur {
+		0% {
+			filter: blur(20rem);
+			opacity: 0;
+		}
+
+		100% {
+			filter: blur(7rem);
+			opacity: 1;
+		}
+	}
+
+	@media (max-width: 1024px),
+	(hover: none),
+	(pointer: coarse) {
+		@keyframes unblur {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+}

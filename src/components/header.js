@@ -3,7 +3,9 @@ import * as React from "react";
 import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
 const Header = ({ siteTitle }) => {
-	const { languages, originalPath } = useI18next();
+	const { languages, originalPath, path, language } = useI18next();
+
+	console.log(languages, originalPath, path, language);
 
 	return (
 		<header
@@ -23,13 +25,25 @@ const Header = ({ siteTitle }) => {
 				{siteTitle}
 			</Link>
 			<ul className="languages">
-				{languages.map((lng) => (
-					<li key={lng}>
-						<Link to={originalPath} language={lng}>
-							{lng}
-						</Link>
-					</li>
-				))}
+				<li>
+					<Link to="/">Home</Link>
+				</li>
+				<li>
+					<Link to="/about">About</Link>
+				</li>
+			</ul>
+			<ul className="languages">
+				{languages.map((lng) => {
+					if (lng !== language) {
+						return (
+							<li key={lng}>
+								<Link to={originalPath} language={lng}>
+									{lng}
+								</Link>
+							</li>
+						);
+					}
+				})}
 			</ul>
 			<img
 				alt="Gatsby logo"

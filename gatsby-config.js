@@ -55,10 +55,10 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-filesystem`,
+			resolve: "gatsby-source-filesystem",
 			options: {
 				path: `${__dirname}/locales`,
-				name: `locale`,
+				name: "locale",
 			},
 		},
 		{
@@ -90,11 +90,11 @@ module.exports = {
 			},
 		}, */
 		{
-			resolve: `gatsby-plugin-react-i18next`,
+			resolve: "gatsby-plugin-react-i18next",
 			options: {
-				localeJsonSourceName: `locale`,
-				languages: [`en`, `fr`, `es`],
-				defaultLanguage: `en`,
+				localeJsonSourceName: "locale",
+				languages: ["en", "fr", "es"],
+				defaultLanguage: "en",
 				trailingSlash: "never",
 				redirect: false,
 				siteUrl: process.env.SITE_URL,
@@ -102,12 +102,14 @@ module.exports = {
 					interpolation: {
 						escapeValue: false,
 					},
-					keySeparator: false,
-					nsSeparator: false,
 				},
 				pages: [
 					{
-						matchPath: "/:lang?",
+						matchPath: "/",
+						languages: ["en", "fr"],
+					},
+					{
+						matchPath: "/about",
 						languages: ["en", "fr"],
 					},
 				],

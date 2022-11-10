@@ -1,0 +1,250 @@
+@use "sass:math";
+
+@mixin fontThin {
+	font-family: "Roboto Thin", sans-serif;
+	font-weight: 100;
+}
+
+@mixin fontLighter {
+	font-family: "Roboto Light", "Roboto Regular", "Roboto", "Arial", sans-serif;
+	font-weight: 300;
+}
+
+@mixin fontLight {
+	font-family: "Roboto", "Arial Narrow", "Arial", "Helvetica", sans-serif;
+	font-weight: 400;
+}
+
+@mixin fontReg {
+	font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+	font-weight: 500;
+}
+
+@mixin fontMed {
+	font-family: "Roboto Medium", "Roboto", "Arial", "Helvetica", sans-serif;
+	font-weight: 500;
+}
+
+@mixin fontBold {
+	font-family: "Roboto Bold", "Roboto", "Arial", "Helvetica", sans-serif;
+	font-weight: 700;
+}
+
+@mixin fontBolder {
+	font-family: "Roboto Black", "Roboto", "Arial Black", "Arial", "Helvetica", sans-serif;
+	font-weight: 900;
+}
+
+@mixin fontBlack {
+	font-family: "Roboto Black", "Roboto", "Arial Black", "Arial", "Helvetica", sans-serif;
+	font-weight: 900;
+}
+
+@mixin fontSuperBold {
+	font-family: "Roboto Black", "Roboto", "Arial Black", "Arial", "Helvetica", sans-serif;
+	font-variant: small-caps;
+	font-weight: 900;
+	line-height: 80%;
+	text-transform: lowercase;
+}
+
+@mixin fontAltLighter {
+	font-family: "Merriweather Light", "Merriweather", "times", serif;
+	font-weight: 300;
+}
+
+@mixin fontAlt {
+	font-family: "Merriweather", "times", serif;
+	font-weight: 400;
+}
+
+@mixin fontAltBold {
+	font-family: "Merriweather Bold", "Merriweather", "times", serif;
+	font-weight: 700;
+}
+
+@mixin fontAltBolder {
+	font-family: "Merriweather Black", "Merriweather", "times", serif;
+	font-weight: 900;
+}
+
+@mixin flexCenter {
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+@mixin bgCover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin bg {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+@mixin blogGradient {
+	background-image: linear-gradient(to bottom, rgba(25, 205, 255, 0.5) 10%, rgba(30, 27, 178, 0.5) 40%, rgba(255, 25, 25, 0.5) 100%);
+}
+
+@mixin ctaStyling($mainColor:$red, $type:"full", $hover:false) {
+	$bgColor: #{$mainColor};
+	$borderColor: #{$mainColor};
+	$borderWidth: 1px;
+	$textColor: #FFF;
+
+	@if $hover {
+		$bgColor: #FFF;
+		$textColor: $mainColor;
+	}
+
+	@if $type=="clear" {
+		$bgColor: #FFF;
+		$textColor: $mainColor;
+
+		@if $hover {
+			$bgColor: $mainColor;
+			$textColor: #FFF;
+		}
+	}
+
+	@if $mainColor=="transparent" {
+		$bgColor: transparent;
+		$borderColor: transparent;
+		$textColor: transparent;
+	}
+
+	background-color:$bgColor;
+	border-color:$borderColor;
+	color:$textColor;
+
+	&:focus {
+		background-color: $mainColor;
+	}
+}
+
+@mixin cta($mainColor:$red, $type:"full") {
+	@include ctaStyling($mainColor, $type, false);
+
+	&:hover,
+	&:focus {
+		@include ctaStyling($mainColor, $type, true);
+	}
+}
+
+@mixin ctaCarolina {
+	font-family: "Roboto";
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	padding: 0.9em 1.8em 0.8em;
+}
+
+@mixin ctaReflexCerulean {
+	background-color: $reflex;
+	border: 0 none;
+	color: #FFF;
+
+	&:hover {
+		background-color: $cerulean;
+	}
+}
+
+@mixin pill {
+	border-radius: 1000px;
+}
+
+@mixin fadeInOnce($duration) {
+	animation: $duration ease-out 0s 1 normal forwards running fadeInNoBlur;
+}
+
+@mixin textGradient($direction, $color1, $color2) {
+	background: linear-gradient(#{$direction}, $color1, $color2);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin fontGradient($direction, $color1, $color2) {
+	@include textGradient($direction, $color1, $color2);
+}
+
+@mixin broadsignGradient {
+	background: linear-gradient(104.25deg, $cerulean 21.14%, $midnightBlue 48.74%, $scarlet 71.31%, #EE6900 89.95%);
+}
+
+@mixin lightCyanGradient {
+	background: linear-gradient(to right, $medium 0%, $light 50%, #FFF 100%);
+}
+
+@mixin ultraCyanGradient {
+	background: linear-gradient(to right, $ultra 20%, #FFF 100%);
+}
+
+@mixin inputWebkitAutofills($bgColor:#FFF, $textColor:$blue) {
+
+	input,
+	textarea,
+	select {
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			box-shadow: inset 0 0 200px $bgColor, inset 0 0 200px $bgColor, inset 0 0 200px $bgColor;
+			color: $textColor;
+			-webkit-text-fill-color: $textColor;
+		}
+
+		&.error:-webkit-autofill,
+		&.error:-webkit-autofill:hover,
+		&.error:-webkit-autofill:focus {
+			color: $red;
+			-webkit-text-fill-color: $red;
+		}
+	}
+}
+
+@mixin col($numberOfColsInTheRow, $flexible:false) {
+	$width: #{math.div(100%, $numberOfColsInTheRow)};
+	$gutter: math.div(30 * ($numberOfColsInTheRow - 1), $numberOfColsInTheRow) + "px";
+
+	@if $flexible==false {
+		flex: 0 0 calc(#{$width} - #{$gutter});
+		max-width: calc(#{$width} - #{$gutter});
+	}
+
+	@else {
+		flex: 1 1 calc(#{$width} - #{$gutter});
+		max-width: 100%;
+	}
+}
+
+@mixin activeWithGradientUnderline {
+	position: relative;
+
+	&:after {
+		background: linear-gradient(104.25deg, #1056FB 21.14%, #0500A9 48.74%, #FF3F3F 71.31%, #EE6900 89.95%);
+		bottom: 0;
+		content: "";
+		height: 2px;
+		left: 0;
+		max-width: 0%;
+		position: absolute;
+		transition: max-width 0.6s ease;
+		width: 100%;
+	}
+
+	&.active {
+		&:after {
+			max-width: 100%;
+		}
+	}
+}

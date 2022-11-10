@@ -1,0 +1,95 @@
+@mixin color-class($name, $prop, $colors, $responsive: false) {
+
+	@each $color,
+	$colorCode in $colors {
+		.#{$name}#{$color} {
+			#{$prop}: var(--#{$color}) !important;
+		}
+
+		.focus#{$separator} {
+			&#{$name}#{$color}:focus {
+				#{$prop}: var(--#{$color}) !important;
+			}
+		}
+
+		.hover#{$separator} {
+			&#{$name}#{$color}:hover {
+				#{$prop}: var(--#{$color}) !important;
+			}
+		}
+
+		.active#{$separator} {
+			&#{$name}#{$color}:active {
+				#{$prop}: var(--#{$color}) !important;
+			}
+		}
+	}
+
+	@if ($responsive) {
+
+		@each $key,
+		$val in $breakpoints {
+			@media screen and (min-width: #{$val}) {
+				.#{$key + $separator} {
+
+					@each $color,
+					$colorCode in $colors {
+						&#{$name}#{$color} {
+							#{$prop}: var(--#{$color}) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+:root {
+
+	@each $name,
+	$color in $broadsignColors {
+		--#{$name}: #{$color};
+	}
+}
+
+.grid:not(.container) {
+	max-width: none;
+}
+
+@include color-class('text-', 'color', $broadsignColors, true);
+@include color-class('bg-', 'background-color', $broadsignColors, true);
+@include color-class('border-', 'border-color', $broadsignColors, true);
+
+.p-button {
+	font-size: 16px;
+	font-weight: 500;
+	padding: 0.5em 1.8em 0.5em;
+
+	&.p-button-rounded {
+		border-radius: 3em;
+	}
+}
+
+.letter-spacing-10 {
+	letter-spacing: 0.1em !important;
+}
+
+.letter-spacing-15 {
+	letter-spacing: 0.15em !important;
+}
+
+.letter-spacing-20 {
+	letter-spacing: 0.2em !important;
+}
+
+.letter-spacing-30 {
+	letter-spacing: 0.3em !important;
+}
+
+.object-fit-contain {
+	object-fit: contain !important;
+}
+
+.object-fit-cover {
+	object-fit: cover !important;
+}

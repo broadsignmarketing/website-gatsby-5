@@ -1,0 +1,269 @@
+/*
+These are helper classes to kinda replicate Tailwind's behavior (until we get actual Tailwind or better)
+The things under .theme_carolina are things that might conflict with previously implemented classes.
+All the rest should be outside of it.
+*/
+
+@include animThisWayRight;
+
+.theme_carolina {
+	color: $reflex;
+
+	.flex-center {
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		color: $reflex;
+		display: block;
+		font-family: "Roboto Bold", "Roboto";
+		font-weight: 700;
+		margin: 0 0 1em;
+		text-transform: none;
+		width: 100%;
+	}
+
+	.h1 {
+		font-size: 96px !important;
+	}
+
+	.h2 {
+		font-size: 60px !important;
+	}
+
+	.h3 {
+		font-size: 35px !important;
+	}
+
+	.h4 {
+		font-size: 24px !important;
+	}
+
+	.h5 {
+		font-size: 20px !important;
+	}
+
+	.h6 {
+		font-size: 20px !important;
+	}
+
+	.subtitle-1 {
+		@include fontReg;
+		color: $cerulean;
+		font-size: 14px !important;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.4em;
+		text-transform: uppercase;
+
+		&.gradient {
+			background: linear-gradient(to right, #E43425 20%, #441FD8 80%, #0A26B8 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			display: inline-block;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	.subtitle-2 {
+		@include fontReg;
+		color: $cerulean;
+		font-size: 14px !important;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.4em;
+		text-transform: uppercase;
+
+		&.gradient {
+			background: linear-gradient(to right, #E43425 20%, #441FD8 80%, #0A26B8 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			display: inline-block;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	p {
+		@include fontReg;
+		color: $ash;
+		font-size: 16px;
+		margin: 0 0 1em;
+
+		&.sm {
+			font-size: 14px;
+		}
+	}
+
+	ul.checks_gradient {
+		li {
+			align-items: center;
+			background: url("../img/ui/check_circle_gradient.svg") left center no-repeat;
+			background-size: 22px 22px;
+			color: $ash;
+			display: flex;
+			font-size: 16px;
+			padding: 0.8em 0 0.8em 2em;
+		}
+	}
+
+	a {
+		color: $cerulean;
+
+		&:hover {
+			color: $reflex;
+		}
+	}
+
+	hr {
+		background-color: $ash;
+		border: 0 none;
+		display: block;
+		height: 2px;
+		margin: 2rem auto;
+		width: 100%;
+
+		&.gradient {
+			@include broadsignGradient;
+		}
+
+		&.thickness-1 {
+			height: 1px;
+		}
+
+		&.thickness-2 {
+			height: 2px;
+		}
+
+		&.thickness-3 {
+			height: 3px;
+		}
+
+		&.color-ash {
+			background-color: $ash;
+		}
+
+		&.color-ultra {
+			background-color: $ultra;
+		}
+
+		&.color-light {
+			background-color: $light;
+		}
+
+		&.color-medium {
+			background-color: $medium;
+		}
+
+		&.color-soft {
+			background-color: $soft;
+		}
+
+	}
+}
+
+@mixin linkWithArrow {
+	align-items: center;
+	cursor: pointer;
+	display: inline-flex;
+
+	&:after {
+		background: transparent url("../img/ui/arrow_right_cerulean.svg") center center no-repeat;
+		content: "";
+		display: inline-block;
+		height: 0.7em;
+		margin-left: 1em;
+		position: relative;
+		width: 1.8em;
+	}
+
+	&:hover {
+		&:after {
+			animation: thisWayRight 1.4s linear 0s infinite;
+		}
+	}
+}
+
+.link_red_arrow {
+	@include linkWithArrow;
+
+	&:after {
+		background: transparent url("../img/ui/arrow_right_red.svg") center center no-repeat;
+		background-size: contain;
+	}
+}
+
+.link_cerulean_arrow {
+	@include linkWithArrow;
+
+	&:after {
+		background: transparent url("../img/ui/arrow_right_cerulean.svg") center center no-repeat;
+		background-size: contain;
+	}
+}
+
+.link_reflex_arrow {
+	@include linkWithArrow;
+
+	&:after {
+		background: transparent url("../img/ui/arrow_right_reflex.svg") center center no-repeat;
+		background-size: contain;
+	}
+}
+
+.hover\:screen:hover {
+	background-color: rgba(#FFF, 0.2) !important;
+}
+
+@each $w in (900, 1000, 1100) {
+	.max-w-#{$w} {
+		max-width: #{$w}px !important;
+	}
+}
+
+@each $z in (10, 50, 100, 1000) {
+	.z-#{$z} {
+		z-index: $z;
+	}
+}
+
+@media (min-width:$sm) {
+	.theme_carolina {
+		.h1 {
+			font-size: 96px !important;
+		}
+
+		.h2 {
+			font-size: 60px !important;
+		}
+
+		.h3 {
+			font-size: 48px !important;
+		}
+
+		.h4 {
+			font-size: 34px !important;
+		}
+
+		.h5 {
+			font-size: 24px !important;
+		}
+
+		.h6 {
+			font-size: 20px !important;
+		}
+
+		.CTA {}
+
+		.subtitle-1 {
+			font-size: 16px !important;
+		}
+
+		.subtitle-2 {
+			font-size: 14px !important;
+		}
+	}
+}
