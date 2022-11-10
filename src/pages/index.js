@@ -26,13 +26,13 @@ import "@sass/components/ImgFlank.scss"
 import "@sass/pages/home.scss"
 
 export default function IndexPage({
-	pageContext: { l, dicoPath },
+	pageContext: { language, dicoPath },
 	location: { pathname },
 	data,
 }) {
 	const [openModal, setOpenModal] = useState(false)
 
-	if (l === "cn") {
+	if (language === "cn") {
 		return <Layout path={pathname} />
 	}
 
@@ -42,7 +42,7 @@ export default function IndexPage({
 		},
 	}
 
-	const route = txt => {
+	const route = (txt = "", l = "") => {
 		return txt
 	}
 
@@ -57,11 +57,11 @@ export default function IndexPage({
 							<Link
 								className={classnames(
 									"hero_cta",
-									`lang_${l}`,
+									`lang_${language}`,
 									"free_trial",
 									"cta_lp"
 								)}
-								to={route("freeTrial", l)}
+								to={route("freeTrial", language)}
 							>
 								<CTA className="span custom">
 									{T.translate("Hero.ctaFreeTrial")}
@@ -128,7 +128,7 @@ export default function IndexPage({
 					}}
 				/>
 			</Hero>
-			{l !== "es" && (
+			{language !== "es" && (
 				<section className="branches Tank">
 					<Link className="branch" to={route("broadsignPlatform")}>
 						<img
@@ -177,7 +177,7 @@ export default function IndexPage({
 				</section>
 			)}
 			<SubHeroBanner />
-			{["es"].includes(l) && (
+			{["es"].includes(language) && (
 				<Link
 					to={`${route("resources", "es")}?w=iem`}
 					className="ilumina_el_mundo_banner"
