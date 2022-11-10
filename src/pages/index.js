@@ -78,7 +78,7 @@ export default function IndexPage({
 							<button
 								className={classnames(
 									"hero_cta",
-									`lang_${l}`,
+									`lang_${language}`,
 									"free_trial",
 									"cta_modal"
 								)}
