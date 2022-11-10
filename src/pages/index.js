@@ -5,23 +5,23 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 // import CTA from "@components/CTA";
 // import Form from "@components/Form";
-import Hero from "@components/Hero";
-import { GatsbyImage as Img } from "gatsby-plugin-image";
+// import Hero from "@components/Hero";
+// import { GatsbyImage as Img } from "gatsby-plugin-image";
 import Layout from "@components/layout";
 // const LogosList = React.lazy(() => import("@components/LogosList"));
 // import Link from "@components/LocalizedLink";
 // import Modal from "@components/Modal";
 // import SubHeroBanner from "@partials/index__SubHeroBanner";
-import Tank from "@components/Tank";
+// import Tank from "@components/Tank";
 // import VideoPoster from "@components/VideoPoster";
 
 // const BlogPosts = React.lazy(() => import("@partials/index__BlogPosts"))
 // const EBooks = React.lazy(() => import("@partials/index__EBooks"))
 // const Quotes = React.lazy(() => import("@partials/index__Quotes"))
 
-import cta_arrow_slim from "@img/pages/index/arrow_right_slim_midnightBlue.svg";
-import media_buyers from "@img/pages/index/icon_media_buyers.svg";
-import media_owners from "@img/pages/index/icon_media_owners.svg";
+// import cta_arrow_slim from "@img/pages/index/arrow_right_slim_midnightBlue.svg";
+// import media_buyers from "@img/pages/index/icon_media_buyers.svg";
+// import media_owners from "@img/pages/index/icon_media_owners.svg";
 
 import "@sass/components/ImgFlank.scss";
 import "@sass/pages/home.scss";
@@ -42,7 +42,7 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 	console.log(data);
 
 	return (
-		<Layout path={pathname} id="home">
+		<div id="home">
 			<h1>Test</h1>
 			{/* <Hero>
 				<Tank div>
@@ -168,7 +168,7 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 					<Form form="freeTrial" fields="boxes" bg="light"></Form>
 				</Modal>
 			)} */}
-		</Layout>
+		</div>
 	);
 }
 
