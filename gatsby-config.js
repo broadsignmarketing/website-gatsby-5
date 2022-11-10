@@ -107,7 +107,7 @@ module.exports = {
 				},
 				pages: [
 					{
-						matchPath: "/",
+						matchPath: "/:lang?",
 						languages: ["en", "fr"],
 					},
 				],
