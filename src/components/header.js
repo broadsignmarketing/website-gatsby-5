@@ -1,6 +1,6 @@
 import * as React from "react";
-// import { Link } from "gatsby";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import { Link } from "gatsby";
+// import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
 const Header = ({ siteTitle }) => {
 	// const { languages, originalPath } = useI18next();
