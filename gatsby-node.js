@@ -17,7 +17,7 @@
   })
 } */
 
-const request = require("request")
+const request = require("request");
 
 /* exports.sourceNodes = ({ actions, createContentDigest }) => {
 	const { createNode, createRedirect } = actions
@@ -512,5 +512,5 @@ exports.createSchemaCustomization = ({ actions }) => {
 			tags: [Tag]
 			thumbnail: String!
 		}
-	`)
-}
+	`);
+};

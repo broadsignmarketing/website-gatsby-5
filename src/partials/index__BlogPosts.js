@@ -1,18 +1,16 @@
-import React, { useMemo } from "react"
-import { blogPostSlug, htmlChars } from "@annex"
+import React, { useMemo } from "react";
+import { blogPostSlug, htmlChars } from "@annex";
 
-import CTA from "@components/CTA"
-import Link from "@components/LocalizedLink"
-import Tank from "@components/Tank"
+import CTA from "@components/CTA";
+import Link from "@components/LocalizedLink";
+import Tank from "@components/Tank";
 
 export default function index__BlogPosts({ posts }) {
 	if (posts.length > 0) {
 		return (
 			<Tank className="resources blog_posts">
 				<aside>
-					<h2 className="font_size_3">
-						{T.translate("resources.blog")}
-					</h2>
+					<h2 className="font_size_3">{T.translate("resources.blog")}</h2>
 					{/* <Link
 						className="see_all blue font_size_1_6"
 						to={route("blog")}
@@ -46,8 +44,8 @@ export default function index__BlogPosts({ posts }) {
 					})}
 				</div> */}
 			</Tank>
-		)
+		);
 	}
 
-	return null
+	return null;
 }
