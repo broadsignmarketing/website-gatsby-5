@@ -3,17 +3,17 @@ import { graphql } from "gatsby";
 import classnames from "classnames";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-import CTA from "@components/CTA";
-import Form from "@components/Form";
+// import CTA from "@components/CTA";
+// import Form from "@components/Form";
 import Hero from "@components/Hero";
 import { GatsbyImage as Img } from "gatsby-plugin-image";
 import Layout from "@components/layout";
-const LogosList = React.lazy(() => import("@components/LogosList"));
-import Link from "@components/LocalizedLink";
-import Modal from "@components/Modal";
-import SubHeroBanner from "@partials/index__SubHeroBanner";
+// const LogosList = React.lazy(() => import("@components/LogosList"));
+// import Link from "@components/LocalizedLink";
+// import Modal from "@components/Modal";
+// import SubHeroBanner from "@partials/index__SubHeroBanner";
 import Tank from "@components/Tank";
-import VideoPoster from "@components/VideoPoster";
+// import VideoPoster from "@components/VideoPoster";
 
 // const BlogPosts = React.lazy(() => import("@partials/index__BlogPosts"))
 // const EBooks = React.lazy(() => import("@partials/index__EBooks"))
@@ -33,12 +33,6 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 		return <Layout path={pathname} />;
 	}
 
-	const T = {
-		translate: (txt) => {
-			return txt;
-		},
-	};
-
 	const route = (txt = "", l = "") => {
 		return txt;
 	};
@@ -49,13 +43,14 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 
 	return (
 		<Layout path={pathname} id="home">
-			<Hero>
+			<h1>Test</h1>
+			{/* <Hero>
 				<Tank div>
 					<div className="text">
 						<h1 className="title">{t("Hero__title")}</h1>
 						<p className="tagline">{t("Hero__tagline")}</p>
 						<div className="ctas version_lp">
-							<Link className={classnames("hero_cta", `lang_${language}`, "free_trial", "cta_lp")} to={route("freeTrial", language)}>
+							{/* <Link className={classnames("hero_cta", `lang_${language}`, "free_trial", "cta_lp")} to={route("freeTrial", language)}>
 								<CTA className="span custom">{t("Hero__ctaFreeTrial")}</CTA>
 								<CTA className="span custom arrow">
 									<img src={cta_arrow_slim} height="20" width="20" alt="" />
@@ -70,7 +65,7 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 								<CTA className="span custom arrow">
 									<img src={cta_arrow_slim} height="20" width="20" alt="" />
 								</CTA>
-							</button>
+							</button> *}
 						</div>
 					</div>
 				</Tank>
@@ -100,7 +95,7 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 						top: "auto",
 					}}
 				/>
-			</Hero>
+			</Hero> */}
 			{/* {language !== "es" && (
 				<section className="branches Tank">
 					<Link className="branch" to={route("broadsignPlatform")}>
