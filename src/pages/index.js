@@ -1,248 +1,128 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import classnames from "classnames";
-//import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-// import CTA from "@components/CTA";
-// import Form from "@components/Form";
-// import Hero from "@components/Hero";
-// import { GatsbyImage as Img } from "gatsby-plugin-image";
-//import Layout from "@components/layout";
-// const LogosList = React.lazy(() => import("@components/LogosList"));
-// import Link from "@components/LocalizedLink";
-// import Modal from "@components/Modal";
-// import SubHeroBanner from "@partials/index__SubHeroBanner";
-// import Tank from "@components/Tank";
-// import VideoPoster from "@components/VideoPoster";
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import * as styles from "../components/index.module.css"
 
-// const BlogPosts = React.lazy(() => import("@partials/index__BlogPosts"))
-// const EBooks = React.lazy(() => import("@partials/index__EBooks"))
-// const Quotes = React.lazy(() => import("@partials/index__Quotes"))
+const links = [
+  {
+    text: "Tutorial",
+    url: "https://www.gatsbyjs.com/docs/tutorial",
+    description:
+      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+  },
+  {
+    text: "Examples",
+    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+    description:
+      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
+  },
+  {
+    text: "Plugin Library",
+    url: "https://www.gatsbyjs.com/plugins",
+    description:
+      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+  },
+  {
+    text: "Build and Host",
+    url: "https://www.gatsbyjs.com/cloud",
+    description:
+      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+  },
+]
 
-// import cta_arrow_slim from "@img/pages/index/arrow_right_slim_midnightBlue.svg";
-// import media_buyers from "@img/pages/index/icon_media_buyers.svg";
-// import media_owners from "@img/pages/index/icon_media_owners.svg";
+const samplePageLinks = [
+  {
+    text: "Page 2",
+    url: "page-2",
+    badge: false,
+    description:
+      "A simple example of linking to another page within a Gatsby site",
+  },
+  { text: "TypeScript", url: "using-typescript" },
+  { text: "Server Side Rendering", url: "using-ssr" },
+  { text: "Deferred Static Generation", url: "using-dsg" },
+]
 
-import "@sass/components/ImgFlank.scss";
-import "@sass/pages/home.scss";
+const moreLinks = [
+  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
+  {
+    text: "Documentation",
+    url: "https://gatsbyjs.com/docs/",
+  },
+  {
+    text: "Starters",
+    url: "https://gatsbyjs.com/starters/",
+  },
+  {
+    text: "Showcase",
+    url: "https://gatsbyjs.com/showcase/",
+  },
+  {
+    text: "Contributing",
+    url: "https://www.gatsbyjs.com/contributing/",
+  },
+  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
+]
 
-export default function IndexPage({ pageContext: { language }, location: { pathname }, data }) {
-	//const [openModal, setOpenModal] = useState(false);
+const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-	/* if (language === "cn") {
-		return <Layout path={pathname} />;
-	} */
+const IndexPage = () => (
+  <Layout>
+    <div className={styles.textCenter}>
+      <StaticImage
+        src="../images/example.png"
+        loading="eager"
+        width={64}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+      />
+      <h1>
+        Welcome to <b>Gatsby!</b>
+      </h1>
+      <p className={styles.intro}>
+        <b>Example pages:</b>{" "}
+        {samplePageLinks.map((link, i) => (
+          <React.Fragment key={link.url}>
+            <Link to={link.url}>{link.text}</Link>
+            {i !== samplePageLinks.length - 1 && <> · </>}
+          </React.Fragment>
+        ))}
+        <br />
+        Edit <code>src/pages/index.js</code> to update this page.
+      </p>
+    </div>
+    <ul className={styles.list}>
+      {links.map(link => (
+        <li key={link.url} className={styles.listItem}>
+          <a
+            className={styles.listItemLink}
+            href={`${link.url}${utmParameters}`}
+          >
+            {link.text} ↗
+          </a>
+          <p className={styles.listItemDescription}>{link.description}</p>
+        </li>
+      ))}
+    </ul>
+    {moreLinks.map((link, i) => (
+      <React.Fragment key={link.url}>
+        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+        {i !== moreLinks.length - 1 && <> · </>}
+      </React.Fragment>
+    ))}
+  </Layout>
+)
 
-	/* const route = (txt = "", l = "") => {
-		return txt;
-	}; */
-
-	// const { t } = useTranslation();
-
-	console.log(language, data);
-
-	return (
-		<div id="home">
-			<h1>Test</h1>
-			{/* <Hero>
-				<Tank div>
-					<div className="text">
-						<h1 className="title">{t("Hero__title")}</h1>
-						<p className="tagline">{t("Hero__tagline")}</p>
-						<div className="ctas version_lp">
-							{/* <Link className={classnames("hero_cta", `lang_${language}`, "free_trial", "cta_lp")} to={route("freeTrial", language)}>
-								<CTA className="span custom">{t("Hero__ctaFreeTrial")}</CTA>
-								<CTA className="span custom arrow">
-									<img src={cta_arrow_slim} height="20" width="20" alt="" />
-								</CTA>
-							</Link>
-							<button
-								className={classnames("hero_cta", `lang_${language}`, "free_trial", "cta_modal")}
-								onClick={() => {
-									setOpenModal(true);
-								}}>
-								<CTA className="span custom">{t("Hero__ctaFreeTrial")}</CTA>
-								<CTA className="span custom arrow">
-									<img src={cta_arrow_slim} height="20" width="20" alt="" />
-								</CTA>
-							</button> *}
-						</div>
-					</div>
-				</Tank>
-				<Img
-					alt=""
-					className="hero bg hidden sm:inline-block"
-					image={data.Hero.childImageSharp.gatsbyImageData}
-					objectPosition="center bottom"
-					loading="eager"
-					style={{
-						bottom: "0px",
-						position: "absolute",
-						transformOrigin: "center bottom",
-						top: "auto",
-					}}
-				/>
-				<Img
-					alt=""
-					className="hero bg inline-block sm:hidden"
-					image={data.HeroMobile.childImageSharp.gatsbyImageData}
-					objectPosition="center bottom"
-					loading="eager"
-					style={{
-						bottom: "0px",
-						position: "absolute",
-						transformOrigin: "center bottom",
-						top: "auto",
-					}}
-				/>
-			</Hero> */}
-			{/* {language !== "es" && (
-				<section className="branches Tank">
-					<Link className="branch" to={route("broadsignPlatform")}>
-						<img src={media_owners} className="icon" alt="Media owners" height="80" width="80" loading="lazy" />
-						<div className="desc">
-							<h2 className="media_type font_size_3">{t("branches.mediaOwners.title")}</h2>
-							<p className="font_size_2">{t("branches.mediaOwners.p")}</p>
-							<hr />
-							<span className="cta text-reflex font_size_1_6 uppercase font-black">{t("branches.mediaOwners.cta")}</span>
-						</div>
-					</Link>
-					<Link className="branch" to={route("launchPDOOHCampaign")}>
-						<img src={media_buyers} className="icon" alt="Media buyers" height="80" width="80" loading="lazy" />
-						<div className="desc">
-							<h2 className="media_type font_size_3">{t("branches.mediaBuyers.title")}</h2>
-							<p className="font_size_2">{t("branches.mediaBuyers.p")}</p>
-							<hr />
-							<span className="cta text-reflex font_size_1_6 uppercase font-black">{t("branches.mediaBuyers.cta")}</span>
-						</div>
-					</Link>
-				</section>
-			)} */}
-			{/* <SubHeroBanner /> */}
-			{/* {["es"].includes(language) && (
-				<Link to={`${route("resources", "es")}?w=iem`} className="ilumina_el_mundo_banner">
-					<div className="flash" />
-					<div className="inner">
-						<p>Conozca nuestra plataforma</p>
-						<CTA className="span round cerulean">Mira Aquí</CTA>
-					</div>
-				</Link>
-			)} */}
-			{/* <VideoPoster
-				title={t("videoTitle")}
-				className="client_reel"
-				YTid="mWA31Igrvk0"
-				playBtnStyle="solid"
-				bg="transparent"
-				poster={data.clientReelVideoPoster.childImageSharp.gatsbyImageData}>
-				<span className="client_reel_title">{t("videoTitle")}</span>
-			</VideoPoster> */}
-			{/* <React.Suspense>
-				<Quotes></Quotes>
-			</React.Suspense> */}
-			{/* <React.Suspense>
-				<BlogPosts posts={data.posts.nodes}></BlogPosts>
-			</React.Suspense> */}
-			{/* <React.Suspense>
-				<EBooks></EBooks>
-			</React.Suspense> */}
-			{/* <React.Suspense>
-				<LogosList list="media_owners" variation="grey">
-					<h2 before="true" className="font_size_3_4">
-						{t("logosList.title")}
-					</h2>
-				</LogosList>
-			</React.Suspense> */}
-			{/* <section className="shin">
-				<Tank div>
-					<CTA className="pink" to={route("freeTrial")}>
-						{t("shin.freeTrial")}
-					</CTA>
-					<CTA className="custom" to={route("demo")}>
-						{t("shin.demo")}
-					</CTA>
-				</Tank>
-			</section> */}
-			{/* {openModal && (
-				<Modal variant="form" onClose={() => setOpenModal(false)}>
-					<Form form="freeTrial" fields="boxes" bg="light"></Form>
-				</Modal>
-			)} */}
-		</div>
-	);
-}
-
-export const queryIndex = graphql`
-	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index"] } }) {
-			edges {
-				node {
-					ns
-					data
-					language
-				}
-			}
-		}
-
-		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
-			}
-		}
-
-		HeroMobile: file(relativePath: { eq: "pages/index/hero_mobile.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
-			}
-		}
-
-		clientReelVideoPoster: file(relativePath: { eq: "pages/index/poster_client_reel.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
-			}
-		}
-	}
-`;
-/*
-export const queryIndex = graphql`
-	query ($language: String!) {
-			locales: locale(ns: { eq: "index" }, language: { eq: $language }) {
-			id
-			ns
-			data
-			language
-		}
-
-		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
-			}
-		}
-		HeroMobile: file(relativePath: { eq: "pages/index/hero_mobile.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
-			}
-		}
-
-		clientReelVideoPoster: file(
-			relativePath: { eq: "pages/index/poster_client_reel.jpg" }
-		) {
-			childImageSharp {
-				gatsbyImageData
-			}
-		}
-
-		posts: allUberflipItem(
-			limit: 2
-			sort: { fields: date, order: DESC }
-			filter: {
-				language: { eq: $language }
-				stream: { eq: "blog" }
-				date: { ne: "2022-08-18" }
-			}
-		) {
-			...ufItems
-		}
-	}
-`
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
+export const Head = () => <Seo title="Home" />
+
+export default IndexPage

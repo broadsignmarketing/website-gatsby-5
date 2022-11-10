@@ -8,146 +8,36 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-	siteMetadata: {
-		title: "Broadsign",
-		name: "Broadsign",
-		author: "Kevin Gagnon, Valentin Lachere, Michel Maroun, Charbel Chahine",
-		description: "Cloud-based digital signage solutions",
-		type: "Company",
-		url: process.env.SITE_URL || "https://broadsign.com",
-		sameAs: [
-			"https://www.facebook.com/BroadSign",
-			"https://twitter.com/broadsign",
-			"https://www.linkedin.com/company/broadsign",
-		],
-		facebookAppID: "BroadSign",
-		twitterSiteID: "Broadsign",
-		twitterUserID: "@broadsign",
-		siteUrl: process.env.SITE_URL || "https://broadsign.com",
-	},
-	plugins: [
-		{
-			resolve: "gatsby-plugin-sharp",
-			options: {
-				defaultQuality: 80,
-				stripMetadata: true,
-				defaults: {
-					formats: ["auto", "webp", "avif"],
-					placeholder: "blurred",
-					quality: 80,
-					breakpoints: [600, 1200],
-				},
-			},
-		},
-		{
-			resolve: "gatsby-transformer-sharp",
-		},
-		{
-			resolve: "gatsby-plugin-image",
-		},
-		{
-			resolve: "gatsby-plugin-manifest",
-			options: {
-				name: "Broadsign",
-				short_name: "Broadsign",
-				start_url: "/",
-				background_color: "#FFFFFF",
-				theme_color: "#001464",
-				display: "minimal-ui",
-				icon: "static/icons/icon.png",
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/locales`,
-				name: `locale`,
-			},
-		},
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				name: "pages",
-				path: `${__dirname}/src/pages/`,
-			},
-		},
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				name: "queries",
-				path: `${__dirname}/src/queries/`,
-			},
-		},
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				name: "img",
-				path: `${__dirname}/src/img/`,
-			},
-		},
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				name: "static_img",
-				path: `${__dirname}/static/img/`,
-			},
-		},
-		{
-			resolve: `gatsby-plugin-react-i18next`,
-			options: {
-				localeJsonSourceName: `locale`,
-				languages: [`en`, `fr`, `es`],
-				defaultLanguage: `en`,
-				siteUrl: process.env.SITE_URL,
-				i18nextOptions: {
-					interpolation: {
-						escapeValue: false,
-					},
-					keySeparator: false,
-					nsSeparator: false,
-				},
-				pages: [
-					{
-						matchPath: "/:lang?/blog/:uid",
-						getLanguageFromPath: true,
-						excludeLanguages: ["es"],
-					},
-					{
-						matchPath: "/preview",
-						languages: ["en"],
-					},
-				],
-			},
-		},
-		{
-			resolve: "gatsby-plugin-alias-imports",
-			options: {
-				alias: {
-					"@annex": "src/assets/annex.tsx",
-					"@assets": "src/assets",
-					"@bsTypes": "src/assets/types.tsx",
-					"@components": "src/components",
-					"@hooks": "src/hooks",
-					"@icons": "src/img/icons",
-					"@i18n": "src/i18n",
-					"@img": "src/img",
-					"@logos": "static/img/logos",
-					"@meta": "static/meta",
-					"@partials": "src/partials",
-					"@route": "src/router/route.js",
-					"@router": "src/router/router.json",
-					"@sass": "src/styles",
-					"@static": "static",
-					"@templates": "src/templates",
-					"@uberflip": "src/assets/uberflip.js",
-					"@utils": "src/utils",
-					"@videos": "static/videos",
-				},
-				extensions: ["js"],
-			},
-		},
-		{
-			resolve: "gatsby-plugin-sass",
-		},
-	],
+  siteMetadata: {
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+  },
+  plugins: [
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+  ],
 }
