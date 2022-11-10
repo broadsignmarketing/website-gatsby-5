@@ -1,0 +1,61 @@
+{
+	"seo": {
+		"title": "Digital billboard and signage sales, management, and scheduling software",
+		"description": "Power your OOH business with the leading solutions for selling and managing out-of-home media across networks of any size."
+	},
+	"blah": "Blahmore",
+	"Hero__title": "Light Up the World",
+	"Hero__tagline": "We make it easy to buy, sell and deliver out-of-home media across the globe",
+	"Hero__ctaFreeTrial": "Request a Free Trial",
+	"Hero__ctaContact": "Contact Us",
+	"branches": {
+		"mediaBuyers": {
+			"title": "Agencies & Brands",
+			"p": "Reach your target audience when they're offline with digital billboards and screens",
+			"cta": "Learn more"
+		},
+		"mediaOwners": {
+			"title": "Media owners",
+			"p": "Transform your business with the leading solutions for out-of-home",
+			"cta": "Learn more"
+		}
+	},
+	"broadsignAirBanner": {
+		"new": "New",
+		"tagline": "Connect Broadsign Control to any digital player with _Broadsign Air_"
+	},
+	"videoTitle": "See what we make possible",
+	"quotes": {
+		"q1": {
+			"quote": "With Broadsign, we have the enhanced flexibility, creative capabilities, and planning tools we need to make connections more efficiently and cohesively across our network.",
+			"company": "Intersection",
+			"id": "intersection"
+		},
+		"q2": {
+			"quote": "Since our transition to Broadsign, we've been able to streamline our workflow, become more flexible and react more quickly to changes made by advertisers.",
+			"company": "Lightbox",
+			"id": "lightbox"
+		},
+		"q3": {
+			"quote": "Using Broadsign's rule-based automation made it easier for us to focus on campaign features rather than the software itself.",
+			"company": "Grandi Stazioni Retail",
+			"id": "grandi_stazioni"
+		}
+	},
+	"next": "Next",
+	"resources": {
+		"blog": "Blog",
+		"seeAllPosts": "See all posts",
+		"eBooks": "Useful Reads",
+		"seeAllEBooks": "See all resources",
+		"readMore": "Read more",
+		"download": "Download"
+	},
+	"logosList": {
+		"title": "We work with the biggest names in OOH"
+	},
+	"shin": {
+		"freeTrial": "Request a Free Trial",
+		"demo": "Book a Live Demo"
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"seo": {
+		"title": "Logiciel de vente, de gestion et de planification des médias OOH",
+		"description": "Dynamisez votre activité OOH avec les solutions de pointe pour la vente et la gestion des médias hors domicile sur des réseaux de toutes tailles."
+	},
+	"Hero__title": "Éclairez le monde",
+	"Hero__tagline": "Grâce à nous, il est plus facile que jamais d'acheter, de vendre et de livrer de la publicité extérieure numérique à l'échelle de la planète",
+	"Hero__ctaFreeTrial": "Demander un essai gratuit",
+	"Hero__ctaContact": "Rejoignez-nous",
+	"branches": {
+		"mediaBuyers": {
+			"title": "Acheteurs de médias",
+			"p": "Rejoignez votre public cible lorsqu'il est hors ligne à l'aide de panneaux d'affichage et d'écrans numériques",
+			"cta": "Pour les acheteurs"
+		},
+		"mediaOwners": {
+			"title": "Propriétaires de médias",
+			"p": "Transformez votre entreprise avec les principales plateformes d'affichage extérieur",
+			"cta": "Pour les propriétaires"
+		}
+	},
+	"broadsignAirBanner": {
+		"new": "Nouveau",
+		"tagline": "Connectez Broadsign Control à n'importe quel lecteur numérique avec _Broadsign Air_"
+	},
+	"videoTitle": "Voyez ce que nous rendons possible",
+	"quotes": {
+		"q1": {
+			"quote": "Broadsign nous donne la flexibilité, les capacités créatives et les outils de planification améliorés pour établir ces connexions de manière plus efficace et cohérente à travers notre réseau.",
+			"company": "Intersection",
+			"id": "intersection"
+		},
+		"q2": {
+			"quote": "Depuis notre transition vers Broadsign, nous avons pu rationaliser notre flux de travail, devenir plus flexibles et réagir plus rapidement aux changements apportés par les annonceurs.",
+			"company": "Lightbox",
+			"id": "lightbox"
+		},
+		"q3": {
+			"quote": "L'utilisation de l'automatisation basée sur des règles de Broadsign nous a permis de nous concentrer sur les fonctionnalités de la campagne plutôt que sur le logiciel lui-même.",
+			"company": "Grandi Stazioni Retail",
+			"id": "grandi_stazioni"
+		}
+	},
+	"next": "Suivant",
+	"resources": {
+		"blog": "Blogue",
+		"seeAllPosts": "Voir tous les articles",
+		"eBooks": "Lectures utiles",
+		"seeAllEBooks": "Voir toutes les ressources",
+		"readMore": "Lire la suite",
+		"download": "Télécharger"
+	},
+	"logosList": {
+		"title": "Nous travaillons avec les plus grands noms du OOH"
+	},
+	"shin": {
+		"freeTrial": "Demander un essai gratuit",
+		"demo": "Demander une démo en direct"
+	}
+}

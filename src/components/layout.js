@@ -11,18 +11,18 @@ import "@sass/components/CookieConsent.scss";
 import "@sass/components/ExitIntent.scss";
 
 export default function Layout({ id, className, children, path, seo = {} }) {
-	if (path && path.includes("404")) {
+	/* if (path && path.includes("404")) {
 		return (
 			<div id="global">
 				<main>{children}</main>
 			</div>
 		);
-	}
+	} */
 
-	const isContact = path && path.match(/\/(contact|fr\/nous-rejoindre|es\/contacto)\//) ? true : false;
+	/* const isContact = path && path.match(/\/(contact|fr\/nous-rejoindre|es\/contacto)\//) ? true : false; */
 
 	return (
-		<div id="global" className={classnames(isContact ? "is_contact" : "")}>
+		<div id="global" /* className={classnames(isContact ? "is_contact" : "")} */>
 			{/* <Helmet seo={seo} path={path} /> */}
 			{/* <Header path={path}></Header> */}
 			<main className={className} id={id}>

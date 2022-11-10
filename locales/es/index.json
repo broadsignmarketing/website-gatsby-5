@@ -1,0 +1,60 @@
+{
+	"seo": {
+		"title": "Software de programación, gestión y ventas de medios OOH",
+		"description": "Impulse su negocio OOH con las soluciones líderes para vender y administrar medios fuera del hogar en redes de cualquier tamaño."
+	},
+	"Hero__title": "Ilumina el mundo",
+	"Hero__tagline": "Facilitamos la compra, venta y distribución de medios de publicidad exterior en todo el mundo",
+	"Hero__ctaFreeTrial": "Pida una prueba gratuita",
+	"Hero__ctaContact": "Contáctenos",
+	"branches": {
+		"mediaBuyers": {
+			"title": "Compradores de medios",
+			"p": "Llegue a sus destinatarios cuando estos no estén conectados con carteleras y pantallas digitales",
+			"cta": "Para compradores"
+		},
+		"mediaOwners": {
+			"title": "Propietarios de medios",
+			"p": "Transforme su negocio con las soluciones líderes para publicidad exterior",
+			"cta": "Para propietarios"
+		}
+	},
+	"broadsignAirBanner": {
+		"new": "Nuevo",
+		"tagline": "Conecte Broadsign Control a cualquier reproductor digital con _Broadsign Air_"
+	},
+	"videoTitle": "Mire lo que hacemos posible",
+	"quotes": {
+		"q1": {
+			"quote": "Con Broadsign, tenemos la flexibilidad mejorada, las capacidades creativas y las herramientas de planificación necesarias para hacer conexiones de manera más eficiente y uniforme en toda nuestra red.",
+			"company": "Intersection",
+			"id": "intersection"
+		},
+		"q2": {
+			"quote": "Desde que incorporamos Broadsign, hemos podido agilizar nuestro flujo de trabajo, ser más flexibles y reaccionar más rápidamente a los cambios realizados por los anunciantes.",
+			"company": "Lightbox",
+			"id": "lightbox"
+		},
+		"q3": {
+			"quote": "El uso de la automatización basada en reglas de Broadsign nos permitió centrarnos en las características de la campaña más que en el propio software.",
+			"company": "Grandi Stazioni Retail",
+			"id": "grandi_stazioni"
+		}
+	},
+	"next": "Siguiente",
+	"resources": {
+		"blog": "Blog",
+		"seeAllPosts": "Ver todas las entradas",
+		"eBooks": "Lecturas útiles",
+		"seeAllEBooks": "Ver todos los recursos",
+		"readMore": "Leer más",
+		"download": "Descargar"
+	},
+	"logosList": {
+		"title": "Trabajamos con los principales actores en publicidad exterior"
+	},
+	"shin": {
+		"freeTrial": "Pida una prueba gratuita",
+		"demo": "Solicite una demo"
+	}
+}

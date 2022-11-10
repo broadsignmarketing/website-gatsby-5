@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import classnames from "classnames";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 import CTA from "@components/CTA";
 import Form from "@components/Form";
@@ -42,16 +43,20 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 		return txt;
 	};
 
+	const { t } = useTranslation();
+
+	console.log(data);
+
 	return (
 		<Layout path={pathname} id="home">
 			<Hero>
 				<Tank div>
 					<div className="text">
-						<h1 className="title">{T.translate("Hero.title")}</h1>
-						<p className="tagline">{T.translate("Hero.tagline")}</p>
+						<h1 className="title">{t("Hero__title")}</h1>
+						<p className="tagline">{t("Hero__tagline")}</p>
 						<div className="ctas version_lp">
 							<Link className={classnames("hero_cta", `lang_${language}`, "free_trial", "cta_lp")} to={route("freeTrial", language)}>
-								<CTA className="span custom">{T.translate("Hero.ctaFreeTrial")}</CTA>
+								<CTA className="span custom">{t("Hero__ctaFreeTrial")}</CTA>
 								<CTA className="span custom arrow">
 									<img src={cta_arrow_slim} height="20" width="20" alt="" />
 								</CTA>
@@ -61,7 +66,7 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 								onClick={() => {
 									setOpenModal(true);
 								}}>
-								<CTA className="span custom">{T.translate("Hero.ctaFreeTrial")}</CTA>
+								<CTA className="span custom">{t("Hero__ctaFreeTrial")}</CTA>
 								<CTA className="span custom arrow">
 									<img src={cta_arrow_slim} height="20" width="20" alt="" />
 								</CTA>
@@ -96,30 +101,30 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 					}}
 				/>
 			</Hero>
-			{language !== "es" && (
+			{/* {language !== "es" && (
 				<section className="branches Tank">
 					<Link className="branch" to={route("broadsignPlatform")}>
 						<img src={media_owners} className="icon" alt="Media owners" height="80" width="80" loading="lazy" />
 						<div className="desc">
-							<h2 className="media_type font_size_3">{T.translate("branches.mediaOwners.title")}</h2>
-							<p className="font_size_2">{T.translate("branches.mediaOwners.p")}</p>
+							<h2 className="media_type font_size_3">{t("branches.mediaOwners.title")}</h2>
+							<p className="font_size_2">{t("branches.mediaOwners.p")}</p>
 							<hr />
-							<span className="cta text-reflex font_size_1_6 uppercase font-black">{T.translate("branches.mediaOwners.cta")}</span>
+							<span className="cta text-reflex font_size_1_6 uppercase font-black">{t("branches.mediaOwners.cta")}</span>
 						</div>
 					</Link>
 					<Link className="branch" to={route("launchPDOOHCampaign")}>
 						<img src={media_buyers} className="icon" alt="Media buyers" height="80" width="80" loading="lazy" />
 						<div className="desc">
-							<h2 className="media_type font_size_3">{T.translate("branches.mediaBuyers.title")}</h2>
-							<p className="font_size_2">{T.translate("branches.mediaBuyers.p")}</p>
+							<h2 className="media_type font_size_3">{t("branches.mediaBuyers.title")}</h2>
+							<p className="font_size_2">{t("branches.mediaBuyers.p")}</p>
 							<hr />
-							<span className="cta text-reflex font_size_1_6 uppercase font-black">{T.translate("branches.mediaBuyers.cta")}</span>
+							<span className="cta text-reflex font_size_1_6 uppercase font-black">{t("branches.mediaBuyers.cta")}</span>
 						</div>
 					</Link>
 				</section>
-			)}
-			<SubHeroBanner />
-			{["es"].includes(language) && (
+			)} */}
+			{/* <SubHeroBanner /> */}
+			{/* {["es"].includes(language) && (
 				<Link to={`${route("resources", "es")}?w=iem`} className="ilumina_el_mundo_banner">
 					<div className="flash" />
 					<div className="inner">
@@ -127,16 +132,16 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 						<CTA className="span round cerulean">Mira Aquí</CTA>
 					</div>
 				</Link>
-			)}
-			<VideoPoster
-				title={T.translate("videoTitle")}
+			)} */}
+			{/* <VideoPoster
+				title={t("videoTitle")}
 				className="client_reel"
 				YTid="mWA31Igrvk0"
 				playBtnStyle="solid"
 				bg="transparent"
 				poster={data.clientReelVideoPoster.childImageSharp.gatsbyImageData}>
-				<span className="client_reel_title">{T.translate("videoTitle")}</span>
-			</VideoPoster>
+				<span className="client_reel_title">{t("videoTitle")}</span>
+			</VideoPoster> */}
 			{/* <React.Suspense>
 				<Quotes></Quotes>
 			</React.Suspense> */}
@@ -146,39 +151,50 @@ export default function IndexPage({ pageContext: { language, dicoPath }, locatio
 			{/* <React.Suspense>
 				<EBooks></EBooks>
 			</React.Suspense> */}
-			<React.Suspense>
+			{/* <React.Suspense>
 				<LogosList list="media_owners" variation="grey">
 					<h2 before="true" className="font_size_3_4">
-						{T.translate("logosList.title")}
+						{t("logosList.title")}
 					</h2>
 				</LogosList>
-			</React.Suspense>
-			<section className="shin">
+			</React.Suspense> */}
+			{/* <section className="shin">
 				<Tank div>
 					<CTA className="pink" to={route("freeTrial")}>
-						{T.translate("shin.freeTrial")}
+						{t("shin.freeTrial")}
 					</CTA>
 					<CTA className="custom" to={route("demo")}>
-						{T.translate("shin.demo")}
+						{t("shin.demo")}
 					</CTA>
 				</Tank>
-			</section>
-			{openModal && (
+			</section> */}
+			{/* {openModal && (
 				<Modal variant="form" onClose={() => setOpenModal(false)}>
 					<Form form="freeTrial" fields="boxes" bg="light"></Form>
 				</Modal>
-			)}
+			)} */}
 		</Layout>
 	);
 }
 
 export const queryIndex = graphql`
-	query IndexContent {
+	query ($language: String!) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index"] } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
+			}
+		}
+
 		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
 			childImageSharp {
 				gatsbyImageData
 			}
 		}
+
 		HeroMobile: file(relativePath: { eq: "pages/index/hero_mobile.jpg" }) {
 			childImageSharp {
 				gatsbyImageData
@@ -194,7 +210,14 @@ export const queryIndex = graphql`
 `;
 /*
 export const queryIndex = graphql`
-	query IndexContent($language: String!) {
+	query ($language: String!) {
+			locales: locale(ns: { eq: "index" }, language: { eq: $language }) {
+			id
+			ns
+			data
+			language
+		}
+
 		Hero: file(relativePath: { eq: "pages/index/hero_desktop.jpg" }) {
 			childImageSharp {
 				gatsbyImageData
