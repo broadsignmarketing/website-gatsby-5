@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-// import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -67,7 +67,7 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`;
 
 const IndexPage = () => {
-	// const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<Layout>
@@ -81,19 +81,7 @@ const IndexPage = () => {
 					alt=""
 					style={{ marginBottom: `var(--space-3)` }}
 				/>
-				{/* <h1>{t("Hero__title")}</h1>
-				<h1>
-					<Trans>Welcome to my Gatsby site!</Trans>
-				</h1>
-				<p>
-					<Trans>My name is Shanika</Trans>
-				</p>
-				<p>
-					<Trans>My profession is SSE</Trans>
-				</p>
-				<p>
-					<Trans>My Birthday is 1990/10/10</Trans>
-				</p> */}
+				<h1>{t("Hero__title")}</h1>
 				<p className={styles.intro}>
 					<b>Example pages:</b>{" "}
 					{samplePageLinks.map((link, i) => (

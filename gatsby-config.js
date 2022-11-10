@@ -107,13 +107,8 @@ module.exports = {
 				},
 				pages: [
 					{
-						matchPath: "/:lang?/blog/:uid",
-						getLanguageFromPath: true,
-						excludeLanguages: ["es"],
-					},
-					{
-						matchPath: "/preview",
-						languages: ["en"],
+						matchPath: "/",
+						languages: ["en", "fr"],
 					},
 				],
 			},

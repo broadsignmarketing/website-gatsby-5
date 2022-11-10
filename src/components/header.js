@@ -3,7 +3,8 @@ import { Link } from "gatsby";
 // import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
 const Header = ({ siteTitle }) => {
-	// const { languages, originalPath } = useI18next();
+	const { languages, originalPath } = useI18next();
+
 	return (
 		<header
 			style={{
@@ -21,7 +22,7 @@ const Header = ({ siteTitle }) => {
 				}}>
 				{siteTitle}
 			</Link>
-			{/* <ul className="languages">
+			<ul className="languages">
 				{languages.map((lng) => (
 					<li key={lng}>
 						<Link to={originalPath} language={lng}>
@@ -29,7 +30,7 @@ const Header = ({ siteTitle }) => {
 						</Link>
 					</li>
 				))}
-			</ul> */}
+			</ul>
 			<img
 				alt="Gatsby logo"
 				height={20}
