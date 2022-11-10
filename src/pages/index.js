@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import classnames from "classnames";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+//import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 // import CTA from "@components/CTA";
 // import Form from "@components/Form";
 // import Hero from "@components/Hero";
 // import { GatsbyImage as Img } from "gatsby-plugin-image";
-import Layout from "@components/layout";
+//import Layout from "@components/layout";
 // const LogosList = React.lazy(() => import("@components/LogosList"));
 // import Link from "@components/LocalizedLink";
 // import Modal from "@components/Modal";
@@ -26,20 +26,20 @@ import Layout from "@components/layout";
 import "@sass/components/ImgFlank.scss";
 import "@sass/pages/home.scss";
 
-export default function IndexPage({ pageContext: { language, dicoPath }, location: { pathname }, data }) {
-	const [openModal, setOpenModal] = useState(false);
+export default function IndexPage({ pageContext: { language }, location: { pathname }, data }) {
+	//const [openModal, setOpenModal] = useState(false);
 
-	if (language === "cn") {
+	/* if (language === "cn") {
 		return <Layout path={pathname} />;
-	}
+	} */
 
-	const route = (txt = "", l = "") => {
+	/* const route = (txt = "", l = "") => {
 		return txt;
-	};
+	}; */
 
-	const { t } = useTranslation();
+	// const { t } = useTranslation();
 
-	console.log(data);
+	console.log(language, data);
 
 	return (
 		<div id="home">
