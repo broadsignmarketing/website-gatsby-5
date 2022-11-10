@@ -18,6 +18,10 @@
 } */
 
 const request = require("request");
+exports.onCreatePage = ({ page, actions }) => {
+	console.log(page);
+	createPage(page);
+};
 
 /* exports.sourceNodes = ({ actions, createContentDigest }) => {
 	const { createNode, createRedirect } = actions
