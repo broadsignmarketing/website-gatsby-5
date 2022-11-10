@@ -21,6 +21,7 @@ module.exports = {
 		twitterUserID: "@broadsign",
 		siteUrl: process.env.SITE_URL || "https://broadsign.com",
 	},
+	trailingSlash: "never",
 	plugins: [
 		{
 			resolve: "gatsby-plugin-sharp",
@@ -94,6 +95,7 @@ module.exports = {
 				localeJsonSourceName: `locale`,
 				languages: [`en`, `fr`, `es`],
 				defaultLanguage: `en`,
+				trailingSlash: "never",
 				siteUrl: process.env.SITE_URL,
 				i18nextOptions: {
 					interpolation: {
