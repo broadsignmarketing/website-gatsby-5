@@ -96,6 +96,7 @@ module.exports = {
 				languages: [`en`, `fr`, `es`],
 				defaultLanguage: `en`,
 				trailingSlash: "never",
+				redirect: false,
 				siteUrl: process.env.SITE_URL,
 				i18nextOptions: {
 					interpolation: {
